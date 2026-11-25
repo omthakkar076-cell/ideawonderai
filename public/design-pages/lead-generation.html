@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Digital Marketing & Automation Agency | IdeaWonder AI</title>
+<meta name="description" content="Grow your business with AI-powered SEO, GEO, paid advertising, lead generation, social media marketing and business automation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1446ff;--blue2:#0a2bd0;--sky:#a9c6ff;--ink:#0a0a0a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,sans-serif;line-height:1.65;color:var(--ink);background:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;letter-spacing:-.02em;line-height:1.08}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px;position:relative}
+svg.ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.sprite{position:absolute;width:0;height:0;overflow:hidden}
+
+/* THEMES: white bg = black text, blue bg = white text */
+.lt{--fg:#0a0a0a;--mut:#23283d;--card:#f2f6ff;--line:#d6e1ff;--spot:rgba(20,70,255,.14);--tile:var(--blue);--tilefg:#fff;background:#fff;color:var(--fg);background-image:radial-gradient(rgba(20,70,255,.13) 1.2px,transparent 1.3px);background-size:30px 30px}
+.bl{--fg:#fff;--mut:rgba(255,255,255,.84);--card:rgba(255,255,255,.11);--line:rgba(255,255,255,.3);--spot:rgba(255,255,255,.22);--tile:#fff;--tilefg:var(--blue);color:#fff;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(160deg,var(--blue),var(--blue2));background-size:64px 64px,64px 64px,auto}
+section{position:relative;padding:130px 0;overflow:hidden}
+.grad{background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
+.lt .grad,.hero .grad{background-image:linear-gradient(90deg,#1446ff,#5a8dff,#1446ff)}
+.bl .grad{background-image:linear-gradient(90deg,#fff,#a9c6ff,#fff)}
+@keyframes shine{to{background-position:200% center}}
+#prog{position:fixed;top:0;left:0;height:4px;width:0;background:var(--blue);z-index:300;box-shadow:0 0 12px var(--blue)}
+
+/* NAV */
+nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:250;width:min(1120px,calc(100% - 28px));display:flex;align-items:center;justify-content:space-between;padding:8px 12px 8px 22px;border:1px solid #dbe5ff;border-radius:100px;background:rgba(255,255,255,.86);backdrop-filter:blur(16px);box-shadow:0 12px 40px -16px rgba(20,70,255,.35);color:var(--ink)}
+.logo{display:flex;align-items:center;font-family:'Space Grotesk';font-weight:700;font-size:20px}
+.logo img{height:34px;width:auto;display:block}
+nav ul{display:flex;gap:30px;list-style:none;font-size:14px;font-weight:500}
+nav ul a{opacity:.7}nav ul a:hover,nav ul .on{opacity:1;color:var(--blue)}
+@media(max-width:820px){nav ul{display:none}}
+
+/* BUTTONS */
+.btn{position:relative;display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:100px;font-weight:600;font-size:15px;border:1.5px solid currentColor;transition:.35s;overflow:hidden;cursor:pointer;background:transparent;font-family:inherit;color:inherit}
+.btn.sm{padding:11px 22px;font-size:14px}
+.lt .btn.pri,.hero .btn.pri,nav .btn.pri{background:var(--blue);color:#fff;border-color:var(--blue);box-shadow:0 14px 34px -10px rgba(20,70,255,.6)}
+.bl .btn.pri{background:#fff;color:var(--blue);border-color:#fff;box-shadow:0 14px 34px -10px rgba(0,0,0,.4)}
+.btn.pri:hover{transform:translateY(-3px)}
+.btn.gh:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+.bl .btn.gh:hover{background:#fff;color:var(--blue)}
+.btn::after{content:"";position:absolute;top:0;left:-100%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg)}
+.btn:hover::after{left:150%;transition:.8s}
+.mag{transition:transform .25s}
+
+/* HERO STORY */
+.hero{background:#fff;background-image:radial-gradient(rgba(20,70,255,.14) 1.2px,transparent 1.3px);background-size:30px 30px;color:var(--ink);--mut:#23283d}
+.story{height:540vh;position:relative}
+.sticky{position:sticky;top:0;height:100vh;display:grid;grid-template-columns:1fr 1.05fr;gap:44px;align-items:center;padding:96px max(24px,calc((100vw - 1200px)/2)) 36px;overflow:hidden}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);border:1px solid #c9d8ff;background:#eef3ff;padding:8px 16px;border-radius:100px;margin-bottom:22px;font-weight:600}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--blue);animation:pulse 1.5s infinite}
+@keyframes pulse{50%{opacity:.3;transform:scale(.6)}}
+h1{font-size:clamp(30px,4.2vw,56px);margin-bottom:22px;color:var(--ink);font-weight:700;animation:h1in 1s cubic-bezier(.2,.8,.2,1) both}
+@keyframes h1in{from{opacity:0;transform:translateY(30px)}}
+.copies{display:grid;min-height:150px;position:relative}
+.copy{grid-area:1/1;font-size:clamp(16px,1.35vw,19px);color:var(--mut);opacity:0;transform:translateY(26px);filter:blur(6px);transition:.7s cubic-bezier(.2,.8,.2,1);pointer-events:none}
+.copy.on{opacity:1;transform:none;filter:none}
+.copy.lg{font-family:'Space Grotesk';font-size:clamp(24px,2.6vw,36px);font-weight:600;color:var(--ink);line-height:1.2}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.dots{display:flex;gap:8px;margin-top:30px;align-items:center}
+.dots i{height:5px;width:36px;border-radius:5px;background:#d6e1ff;position:relative;overflow:hidden}
+.dots i::after{content:"";position:absolute;inset:0;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:.6s}
+.dots i.on::after{transform:scaleX(1)}
+.dots span{font-size:11px;letter-spacing:.2em;color:var(--mut);margin-left:8px;font-weight:600}
+
+/* STAGE */
+.stage{--p:0;container-type:size;position:relative;height:min(80vh,660px);border-radius:40px;background:linear-gradient(155deg,#1b50ff,#0a2bd0 70%);color:#fff;overflow:hidden;box-shadow:0 50px 100px -30px rgba(20,70,255,.65)}
+.stage::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:8cqw 8cqw;translate:0 calc(var(--p)*-16cqw)}
+.stage .glow{position:absolute;width:70cqw;height:70cqw;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.4),transparent 65%);left:50%;top:48%;translate:-50% -50%;scale:calc(.8 + var(--p)*.7)}
+.e{opacity:0;transform:translateY(5cqh) scale(.92);filter:blur(8px);transition:opacity .8s,transform .9s cubic-bezier(.2,.8,.2,1),filter .8s;transition-delay:var(--d,0s);pointer-events:none}
+.e.on{opacity:1;transform:none;filter:none}
+.e:not(.on){transition-delay:0s}
+.schip{position:absolute;left:6cqw;top:5cqh;font-size:max(10px,1.9cqw);letter-spacing:.16em;font-weight:600;padding:1.4cqw 3cqw;border-radius:100px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.4)}
+/* 0 lead cloud */
+.fieldwrap{position:absolute;inset:0;transform:translateY(calc(var(--p)*-14cqh))}
+.lc{position:absolute;display:flex;align-items:center;gap:1.8cqw;padding:1.5cqw 2.6cqw 1.5cqw 1.6cqw;border-radius:100px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.4);animation:bobx 5s ease-in-out infinite;animation-delay:var(--dl,0s)}
+.lc i{width:4.4cqw;height:4.4cqw;border-radius:50%;background:rgba(255,255,255,.75);flex:none}
+.lc b{display:block;width:var(--w,11cqw);height:1.6cqw;border-radius:6px;background:rgba(255,255,255,.55)}
+/* 1 ICP */
+.tgtring{position:absolute;left:50%;top:40cqh;width:84cqw;height:84cqw;margin:-42cqw 0 0 -42cqw;border:2px dashed rgba(255,255,255,.55);border-radius:50%;animation:spin 30s linear infinite}
+.tgtring.b{width:58cqw;height:58cqw;margin:-29cqw 0 0 -29cqw;border-style:solid;border-color:rgba(255,255,255,.2);animation-direction:reverse}
+.icp{position:absolute;left:12cqw;right:12cqw;top:15cqh;padding:3.6cqw;border-radius:4cqw;background:#fff;color:var(--ink);box-shadow:0 4cqw 9cqw -3cqw rgba(0,0,0,.55)}
+.icp small{display:flex;align-items:center;gap:1.4cqw;color:var(--blue);font-weight:700;font-size:max(9.5px,1.9cqw);letter-spacing:.14em;text-transform:uppercase}
+.icpr{display:flex;align-items:center;gap:2.4cqw;margin-top:3.4cqw;font-size:max(10px,2.1cqw);font-weight:600}
+.icpr span{width:24cqw;color:#444}
+.icpr i{height:2.6cqw;border-radius:6px;background:#dfe8ff;flex:1;position:relative;overflow:hidden}
+.icpr i::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(20,70,255,.35),transparent);transform:translateX(-100%);animation:sweep 2.4s infinite}
+@keyframes sweep{to{transform:translateX(100%)}}
+.icpr .ic{color:var(--blue);font-size:3.8cqw}
+/* 2 funnel (FIXED: unique class .fband, labels centered) */
+.fnl{position:absolute;inset:0}
+.fband{position:absolute;display:flex;align-items:center;justify-content:center;text-align:center;font-family:'Space Grotesk';font-weight:700;font-size:max(12px,3cqw);letter-spacing:.14em;padding:0;border:0;margin:0}
+.fband.b1{left:8cqw;right:8cqw;top:14cqh;height:19cqh;background:rgba(255,255,255,.2);clip-path:polygon(0 0,100% 0,90% 100%,10% 100%)}
+.fband.b2{left:17cqw;right:17cqw;top:35cqh;height:19cqh;background:rgba(255,255,255,.38);clip-path:polygon(0 0,100% 0,87% 100%,13% 100%)}
+.fband.b3{left:22cqw;right:22cqw;top:56cqh;height:19cqh;background:#fff;color:var(--blue);clip-path:polygon(0 0,100% 0,84% 100%,16% 100%)}
+.fd{position:absolute;top:9cqh;width:2.4cqw;height:2.4cqw;border-radius:50%;left:var(--x);animation:fallpass 4.2s ease-in infinite;animation-delay:var(--dl,0s);background:#fff;box-shadow:0 0 3cqw rgba(255,255,255,.9)}
+.fd.x{background:rgba(255,255,255,.55);box-shadow:none;animation-name:falldrop}
+@keyframes fallpass{0%{opacity:0;transform:translateY(0)}10%{opacity:1}100%{opacity:1;transform:translateY(68cqh)}}
+@keyframes falldrop{0%{opacity:0;transform:translateY(0)}10%{opacity:1}55%{opacity:1;transform:translate(var(--sx,0),26cqh)}75%{opacity:0;transform:translate(calc(var(--sx,0)*1.4),34cqh) scale(.4)}100%{opacity:0}}
+/* 3 qualified lead */
+.qcard{position:absolute;left:10cqw;right:10cqw;top:13cqh;padding:3.6cqw;border-radius:4cqw;background:#fff;color:var(--ink);box-shadow:0 4cqw 9cqw -3cqw rgba(0,0,0,.55)}
+.qh{display:flex;align-items:center;gap:2.4cqw}
+.qh .av{width:8cqw;height:8cqw;border-radius:50%;background:linear-gradient(135deg,#9db8ff,#1446ff);flex:none}
+.qh small{display:block;color:var(--blue);font-weight:700;font-size:max(9px,1.8cqw);letter-spacing:.14em;text-transform:uppercase}
+.qh h4{font-size:max(15px,3.6cqw);line-height:1.15}
+.qh .ok{margin-left:auto;width:7cqw;height:7cqw;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:4cqw;flex:none}
+.qs{margin:2.4cqw 0 0;font-size:max(10px,2cqw);letter-spacing:.1em;color:#555;font-weight:600}
+.mt{display:flex;align-items:center;gap:2.4cqw;margin-top:2.8cqw;font-size:max(10px,2.1cqw);font-weight:600}
+.mt span{width:20cqw}
+.mt .tr{flex:1;height:2.6cqw;background:#dfe8ff;border-radius:6px;overflow:hidden}
+.mt .tr i{display:block;height:100%;width:0;background:var(--blue);border-radius:6px;transition:width 1.4s cubic-bezier(.2,.8,.2,1) .4s}
+.qcard.on .tr i{width:var(--w)}
+.pipe{position:absolute;left:10cqw;right:10cqw;bottom:9cqh;height:24cqh;display:flex;align-items:flex-end;gap:2cqw}
+.pipe i{flex:1;background:#fff;border-radius:6px 6px 2px 2px;height:0;transition:height 1.2s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i)*.12s + .5s)}
+.pipe.on i{height:var(--h)}
+.cap2{position:absolute;left:0;right:0;bottom:1.6cqh;text-align:center;font-size:max(8.5px,1.7cqw);letter-spacing:.2em;opacity:.7}
+/* 4 channels orbit */
+.orbit{position:absolute;left:50%;top:76cqh;width:0;height:0;--R:21cqw}
+.ring{position:absolute;left:calc(var(--R)*-1);top:calc(var(--R)*-1);width:calc(var(--R)*2);height:calc(var(--R)*2);border:1.5px dashed rgba(255,255,255,.6);border-radius:50%;rotate:calc(var(--p)*-120deg)}
+.ring.b{left:calc(var(--R)*-.6);top:calc(var(--R)*-.6);width:calc(var(--R)*1.2);height:calc(var(--R)*1.2);border-style:solid;border-color:rgba(255,255,255,.2)}
+.arm{position:absolute;left:0;top:0;transform:rotate(calc(var(--b)*1deg + var(--p)*220deg))}
+.spoke{position:absolute;left:0;top:-1px;width:var(--R);height:2px;background:linear-gradient(90deg,rgba(255,255,255,.05),rgba(255,255,255,.8))}
+.npos{position:absolute;left:var(--R);top:0;transform:translate(-50%,-50%) rotate(calc((var(--b)*1deg + var(--p)*220deg)*-1))}
+.node{display:grid;place-items:center;width:9cqw;height:9cqw;border-radius:50%;background:#fff;box-shadow:0 2cqw 4cqw -1.5cqw rgba(0,0,0,.5);color:var(--blue);font-size:4.6cqw}
+.node img,.node .fbk{width:5cqw;height:5cqw}
+.core{position:absolute;left:0;top:0;translate:-50% -50%;width:16cqw;height:16cqw;border-radius:50%;background:#fff;color:var(--ink);display:grid;place-items:center;text-align:center;font-family:'Space Grotesk';font-weight:700;font-size:max(10px,2.2cqw);line-height:1.1;box-shadow:0 0 0 2cqw rgba(255,255,255,.2),0 0 9cqw rgba(255,255,255,.7);animation:cp 2.4s infinite}
+.core svg{color:var(--blue);display:block;margin:0 auto .6cqw;font-size:5cqw}
+@keyframes cp{50%{box-shadow:0 0 0 3.6cqw rgba(255,255,255,.12),0 0 12cqw rgba(255,255,255,.85)}}
+.ansc{position:absolute;left:7cqw;right:7cqw;top:8cqh;padding:3.6cqw;border-radius:4cqw;background:#fff;color:var(--ink);box-shadow:0 4cqw 9cqw -3cqw rgba(0,0,0,.55)}
+.ansc small{display:flex;align-items:center;gap:1.4cqw;color:var(--blue);font-weight:700;font-size:max(9.5px,1.9cqw);letter-spacing:.14em;text-transform:uppercase}
+.ansc h4{font-size:max(17px,4.1cqw);margin:1.4cqw 0 .8cqw}
+.ansc p{font-size:max(10px,2cqw);color:#444;margin-bottom:2cqw;letter-spacing:.06em}
+.ansc .ch2{display:flex;gap:1.3cqw;flex-wrap:wrap}
+.ansc .ch2 span{display:inline-flex;gap:.8cqw;align-items:center;padding:1cqw 2cqw;border-radius:100px;background:#eef3ff;color:var(--blue);font-weight:600;font-size:max(9px,1.8cqw)}
+.scroll{position:absolute;left:50%;bottom:4px;translate:-50% 0;font-size:10px;letter-spacing:.3em;font-weight:600;color:var(--mut);display:flex;flex-direction:column;align-items:center;gap:6px}
+.scroll::after{content:"";width:2px;height:26px;background:linear-gradient(var(--blue),transparent);animation:sd 1.6s infinite}
+@keyframes sd{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@media(max-width:960px){.sticky{grid-template-columns:1fr;grid-template-rows:auto 1fr;gap:16px;padding-top:84px}.stage{height:44vh;order:-1}.copies{min-height:130px}.dots,.scroll{display:none}h1{font-size:26px;margin-bottom:12px}.eyebrow{margin-bottom:12px}.cta-row{margin-top:14px}}
+
+/* FLOATING DECOR */
+.fl{position:absolute;pointer-events:none;color:var(--blue);will-change:transform;animation:bobx 7s ease-in-out infinite}
+.bl .fl{color:#fff}
+.fl svg{width:100%;height:100%;display:block}
+@keyframes bobx{50%{translate:0 -18px}}
+@keyframes spin{to{rotate:360deg}}
+
+/* COMMON */
+.kick{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);display:flex;align-items:center;gap:12px;margin-bottom:22px;font-weight:600}
+.bl .kick{color:#fff}
+.kick b{font-family:'Space Grotesk';background:var(--blue);color:#fff;padding:3px 10px;border-radius:100px;letter-spacing:.06em}
+.bl .kick b{background:#fff;color:var(--blue)}
+.kick::after{content:"";height:2px;width:56px;background:currentColor;opacity:.5}
+h2{font-size:clamp(32px,4.5vw,58px);max-width:940px;margin-bottom:24px}
+.sub{color:var(--mut);font-size:18px;max-width:760px}
+.split .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em}
+.split .w span{display:inline-block;transform:translateY(112%) rotate(5deg);transition:transform .85s cubic-bezier(.2,.8,.2,1)}
+.split.in .w span{transform:none}
+.rv{opacity:0;transform:translateY(44px);transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+.spot{position:relative;border:1px solid var(--line);border-radius:26px;background:var(--card);padding:32px;overflow:hidden;transition:transform .45s,border-color .4s,box-shadow .4s}
+.spot::before{content:"";position:absolute;inset:0;background:radial-gradient(360px circle at var(--mx,50%) var(--my,50%),var(--spot),transparent 60%);opacity:0;transition:.4s}
+.spot:hover{transform:translateY(-8px);box-shadow:0 30px 60px -28px rgba(20,70,255,.55)}
+.spot:hover::before{opacity:1}
+.spot>*{position:relative}
+.spot h3{font-size:22px;margin:16px 0 10px}
+.spot p{color:var(--mut);font-size:15px}
+.tile{width:60px;height:60px;border-radius:20px;display:grid;place-items:center;font-size:28px;background:var(--tile);color:var(--tilefg);transition:.5s;position:relative}
+.tile::after{content:"";position:absolute;inset:-7px;border-radius:26px;border:1.5px dashed currentColor;opacity:0;transition:.5s;color:var(--tile)}
+.spot:hover .tile{transform:rotate(-8deg) scale(1.1)}.spot:hover .tile::after{opacity:.6;rotate:20deg}
+.num{font-family:'Space Grotesk';font-size:13px;font-weight:700;letter-spacing:.14em;opacity:.7;position:absolute!important;top:26px;right:28px}
+/* FIXED: scoped watermark number so it never affects other elements */
+.spot>.wm{position:absolute!important;right:18px;bottom:-14px;font-family:'Space Grotesk';font-weight:700;font-size:72px;opacity:.07;line-height:1}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:50px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:50px}
+@media(max-width:1000px){.g4,.g3{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.g4,.g3{grid-template-columns:1fr}.span2{grid-column:auto!important}}
+.callout{margin-top:50px;padding:36px 40px;border-radius:30px;font-family:'Space Grotesk';font-size:clamp(20px,2.4vw,28px);line-height:1.3;position:relative;overflow:hidden}
+.lt .callout{background:var(--blue);color:#fff}
+.lt .callout .grad{background-image:linear-gradient(90deg,#fff,#a9c6ff,#fff)}
+.bl .callout{background:#fff;color:var(--ink)}
+.bl .callout .grad{background-image:linear-gradient(90deg,#1446ff,#5a8dff,#1446ff)}
+.note{margin-top:28px;color:var(--mut);font-size:15px;border-left:3px solid currentColor;padding-left:18px;max-width:840px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:40px;align-items:center}
+@media(max-width:900px){.cols{grid-template-columns:1fr}}
+.cols p{color:var(--mut);font-size:17px;margin-bottom:18px}
+
+/* MARQUEE */
+.mqband{background:var(--blue);padding:24px 0;overflow:hidden;transform:rotate(-1.4deg);margin:0 -30px;position:relative;z-index:3;box-shadow:0 30px 60px -30px rgba(20,70,255,.7)}
+.mqband div{display:flex;gap:56px;width:max-content;animation:mq 30s linear infinite;font-family:'Space Grotesk';font-size:clamp(22px,3vw,36px);font-weight:700;white-space:nowrap;color:#fff}
+.mqband span:nth-child(3n+1){color:transparent;-webkit-text-stroke:1.2px #fff}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* LEADS -> OPPORTUNITIES VISUAL */
+.calwrap{border:1px solid var(--line);border-radius:30px;padding:26px;background:#fff;box-shadow:0 40px 80px -36px rgba(20,70,255,.5)}
+.calwrap .row2{display:flex;justify-content:space-between;font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:20px;font-weight:600}
+.calwrap .row2 span:last-child{color:var(--blue)}
+.hbars{display:flex;flex-direction:column;gap:14px}
+.hb{display:flex;align-items:center;gap:14px;font-size:13px;font-weight:600}
+.hb span{width:120px;flex:none}
+.hb i{height:32px;border-radius:10px;background:var(--blue);width:0;transition:width 1.2s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i)*.22s)}
+.calwrap.in .hb i{width:var(--w)}
+.hb.last i{background:#0a0a0a}
+.capx{font-size:10.5px;letter-spacing:.1em;margin-top:16px;opacity:.6}
+
+/* CHIPS + FLOW */
+.chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.chipx{display:inline-flex;align-items:center;gap:10px;padding:13px 20px;border-radius:100px;border:1px solid var(--line);background:var(--card);font-weight:500;font-size:15px;transition:.35s}
+.chipx .ic{font-size:19px}
+.chipx:hover{background:#fff;color:var(--blue);transform:translateY(-4px) rotate(-1deg)}
+.flow{display:flex;align-items:center;gap:14px;margin-top:22px;flex-wrap:wrap}
+.fn1{display:flex;align-items:center;gap:12px;padding:14px 20px;border-radius:20px;background:#fff;color:var(--ink);font-weight:600;font-size:14.5px;box-shadow:0 20px 40px -20px rgba(0,0,0,.5);opacity:0;transform:translateY(20px);transition:.6s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i)*.35s)}
+.flow.in .fn1{opacity:1;transform:none}
+.fn1 .ic{font-size:22px;color:var(--blue)}
+.fn1 img,.fn1 .fbk{width:24px;height:24px}
+.arr{font-size:24px;font-weight:700;opacity:0;transition:opacity .5s;transition-delay:calc(var(--i)*.35s + .2s)}
+.flow.in .arr{opacity:1;animation:nudge 1.4s ease-in-out infinite}
+@keyframes nudge{50%{transform:translateX(6px)}}
+
+/* SERVICE TABS */
+.svc{display:grid;grid-template-columns:350px 1fr;gap:28px;margin-top:50px;align-items:start}
+.tabs{display:flex;flex-direction:column;gap:8px;position:sticky;top:110px}
+.tab{display:flex;gap:14px;align-items:center;text-align:left;padding:12px 18px;border-radius:18px;border:1.5px solid var(--line);background:#fff;color:var(--ink);font:600 15px Inter;cursor:pointer;transition:.35s}
+.tab .ic{font-size:20px;color:var(--blue)}
+.tab .tl2{width:32px;height:32px;border-radius:10px;background:#fff;border:1px solid #dbe5ff;display:grid;place-items:center;flex:none}
+.tab .tl2 img,.tab .tl2 .fbk{width:20px;height:20px}
+.tab:hover{border-color:var(--blue);transform:translateX(4px)}
+.tab.on{background:var(--blue);color:#fff;border-color:var(--blue);transform:translateX(10px);box-shadow:0 18px 36px -14px rgba(20,70,255,.7)}
+.tab.on .ic{color:#fff}
+.panel{border-radius:34px;padding:46px;background:linear-gradient(155deg,var(--blue),var(--blue2));color:#fff;min-height:680px;position:relative;overflow:hidden;box-shadow:0 40px 80px -30px rgba(20,70,255,.6)}
+.panel::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:44px 44px}
+.pbody{position:relative;animation:swap .65s cubic-bezier(.2,.8,.2,1)}
+@keyframes swap{from{opacity:0;transform:translateY(26px)}}
+.pico{position:absolute;right:0;top:-6px;width:150px;height:150px}
+.pico .main{position:absolute;inset:25px;border-radius:34px;background:#fff;color:var(--blue);display:grid;place-items:center;font-size:56px;animation:bobx 5s ease-in-out infinite;box-shadow:0 20px 40px -12px rgba(0,0,0,.45)}
+.pico .main img,.pico .main .fbk{width:56px;height:56px}
+.pico .r{position:absolute;inset:0;border-radius:50%;border:1.5px dashed rgba(255,255,255,.6);animation:spin 14s linear infinite}
+.pico .mini{position:absolute;width:30px;height:30px;border-radius:10px;background:rgba(255,255,255,.25);display:grid;place-items:center;font-size:16px;border:1px solid rgba(255,255,255,.5)}
+.panel h3{font-size:clamp(26px,3vw,36px);margin-bottom:12px;max-width:430px}
+.panel .stl{font-size:18px;margin-bottom:12px;font-weight:500;max-width:520px;color:var(--sky)}
+.panel p.d{color:rgba(255,255,255,.85);margin-bottom:22px;max-width:600px}
+.lst{display:grid;grid-template-columns:1fr 1fr;gap:10px 22px;list-style:none;margin-bottom:22px}
+.lst li{font-size:14.5px;padding-left:30px;position:relative;opacity:0;animation:li .5s forwards;animation-delay:calc(var(--i)*55ms + .15s)}
+@keyframes li{from{opacity:0;transform:translateX(-14px)}to{opacity:1;transform:none}}
+.lst li::before{content:"";position:absolute;left:0;top:3px;width:19px;height:19px;border-radius:50%;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231446ff' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/11px no-repeat}
+.lrow{display:flex;gap:10px;margin-bottom:22px;flex-wrap:wrap}
+.lgt{width:46px;height:46px;border-radius:14px;background:#fff;display:grid;place-items:center}
+.lgt img,.lgt .fbk{width:26px;height:26px}
+.deliv{padding:20px 24px;border-radius:20px;background:#fff;color:var(--ink);font-size:15px}
+.deliv b{color:var(--blue);display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:4px}
+@media(max-width:960px){.svc{grid-template-columns:1fr}.tabs{position:static;flex-direction:row;overflow-x:auto;padding-bottom:8px}.tab{flex:none;white-space:nowrap}.tab.on{transform:none}.lst{grid-template-columns:1fr}.panel{padding:28px}.pico{display:none}}
+.fbk{display:grid;place-items:center;border-radius:9px;color:#fff;font:700 15px 'Space Grotesk'}
+
+/* CHANNEL cards */
+.pic{width:64px;height:64px;border-radius:20px;display:grid;place-items:center;background:#fff;color:var(--blue);font-size:30px;transition:.5s;box-shadow:0 14px 28px -12px rgba(0,0,0,.4)}
+.pic img,.pic .fbk{width:34px;height:34px;object-fit:contain;display:block}
+.spot:hover .pic{transform:rotate(-8deg) scale(1.1)}
+
+/* JOURNEY (six stages) */
+.journey{position:relative;display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:70px}
+.jline{position:absolute;left:8.3%;right:8.3%;top:29px;height:3px;background:#d6e1ff;border-radius:3px}
+.jline i{position:absolute;inset:0;background:var(--blue);border-radius:3px;transform:scaleX(0);transform-origin:left;transition:transform 2.4s cubic-bezier(.2,.8,.2,1) .3s;box-shadow:0 0 14px var(--blue)}
+.journey.in .jline i{transform:scaleX(1)}
+.jn .nd{width:60px;height:60px;border-radius:50%;margin:0 auto 20px;background:#fff;border:3px solid #c9d8ff;color:var(--blue);display:grid;place-items:center;font-size:25px;position:relative;z-index:2;transition:.5s;transition-delay:calc(var(--i)*.4s)}
+.journey.in .nd{background:var(--blue);color:#fff;border-color:var(--blue);box-shadow:0 0 0 8px rgba(20,70,255,.15)}
+.jn .spot{padding:20px}
+.jn .spot h3{font-size:20px;margin:0 0 4px}
+.jn .spot em{display:block;font-style:normal;color:var(--blue);font-weight:600;font-size:12px;letter-spacing:.1em;margin-bottom:10px;text-transform:uppercase}
+.jn .spot p{font-size:13.5px}
+@media(max-width:1100px){.journey{grid-template-columns:1fr 1fr 1fr}.jline{display:none}}
+@media(max-width:700px){.journey{grid-template-columns:1fr}}
+
+/* INBOUND / OUTBOUND */
+.io{display:grid;grid-template-columns:1fr auto 1fr;gap:20px;margin-top:50px;align-items:stretch}
+.io .spot{padding:36px}
+.io .spot h3{font-size:28px}
+.mlabel{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;margin:20px 0 12px;opacity:.85}
+.io .deliv{margin-top:20px}
+.tg{display:inline-block;font-size:13px;padding:6px 14px;border-radius:100px;border:1px solid var(--line);margin:0 8px 8px 0;background:rgba(255,255,255,.1)}
+.plusc{align-self:center;width:64px;height:64px;border-radius:50%;background:#fff;color:var(--blue);display:grid;place-items:center;font:700 34px 'Space Grotesk';animation:cp2 2.4s infinite;box-shadow:0 0 0 8px rgba(255,255,255,.2)}
+@keyframes cp2{50%{box-shadow:0 0 0 16px rgba(255,255,255,.08)}}
+.combo{margin-top:30px;padding:44px;border-radius:30px;background:#fff;color:var(--ink)}
+.combo h3{font-size:clamp(24px,3vw,34px);margin-bottom:14px}
+.combo p{color:#23283d;max-width:820px;margin-bottom:12px}
+@media(max-width:900px){.io{grid-template-columns:1fr}.plusc{justify-self:center}}
+
+/* VENN */
+.venn{position:relative;height:430px;margin:40px auto 30px;max-width:480px}
+.vc{position:absolute;width:270px;height:270px;border-radius:50%;display:grid;place-items:center;font:700 26px 'Space Grotesk';color:#fff;background:rgba(255,255,255,.14);border:2px solid #fff;transition:.5s;cursor:pointer;animation:bobx 8s ease-in-out infinite}
+.vc small{display:block;font-size:10.5px;font-weight:600;letter-spacing:.1em;text-align:center;opacity:.9;max-width:110px;margin:4px auto 0}
+.vc.a{left:0;top:0}.vc.b{right:0;top:0;animation-delay:-2.5s}.vc.c{left:50%;margin-left:-135px;bottom:0;animation-delay:-5s}
+.vc.a span{transform:translate(-42px,-34px);text-align:center}.vc.b span{transform:translate(42px,-34px);text-align:center}.vc.c span{transform:translateY(50px);text-align:center}
+.vc.hl{transform:scale(1.07);background:rgba(255,255,255,.3);z-index:5}
+.vcore{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);z-index:6;text-align:center;font-family:'Space Grotesk';font-weight:700;font-size:13px;line-height:1.1;padding:18px 14px;border-radius:50%;background:#fff;color:var(--blue);box-shadow:0 0 0 8px rgba(255,255,255,.25);animation:cp2 2.4s infinite}
+@media(max-width:560px){.venn{height:300px;transform:scale(.62);transform-origin:top center;margin-bottom:-120px}}
+.ladder{display:flex;align-items:flex-end;gap:14px;margin-top:30px;height:240px}
+.lad{flex:1;border-radius:22px;border:1px solid var(--line);background:var(--card);padding:18px;height:0;overflow:hidden;transition:height 1s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i)*.2s);font-family:'Space Grotesk';font-weight:700;font-size:16px;line-height:1.2;display:flex;align-items:flex-end}
+.ladder.in .lad{height:var(--h)}
+.lad.top{background:#fff;color:var(--blue)}
+
+/* FAQ */
+.faq{margin-top:50px;display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+@media(max-width:900px){.faq{grid-template-columns:1fr}}
+.fq{border:1px solid var(--line);border-radius:22px;background:var(--card);cursor:pointer;transition:.35s}
+.fq:hover{transform:translateY(-3px)}
+.fq .hd{display:flex;gap:14px;align-items:center;padding:20px 22px}
+.fq .hd h4{flex:1;font-size:16.5px;font-weight:600;line-height:1.3}
+.fq .nn{font-family:'Space Grotesk';font-weight:700;font-size:13px;opacity:.7}
+.pm{flex:none;width:34px;height:34px;border-radius:50%;border:1.5px solid currentColor;display:grid;place-items:center;transition:.4s;font-size:20px;line-height:1}
+.open>.hd .pm{transform:rotate(45deg);background:var(--blue);color:#fff;border-color:var(--blue)}
+.bd{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s}
+.open>.bd{grid-template-rows:1fr}.bd>div{overflow:hidden}
+.fq .bd p{padding:0 22px 22px;color:var(--mut);font-size:15px}
+.fq.open{background:#fff;color:var(--ink);--mut:#23283d}
+
+/* FINAL */
+.final{padding:110px 0 70px}
+.fcard{position:relative;border-radius:48px;padding:90px 50px;text-align:center;color:#fff;overflow:hidden;background:linear-gradient(150deg,var(--blue),var(--blue2));box-shadow:0 60px 120px -40px rgba(20,70,255,.7)}
+.fcard::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(circle at 50% 50%,#000,transparent 75%)}
+.fcard::after{content:"";position:absolute;width:700px;height:700px;left:50%;top:50%;translate:-50% -50%;background:conic-gradient(from 0deg,rgba(255,255,255,.35),transparent 30%,rgba(255,255,255,.2),transparent 70%,rgba(255,255,255,.35));border-radius:50%;animation:spin 20s linear infinite;filter:blur(40px);opacity:.5}
+.fcard>*{position:relative;z-index:2}
+.fcard .kick{justify-content:center;color:#fff}.fcard .kick b{background:#fff;color:var(--blue)}
+.fcard h2{margin-inline:auto;font-size:clamp(32px,4.8vw,62px);color:#fff}
+.fcard .grad{background-image:linear-gradient(90deg,#fff,#a9c6ff,#fff)}
+.fcard .sub{margin:0 auto 14px;color:rgba(255,255,255,.88)}
+.fcard .cta-row{justify-content:center}
+.fcard .btn.pri{background:#fff;color:var(--blue);border-color:#fff}
+.fcard .btn.gh:hover{background:#fff;color:var(--blue)}
+.fcard .fl{color:#fff;opacity:.6;z-index:1}
+.next{text-align:center;padding:60px 0 110px}
+.next h2{margin-inline:auto;font-size:clamp(30px,4vw,48px)}
+.svcs{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:34px}
+.svcs a{padding:13px 24px;border-radius:100px;border:1.5px solid var(--blue);color:var(--blue);font-weight:600;font-size:15px;transition:.3s;background:#fff}
+.svcs a:hover,.svcs a.cur{background:var(--blue);color:#fff;transform:translateY(-4px)}
+footer{background:linear-gradient(160deg,var(--blue),var(--blue2));color:#fff;padding:80px 0 40px;font-size:14px}
+.fg{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr 1fr;gap:34px}
+footer h5{font-family:'Space Grotesk';font-size:12px;letter-spacing:.18em;margin-bottom:16px}
+footer a{display:block;margin-bottom:10px;opacity:.85}footer a:hover{opacity:1;transform:translateX(3px)}
+footer a.flogo{display:inline-flex;background:#fff;padding:10px 18px;border-radius:16px;opacity:1;margin:0}
+footer a.flogo:hover{transform:none}
+footer a.flogo img{height:34px;width:auto;display:block}
+.fbar{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:50px;padding-top:24px;border-top:1px solid rgba(255,255,255,.3)}
+.fbar span a{display:inline;margin-left:18px}
+.cta-strip{margin-top:56px;padding:34px;border-radius:28px;background:#fff;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.cta-strip small{color:var(--blue);letter-spacing:.16em;font-size:11px;font-weight:700}
+.cta-strip h3{font-size:26px;margin-top:6px}
+footer .cta-strip a.btn.pri{background:var(--blue);color:#fff;border-color:var(--blue);opacity:1;margin:0}
+@media(max-width:900px){.fg{grid-template-columns:1fr 1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.split .w span,.fn1,.arr{opacity:1!important;transform:none!important}.e.on{opacity:1}.hb i{width:var(--w)}.lad{height:var(--h)}}
+
+/* Original IdeaWonder brand lockup: tagline sits below the logo */
+nav a.logo{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;gap:2px!important;line-height:1!important}
+nav a.logo img{display:block;width:205px;height:43px;object-fit:contain;object-position:left center}
+nav .brand-tagline{display:block;margin:0 0 0 2px;color:#6b9cff;font-size:7px;font-weight:800;letter-spacing:.19em;line-height:1.2;white-space:nowrap}
+@media(max-width:760px){nav a.logo img{width:165px;height:36px}nav .brand-tagline{font-size:6px;letter-spacing:.15em}}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+
+<!-- ICON + SHAPE SPRITE (transparent vector artwork) -->
+<svg class="sprite" aria-hidden="true"><defs>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.5 7.2L4 20l1-4.5A8 8 0 1 1 21 12z"/></symbol>
+<symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 17v4M17 19h4"/></symbol>
+<symbol id="i-chip" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+<symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></symbol>
+<symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></symbol>
+<symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></symbol>
+<symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></symbol>
+<symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+<symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
+<symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></symbol>
+<symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2 20c0-4 3-6 7-6s7 2 7 6"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14c3 0 5 1.8 5 5"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+<symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></symbol>
+<symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></symbol>
+<symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></symbol>
+<symbol id="i-megaphone" viewBox="0 0 24 24"><path d="M3 11v2a1 1 0 0 0 1 1h3l8 4V6L7 10H4a1 1 0 0 0-1 1zM19 9a4 4 0 0 1 0 6"/></symbol>
+<symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></symbol>
+<symbol id="i-repeat" viewBox="0 0 24 24"><path d="M17 2l4 4-4 4M3 11V9a3 3 0 0 1 3-3h15M7 22l-4-4 4-4M21 13v2a3 3 0 0 1-3 3H3"/></symbol>
+<symbol id="i-filter" viewBox="0 0 24 24"><path d="M3 4h18l-7 8v6l-4 2v-8z"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></symbol>
+<symbol id="i-inbox" viewBox="0 0 24 24"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.5 5l-3.5 7v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.5-7z"/></symbol>
+<symbol id="i-mouse" viewBox="0 0 24 24"><path d="M5 3l14 7-6 2-2 6z"/></symbol>
+<symbol id="s-star" viewBox="0 0 100 100"><path fill="currentColor" d="M50 0C54 30 70 46 100 50 70 54 54 70 50 100 46 70 30 54 0 50 30 46 46 30 50 0z"/></symbol>
+<symbol id="s-ring" viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="5"/><circle cx="50" cy="50" r="26" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="3 6"/></symbol>
+<symbol id="s-dots" viewBox="0 0 100 100"><g fill="currentColor"><circle cx="10" cy="10" r="4"/><circle cx="35" cy="10" r="4"/><circle cx="60" cy="10" r="4"/><circle cx="85" cy="10" r="4"/><circle cx="10" cy="35" r="4"/><circle cx="35" cy="35" r="4"/><circle cx="60" cy="35" r="4"/><circle cx="85" cy="35" r="4"/><circle cx="10" cy="60" r="4"/><circle cx="35" cy="60" r="4"/><circle cx="60" cy="60" r="4"/><circle cx="85" cy="60" r="4"/><circle cx="10" cy="85" r="4"/><circle cx="35" cy="85" r="4"/><circle cx="60" cy="85" r="4"/><circle cx="85" cy="85" r="4"/></g></symbol>
+<symbol id="s-plus" viewBox="0 0 100 100"><path d="M50 12v76M12 50h76" stroke="currentColor" stroke-width="12" stroke-linecap="round"/></symbol>
+<symbol id="s-target" viewBox="0 0 100 100"><g fill="none" stroke="currentColor" stroke-width="5"><circle cx="50" cy="50" r="44"/><circle cx="50" cy="50" r="28"/></g><circle cx="50" cy="50" r="10" fill="currentColor"/></symbol>
+<symbol id="s-funnel" viewBox="0 0 100 100"><path fill="currentColor" d="M4 8h92L60 52v38l-20-10V52z"/></symbol>
+</defs></svg>
+
+<nav>
+  <a class="logo" href="/"><img src="/brand/ideawonder-logo-horizontal.png" alt="IdeaWonder AI" onerror="this.replaceWith(document.createTextNode('IdeaWonder AI'))"><span class="brand-tagline">IMAGINE MORE. GROW SMARTER.</span></a>
+  <ul><li><a href="/">About</a></li><li><a class="on" href="/services/seo-ai-search">Services</a></li><li><a href="/contact">Contact</a></li></ul>
+  <a class="btn pri sm" href="/contact">Build Your Growth Strategy</a>
+</nav>
+
+<!-- ============ HERO: SCROLL STORY ============ -->
+<div class="hero story" id="story">
+  <div class="sticky">
+    <div>
+      <div class="eyebrow">IdeaWonder AI / Services / Demand Generation</div>
+      <h1>Stop Chasing Leads. <span class="grad">Start Attracting the Right Business Opportunities.</span></h1>
+      <div class="copies">
+        <p class="copy on">More leads don't necessarily mean more revenue.</p>
+        <p class="copy">What matters is finding businesses that need your solution, reaching the right decision-makers and turning genuine interest into sales opportunities.</p>
+        <p class="copy">IdeaWonder AI helps B2B businesses build smarter lead generation systems through digital marketing, paid advertising, conversion optimization and intelligent automation.</p>
+        <p class="copy">From identifying your ideal customers to attracting prospects, capturing enquiries and improving lead conversion, we connect every stage of acquisition with your business growth objectives.</p>
+        <p class="copy lg">From ideal customer to opportunity.</p>
+      </div>
+      <div class="cta-row">
+        <a class="btn pri mag" href="/contact">Build Your Lead Generation Strategy <svg class="ic"><use href="#i-arrow"/></svg></a>
+        <a class="btn gh" href="#service-content">Explore Our Approach</a>
+      </div>
+      <div class="dots"><i class="on"></i><i></i><i></i><i></i><i></i><span>SCROLL TO EXPLORE</span></div>
+    </div>
+
+    <div class="stage" id="stage" data-s="0">
+      <div class="glow"></div>
+      <div class="schip e" data-in="0" data-out="1">DEMAND GENERATION</div>
+      <div class="schip e" data-in="1" data-out="2">IDEAL CUSTOMER PROFILE</div>
+      <div class="schip e" data-in="2" data-out="3">ATTRACT • QUALIFY • CONVERT</div>
+      <div class="schip e" data-in="3" data-out="4">PIPELINE MOMENTUM</div>
+      <div class="schip e" data-in="4">QUALIFIED PIPELINE SYSTEM</div>
+
+      <!-- 0: random leads -->
+      <div class="fieldwrap e" data-in="0" data-out="1" id="leadcloud"></div>
+
+      <!-- 1: ICP -->
+      <div class="tgtring e" data-in="1" data-out="2"></div>
+      <div class="tgtring b e" data-in="1" data-out="2"></div>
+      <div class="icp e" data-in="1" data-out="2">
+        <small><svg class="ic"><use href="#i-target"/></svg> Ideal customer profile</small>
+        <div class="icpr"><span>Industry</span><i></i><svg class="ic"><use href="#i-check"/></svg></div>
+        <div class="icpr"><span>Company size</span><i></i><svg class="ic"><use href="#i-check"/></svg></div>
+        <div class="icpr"><span>Decision-maker</span><i></i><svg class="ic"><use href="#i-check"/></svg></div>
+        <div class="icpr"><span>Market</span><i></i><svg class="ic"><use href="#i-check"/></svg></div>
+      </div>
+
+      <!-- 2: funnel (labels now centered) -->
+      <div class="fnl e" data-in="2" data-out="3" id="fnl">
+        <div class="fband b1"><span>ATTRACT</span></div>
+        <div class="fband b2"><span>QUALIFY</span></div>
+        <div class="fband b3"><span>CONVERT</span></div>
+      </div>
+
+      <!-- 3: qualified lead -->
+      <div class="qcard e" data-in="3" data-out="4">
+        <div class="qh"><i class="av"></i><div><small>Qualified lead</small><h4>Decision maker identified</h4></div><span class="ok"><svg class="ic"><use href="#i-check"/></svg></span></div>
+        <div class="qs">INTENT • FIT • READINESS</div>
+        <div class="mt"><span>Fit</span><div class="tr"><i style="--w:88%"></i></div></div>
+        <div class="mt"><span>Intent</span><div class="tr"><i style="--w:72%"></i></div></div>
+        <div class="mt"><span>Readiness</span><div class="tr"><i style="--w:80%"></i></div></div>
+      </div>
+      <div class="pipe e" data-in="3" data-out="4"><i style="--h:22%;--i:0"></i><i style="--h:34%;--i:1"></i><i style="--h:30%;--i:2"></i><i style="--h:50%;--i:3"></i><i style="--h:64%;--i:4"></i><i style="--h:80%;--i:5"></i><i style="--h:100%;--i:6"></i></div>
+      <div class="cap2 e" data-in="3" data-out="4">ILLUSTRATIVE VISUAL</div>
+
+      <!-- 4: channels -->
+      <div class="orbit e" data-in="4">
+        <div class="ring"></div><div class="ring b"></div>
+        <div id="arms"></div>
+        <div class="core"><div><svg class="ic"><use href="#i-trend"/></svg>Your<br>pipeline</div></div>
+      </div>
+      <div class="ansc e" data-in="4" style="--d:.2s">
+        <small><svg class="ic"><use href="#i-spark"/></svg> Demand generation</small>
+        <h4>From ideal customer to opportunity.</h4>
+        <p>QUALIFIED PIPELINE SYSTEM</p>
+        <div class="ch2"><span>Identify</span><span>Attract</span><span>Capture</span><span>Qualify</span><span>Nurture</span><span>Convert</span></div>
+      </div>
+    </div>
+    <div class="scroll">SCROLL</div>
+  </div>
+</div>
+
+<!-- 01 APPROACH -->
+<section class="bl" id="service-content" style="padding:120px 0 90px">
+  <svg class="fl" data-s=".14" style="width:100px;top:12%;right:8%;opacity:.6"><use href="#s-funnel"/></svg>
+  <svg class="fl" data-s="-.1" style="width:120px;bottom:6%;left:3%;opacity:.3"><use href="#s-dots"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>01</b> The IdeaWonder Approach</div>
+    <h2 class="split">From ideal customer to opportunity. <span class="grad">Qualified pipeline system</span></h2>
+    <p class="sub rv">Strategy, creative execution and connected systems—built around your business objectives.</p>
+  </div>
+</section>
+<div style="overflow:hidden;padding:30px 0;background:linear-gradient(#0a2bd0 50%,#fff 50%)"><div class="mqband"><div id="mq"></div></div></div>
+
+<!-- 02 PROBLEM -->
+<section class="lt">
+  <svg class="fl" data-s=".13" style="width:120px;top:5%;right:4%"><use href="#s-target"/></svg>
+  <svg class="fl" data-s="-.12" style="width:70px;bottom:6%;left:2%"><use href="#s-plus"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>02</b> The Problem</div>
+    <h2 class="split">Your Business Doesn't Need More Random Leads. <span class="grad">It Needs Better Prospects.</span></h2>
+    <div class="cols">
+      <div>
+        <p class="rv">Generating enquiries is easy to measure. Generating enquiries that turn into customers is a different challenge.</p>
+        <p class="rv">Many B2B businesses invest in advertising, content and outreach but struggle to build a consistent flow of qualified sales opportunities.</p>
+      </div>
+      <div class="calwrap rv">
+        <div class="row2"><span>Enquiries to opportunities</span><span>Illustrative</span></div>
+        <div class="hbars">
+          <div class="hb"><span>Enquiries</span><i style="--w:100%;--i:0"></i></div>
+          <div class="hb"><span>Match your ICP</span><i style="--w:66%;--i:1"></i></div>
+          <div class="hb"><span>Qualified</span><i style="--w:40%;--i:2"></i></div>
+          <div class="hb last"><span>Opportunities</span><i style="--w:20%;--i:3"></i></div>
+        </div>
+        <div class="capx">VISUAL IS ILLUSTRATIVE AND DOES NOT REPRESENT REAL RESULTS</div>
+      </div>
+    </div>
+    <div class="g3" id="problems"></div>
+    <div class="callout rv">Lead generation should not end when someone submits a form. <span class="grad">It should create a clear path from discovery to conversion.</span></div>
+  </div>
+</section>
+
+<!-- 03 WHAT IS -->
+<section class="bl">
+  <svg class="fl" data-s=".12" style="width:110px;top:6%;right:5%;opacity:.5"><use href="#s-funnel"/></svg>
+  <svg class="fl" data-s="-.12" style="width:90px;bottom:6%;left:3%;opacity:.5"><use href="#s-star"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>03</b> What Is B2B Lead Generation?</div>
+    <h2 class="split">What Is B2B Lead Generation and <span class="grad">How Does It Drive Business Growth?</span></h2>
+    <p class="sub rv">B2B lead generation is the process of identifying, attracting and engaging businesses that may need your products or services, capturing their interest and moving suitable prospects towards a sales conversation.</p>
+    <p class="sub rv" style="margin-top:16px">Unlike consumer-focused lead generation, B2B acquisition often involves longer decision-making cycles, multiple stakeholders and more detailed evaluation before a purchase.</p>
+    <p class="sub rv" style="margin-top:22px;color:#fff;font-weight:600">An effective B2B lead generation strategy combines:</p>
+    <div class="chips" id="chips"></div>
+    <div class="spot rv" style="margin-top:34px;padding:34px">
+      <p style="color:#fff;font-size:17px;max-width:860px">For example, a technology company may attract potential buyers through SEO, reach decision-makers through LinkedIn advertising, capture demo requests through a landing page and nurture interested prospects through automated follow-ups.</p>
+      <div class="flow" id="flow"></div>
+    </div>
+    <div class="callout rv">The objective is not simply to collect contact details. <span class="grad">It is to create a repeatable process for attracting relevant prospects and developing qualified business opportunities.</span></div>
+  </div>
+</section>
+
+<!-- 04 SERVICES -->
+<section class="lt">
+  <svg class="fl" data-s=".13" style="width:130px;top:5%;right:3%"><use href="#s-ring"/></svg>
+  <svg class="fl" data-s="-.1" style="width:70px;top:46%;left:1%"><use href="#s-plus"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>04</b> Our B2B Lead Generation Services</div>
+    <h2 class="split">A Connected Lead Generation System. <span class="grad">From First Discovery to Sales Opportunity.</span></h2>
+    <p class="sub rv">IdeaWonder AI brings together multiple digital growth capabilities to help businesses attract prospects, capture interest and improve their acquisition process.</p>
+    <div class="svc rv">
+      <div class="tabs" id="tabs"></div>
+      <div class="panel"><div class="pbody" id="panel"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 CHANNELS -->
+<section class="bl">
+  <svg class="fl" data-s=".14" style="width:110px;top:5%;right:5%;opacity:.5"><use href="#s-star"/></svg>
+  <svg class="fl" data-s="-.12" style="width:90px;bottom:5%;left:4%;opacity:.5"><use href="#s-ring"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>05</b> Our Lead Generation Channels</div>
+    <h2 class="split">Multiple Ways to Attract Prospects. <span class="grad">One Goal: Better Business Opportunities.</span></h2>
+    <p class="sub rv">Different channels serve different roles in the customer acquisition journey.</p>
+    <p class="sub rv" style="margin-top:14px;color:#fff;font-weight:600">We combine the most relevant channels based on your audience, offer, industry and buying cycle.</p>
+    <div class="g4" id="channels"></div>
+    <p class="note rv">The right mix depends on your business. We prioritize channel relevance and lead quality rather than recommending every channel by default.</p>
+  </div>
+</section>
+
+<!-- 06 FRAMEWORK -->
+<section class="lt">
+  <svg class="fl" data-s=".13" style="width:100px;top:6%;left:4%"><use href="#s-funnel"/></svg>
+  <svg class="fl" data-s="-.12" style="width:120px;bottom:8%;right:3%;opacity:.4"><use href="#s-dots"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>06</b> Our B2B Lead Generation Framework</div>
+    <h2 class="split">From the Right Audience to <span class="grad">the Right Sales Conversation.</span></h2>
+    <p class="sub rv">We organize lead generation around six connected stages.</p>
+    <div class="journey" id="journey"><div class="jline"><i></i></div></div>
+    <div class="callout rv">The goal is to build a connected acquisition process, <span class="grad">not isolated campaigns that generate disconnected contacts.</span></div>
+  </div>
+</section>
+
+<!-- 07 INBOUND VS OUTBOUND -->
+<section class="bl">
+  <svg class="fl" data-s=".12" style="width:100px;top:5%;right:5%;opacity:.5"><use href="#s-target"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>07</b> Inbound vs Outbound Lead Generation</div>
+    <h2 class="split">Should You Attract Leads, Reach Out to Prospects <span class="grad">or Combine Both?</span></h2>
+    <p class="sub rv">Inbound and outbound lead generation serve different purposes. The right approach depends on how your audience researches solutions and how your business enters new markets.</p>
+    <div class="io">
+      <div class="spot rv">
+        <div class="tile"><svg class="ic"><use href="#i-inbox"/></svg></div>
+        <h3>Inbound Lead Generation</h3>
+        <p>Inbound focuses on attracting prospects who discover your business through relevant content, search engines, advertising and digital experiences.</p>
+        <div class="mlabel">Common methods</div>
+        <div id="inb"></div>
+        <div class="deliv"><b>Best suited for</b>Businesses looking to capture existing demand, build credibility and attract prospects through relevant information.</div>
+      </div>
+      <div class="plusc rv">+</div>
+      <div class="spot rv" style="--d:.12s">
+        <div class="tile"><svg class="ic"><use href="#i-send"/></svg></div>
+        <h3>Outbound Lead Generation</h3>
+        <p>Outbound focuses on proactively identifying and approaching businesses or decision-makers who match your target customer profile.</p>
+        <div class="mlabel">Common methods</div>
+        <div id="outb"></div>
+        <div class="deliv"><b>Best suited for</b>Businesses targeting specific companies, industries, job roles or markets where inbound demand alone may not create sufficient opportunities.</div>
+      </div>
+    </div>
+    <div class="combo rv">
+      <h3>A Combined Lead Generation Strategy</h3>
+      <p>For many B2B companies, combining inbound and outbound approaches can create a more comprehensive acquisition system.</p>
+      <p>Inbound builds discoverability and attracts interested prospects. Outbound helps businesses initiate relevant conversations with carefully selected target accounts.</p>
+      <p style="font-weight:600;color:var(--ink)">IdeaWonder AI can help plan an integrated approach based on your audience, resources, sales process and growth priorities.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 08 INDUSTRIES -->
+<section class="lt">
+  <svg class="fl" data-s=".13" style="width:120px;top:6%;right:4%"><use href="#s-ring"/></svg>
+  <svg class="fl" data-s="-.12" style="width:80px;bottom:8%;left:3%"><use href="#s-star"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>08</b> B2B Lead Generation for Different Industries</div>
+    <h2 class="split">Different Businesses. Different Buyers. <span class="grad">Different Lead Generation Strategies.</span></h2>
+    <p class="sub rv">A lead generation strategy should reflect the buying behavior, decision-making process and commercial requirements of your market.</p>
+    <div class="g4" id="industries"></div>
+  </div>
+</section>
+
+<!-- 09 QUALIFIED -->
+<section class="bl">
+  <svg class="fl" data-s=".12" style="width:100px;top:5%;right:5%;opacity:.5"><use href="#s-funnel"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>09</b> What Makes a Lead Qualified?</div>
+    <h2 class="split">A Form Submission Is Not Automatically <span class="grad">a Sales Opportunity.</span></h2>
+    <p class="sub rv">One of the biggest mistakes in B2B marketing is treating every enquiry as an equally valuable lead.</p>
+    <p class="sub rv" style="margin-top:14px;color:#fff;font-weight:600">We recommend evaluating prospects using three important dimensions.</p>
+    <div class="venn rv">
+      <div class="vc a" data-k="0"><span>FIT<small>ICP MATCH</small></span></div>
+      <div class="vc b" data-k="1"><span>INTENT<small>GENUINE INTEREST</small></span></div>
+      <div class="vc c" data-k="2"><span>READINESS<small>BUYING READINESS</small></span></div>
+      <div class="vcore">QUALIFIED<br>LEAD</div>
+    </div>
+    <div class="g3" id="qual"></div>
+    <h3 class="rv" style="font-size:clamp(26px,3vw,38px);margin-top:70px">Understanding Lead Stages</h3>
+    <div class="ladder" id="ladder">
+      <div class="lad" style="--h:38%;--i:0">Lead</div>
+      <div class="lad" style="--h:58%;--i:1">Marketing-qualified lead (MQL)</div>
+      <div class="lad" style="--h:78%;--i:2">Sales-qualified lead (SQL)</div>
+      <div class="lad top" style="--h:100%;--i:3">Sales opportunity</div>
+    </div>
+    <p class="note rv">Qualification criteria should be agreed between marketing and sales. The definitions will vary depending on the business model and sales process.</p>
+  </div>
+</section>
+
+<!-- 10 WHY -->
+<section class="lt">
+  <svg class="fl" data-s=".12" style="width:100px;top:6%;right:5%"><use href="#s-star"/></svg>
+  <svg class="fl" data-s="-.1" style="width:120px;bottom:5%;left:3%;opacity:.4"><use href="#s-dots"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>10</b> Why IdeaWonder AI?</div>
+    <h2 class="split">We Focus on the Leads That <span class="grad">Can Move Your Business Forward.</span></h2>
+    <div class="g4" id="why"></div>
+    <div class="callout rv"><b>Our philosophy:</b> <span class="grad">Don't fill your pipeline with contacts. Build it with opportunities worth pursuing.</span></div>
+  </div>
+</section>
+
+<!-- 11 FAQ -->
+<section class="bl">
+  <svg class="fl" data-s=".12" style="width:110px;top:5%;right:5%;opacity:.5"><use href="#s-funnel"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>11</b> Frequently Asked Questions</div>
+    <h2 class="split">B2B Lead Generation: <span class="grad">Questions Businesses Ask Before Investing.</span></h2>
+    <div class="faq" id="faq"></div>
+  </div>
+</section>
+
+<!-- 12 FINAL -->
+<section class="lt final">
+  <div class="wrap">
+    <div class="fcard rv">
+      <svg class="fl" data-s=".1" style="width:90px;top:8%;left:6%"><use href="#s-funnel"/></svg>
+      <svg class="fl" data-s="-.1" style="width:70px;bottom:10%;right:8%"><use href="#s-star"/></svg>
+      <svg class="fl" data-s=".1" style="width:130px;top:10%;right:5%;opacity:.4"><use href="#s-target"/></svg>
+      <div class="kick"><b>12</b> Let's talk</div>
+      <h2>The Right Customers Are Out There. <span class="grad">Let's Build a Better Way to Reach Them.</span></h2>
+      <p class="sub">Your business doesn't need disconnected campaigns or an unpredictable flow of enquiries.</p>
+      <p class="sub">It needs a structured lead generation system that attracts relevant prospects, captures genuine interest and creates opportunities for meaningful business conversations.</p>
+      <p class="sub" style="color:#fff;font-weight:600">Let's identify your ideal customers, choose the right acquisition channels and build a strategy aligned with your growth goals.</p>
+      <div class="cta-row">
+        <a class="btn pri mag" href="/contact">Build Your Lead Generation Strategy <svg class="ic"><use href="#i-arrow"/></svg></a>
+        <a class="btn gh" href="/contact" style="color:#fff">Talk to Our Team</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="lt next">
+  <div class="wrap">
+    <div class="kick" style="justify-content:center"><b>GO</b> Let's build what's next</div>
+    <h2 class="split">Ready to make your <span class="grad">next move?</span></h2>
+    <p class="sub rv" style="margin:0 auto 30px">Let's understand your objectives, identify the right opportunities and create a plan that moves your business forward.</p>
+    <a class="btn pri mag" href="/contact">Book a Strategy Call <svg class="ic"><use href="#i-arrow"/></svg></a>
+    <div class="kick" style="justify-content:center;margin-top:70px">Explore other services</div>
+    <div class="svcs">
+      <a href="/services/seo-ai-search">SEO / GEO / AEO</a>
+      <a href="/services/performance-marketing">Performance Marketing</a>
+      <a href="/services/social-media-marketing">Social Media Marketing</a>
+      <a class="cur" href="/services/lead-generation">Lead Generation</a>
+      <a href="/services/business-automation">Business Automation</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fg">
+      <div><a class="flogo" href="/"><img src="/brand/ideawonder-logo-horizontal.png" alt="IdeaWonder AI" onerror="this.replaceWith(document.createTextNode('IdeaWonder AI'))"></a><p style="max-width:300px;margin-top:16px;opacity:.9">An AI-first growth and automation agency helping B2B businesses strengthen digital visibility, acquire customers and scale operations through intelligent marketing and automation.</p></div>
+      <div><h5>EXPLORE</h5><a href="/">Home</a><a href="/">About Us</a><a href="/services/seo-ai-search">Services</a><a href="/contact">Contact</a></div>
+      <div><h5>GET DISCOVERED</h5><a href="/services/seo-ai-search">SEO Services</a><a href="/services/seo-ai-search">AI Search Optimization</a></div>
+      <div><h5>GET CUSTOMERS</h5><a href="/services/performance-marketing">Performance Marketing</a><a href="/services/social-media-marketing">Social Media Marketing</a><a href="/services/lead-generation">B2B Lead Generation</a></div>
+      <div><h5>SCALE SMARTER</h5><a href="/services/business-automation">AI &amp; Business Automation</a><a href="/services/business-automation">Marketing Automation</a></div>
+    </div>
+    <div class="cta-strip"><div><small>YOUR NEXT GROWTH CHAPTER STARTS HERE</small><h3>Have a growth challenge or an idea worth exploring?</h3></div><a class="btn pri" href="/contact">Start a conversation <svg class="ic"><use href="#i-arrow"/></svg></a></div>
+    <div class="fbar"><span>© 2026 IdeaWonder AI. All rights reserved. Imagine More. Market Smarter. Grow Faster.</span><span><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/cookies">Cookies</a></span></div>
+  </div>
+</footer>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const ic=n=>`<svg class="ic"><use href="#i-${n}"/></svg>`;
+
+/* ---------- ORIGINAL PLATFORM LOGOS (Simple Icons CDN, brand colours; fallback = brand-coloured tile) ---------- */
+const P={
+ go:{s:'google',c:'4285F4',n:'Google',f:'G'},
+ me:{s:'meta',c:'0866FF',n:'Meta',f:'M'},
+ li:{s:'linkedin',c:'0A66C2',n:'LinkedIn',f:'in'},
+ yt:{s:'youtube',c:'FF0000',n:'YouTube',f:'▶'},
+ oa:{s:'openai',c:'0a0a0a',n:'ChatGPT / OpenAI',f:'AI'}
+};
+const logo=k=>`<img class="plg" src="https://cdn.simpleicons.org/${P[k].s}/${P[k].c}" alt="${P[k].n} logo" data-c="${P[k].c}" data-f="${P[k].f}" loading="lazy">`;
+function fixLogos(){$$('img.plg').forEach(img=>{if(img.dataset.fx)return;img.dataset.fx=1;
+ const f=()=>{const s=document.createElement('span');s.className='fbk';s.style.background='#'+img.dataset.c;s.textContent=img.dataset.f;img.replaceWith(s)};
+ img.addEventListener('error',f);if(img.complete&&img.naturalWidth===0)f()})}
+
+/* ---------- DATA ---------- */
+const problems=[
+["filter","Too Many Unqualified Enquiries","Your campaigns may generate contacts who do not match your ideal customer profile, budget or service requirements."],
+["chart","Inconsistent Lead Flow","Depending on referrals, occasional campaigns or unpredictable enquiries makes it difficult to plan sustainable growth."],
+["users","Reaching the Wrong Decision-Makers","Your marketing may attract attention without connecting with the people who actually influence purchasing decisions."],
+["mouse","Visitors Who Never Convert","Potential customers visit your website, explore your services and leave without taking the next step."],
+["mail","Leads That Go Cold","Slow follow-ups, disconnected systems and inconsistent communication can cause interested prospects to lose momentum."],
+["eye","No Clear View of Lead Performance","Without reliable tracking and qualification, you may know how many leads you generated but not how many became meaningful opportunities."]
+];
+const whatChips=[["target","Ideal customer profile (ICP) development."],["users","Target audience and decision-maker research."],["search","Search engine optimization and AI search visibility."],["megaphone","Paid advertising and social media marketing."],["pen","Content-led demand generation."],["layers","Conversion-focused landing pages."],["filter","Lead capture and qualification."],["gear","CRM and marketing automation."],["chart","Performance tracking and optimization."]];
+const flow=[["search","SEO"],["li","LinkedIn advertising"],["layers","Landing page demo requests"],["mail","Automated follow-ups"]];
+const services=[
+{t:"B2B Lead Generation Strategy",ico:"target",s:"Start with the right customers, not random audiences.",d:"An effective lead generation strategy begins with understanding who you want to reach and why they would choose your business.",h:"Our strategy development includes:",l:["Ideal customer profile research.","Buyer persona development.","Industry and market analysis.","Company size and audience segmentation.","Decision-maker identification.","Customer pain-point research.","Value proposition development.","Lead generation channel selection.","Acquisition funnel planning.","Campaign and conversion objectives."],r:"A structured B2B lead generation strategy aligned with your target market and business goals."},
+{t:"Inbound Lead Generation",ico:"search",s:"Make it easier for potential customers to discover and approach your business.",d:"Inbound lead generation focuses on attracting prospects who are actively researching challenges, exploring solutions or evaluating service providers.",h:"Our inbound capabilities include:",l:["SEO-driven lead generation.","AI search visibility optimization.","Educational and problem-focused content.","Service-page optimization.","Website conversion improvements.","Lead generation landing pages.","Downloadable resources and lead magnets.","Organic social media strategy.","Website enquiry optimization.","Conversion-focused calls to action."],r:"An inbound acquisition strategy designed to attract relevant visitors and encourage meaningful enquiries."},
+{t:"Paid Lead Generation Campaigns",ico:"megaphone",row:['go','me','li','yt','oa'],s:"Put your business in front of audiences with relevant needs and buying intent.",d:"Paid advertising can accelerate lead generation by reaching specific audiences and capturing demand across digital platforms.",h:"Our paid lead generation capabilities include:",l:["Google Ads lead generation.","Meta lead generation campaigns.","LinkedIn Ads for B2B audiences.","YouTube advertising.","Retargeting and remarketing.","ChatGPT advertising opportunities, where available and eligible.","Audience research and targeting.","Ad copy and creative development.","Campaign optimization.","Conversion tracking."],r:"A paid acquisition strategy designed around your ideal audience, lead objectives and available advertising budget."},
+{t:"LinkedIn B2B Lead Generation",lg:"li",s:"Connect with professionals and businesses that match your ideal customer profile.",d:"LinkedIn provides opportunities to reach professional audiences and engage potential business buyers through relevant content, advertising and relationship-building activities.",h:"Our LinkedIn lead generation capabilities include:",l:["LinkedIn company page optimization.","Professional audience research.","Decision-maker targeting strategy.","LinkedIn content and thought leadership.","LinkedIn Ads lead generation.","Lead Gen Form campaigns.","Account-based campaign planning.","Prospect segmentation.","Outreach messaging strategy.","LinkedIn campaign performance analysis."],r:"A LinkedIn-focused acquisition strategy designed to support relevant B2B conversations and sales opportunities."},
+{t:"Website and Landing Page Lead Generation",ico:"layers",s:"Turn more relevant visitors into meaningful enquiries.",d:"Your website should do more than explain your services. It should guide potential customers towards the right next step.",h:"We improve the conversion experience through:",l:["Lead generation landing pages.","Service-page conversion optimization.","Clear value propositions.","Conversion-focused headlines.","Strategic calls to action.","Lead form optimization.","Mobile-friendly page experiences.","Trust and credibility elements.","Offer and messaging alignment.","Conversion testing recommendations."],r:"A website conversion strategy that helps reduce friction and make it easier for qualified prospects to contact your business."},
+{t:"Lead Qualification and Segmentation",ico:"filter",s:"Separate genuine opportunities from general enquiries.",d:"Not every lead is ready to speak with sales. Not every contact is a suitable customer. We help businesses develop qualification frameworks that distinguish prospects based on fit, interest and buying readiness.",h:"Our capabilities include:",l:["Ideal customer profile-based qualification.","Industry and company segmentation.","Job role and decision-maker classification.","Lead form qualification questions.","Marketing-qualified lead (MQL) criteria.","Sales-qualified lead (SQL) criteria.","Lead scoring framework recommendations.","Lead segmentation.","Sales handoff criteria."],r:"A lead qualification framework designed to help prioritize relevant prospects and improve marketing-to-sales alignment."},
+{t:"Lead Nurturing and Follow-Up Automation",ico:"mail",s:"Don't let interested prospects disappear after the first interaction.",d:"B2B buying decisions often take time. Prospects may need additional information, internal discussions and multiple interactions before they are ready to purchase. We help develop automated follow-up systems that maintain relevant communication.",h:"Our capabilities include:",l:["Automated enquiry acknowledgements.","Email nurture sequences.","WhatsApp follow-up workflows, where appropriate.","Lead assignment and routing.","CRM integration.","Follow-up reminders.","Lead status notifications.","Re-engagement workflows.","Sales pipeline communication support."],r:"A structured lead nurturing and follow-up system that helps businesses respond consistently and manage prospects more effectively."},
+{t:"CRM and Lead Management Integration",ico:"gear",s:"Bring your leads, conversations and sales activities into a connected system.",d:"Disconnected lead data makes it difficult to understand where prospects come from, who is following up and what happens after an enquiry.",h:"We help businesses improve their lead management processes through:",l:["CRM setup and integration support.","Website form-to-CRM connections.","Advertising lead integrations.","Lead source tracking.","Contact segmentation.","Lead assignment workflows.","Pipeline stage configuration.","Automated notifications.","Reporting and dashboard recommendations."],r:"A more organized lead management process that connects marketing enquiries with sales activity."},
+{t:"Lead Generation Analytics and Optimization",ico:"chart",s:"Measure the opportunities your marketing actually creates.",d:"We evaluate lead generation performance to understand which channels, campaigns and conversion experiences are contributing to meaningful results.",h:"Our measurement framework can include:",l:["Total leads generated.","Cost per lead.","Qualified lead rate.","Cost per qualified lead.","Landing-page conversion rate.","MQL-to-SQL conversion rate.","Lead source performance.","Sales opportunity creation.","Customer acquisition cost.","Pipeline contribution."],r:"A performance-focused reporting framework that helps identify opportunities to improve lead quality and acquisition efficiency."}
+];
+const channels=[
+[{i:"search"},"Search Engine Optimization (SEO)","Capture relevant organic search demand by helping potential customers discover your services when researching solutions."],
+[{i:"spark"},"AI Search Optimization","Strengthen discoverability across AI-powered search and answer experiences where prospects explore recommendations and compare providers."],
+[{l:"go"},"Google Ads","Reach people actively searching for products, services and business solutions related to your offering."],
+[{l:"li"},"LinkedIn Marketing","Build professional visibility and engage relevant decision-makers through content, company positioning and targeted advertising."],
+[{l:"me"},"Meta Advertising","Create awareness, reach relevant audiences and support lead generation through Facebook and Instagram."],
+[{i:"pen"},"Content Marketing","Use articles, guides, industry insights and educational resources to attract and nurture potential customers."],
+[{i:"chat"},"Social Media Marketing","Build familiarity, communicate expertise and maintain engagement with relevant audiences."],
+[{i:"layers"},"Landing Pages and Conversion Optimization","Turn campaign traffic and organic visitors into enquiries through clear messaging and focused conversion experiences."]
+];
+const stages=[
+["target","Identify","Define your ideal customers, target industries, company profiles and relevant decision-makers."],
+["megaphone","Attract","Use SEO, AI search, content marketing, paid advertising and social media to reach potential buyers."],
+["doc","Capture","Create relevant conversion opportunities through landing pages, enquiry forms, consultation requests and lead magnets."],
+["filter","Qualify","Evaluate leads based on business fit, requirements, interest and buying readiness."],
+["mail","Nurture","Maintain relevant communication through email, CRM workflows and appropriate follow-up automation."],
+["trend","Convert","Support the transition from marketing-qualified prospects to sales conversations and business opportunities."]
+];
+const inbound=["SEO and AI search visibility","Content marketing","Website enquiries","Social media marketing","Paid search campaigns","Lead magnets and educational resources"];
+const outbound=["Ideal customer profile research","Target account identification","Business prospect research","Professional audience segmentation","Personalized LinkedIn outreach","Permission-aware email outreach","Account-based marketing campaigns"];
+const industries=[
+["chip","SaaS and Technology Companies","Generate demo requests, trial registrations and enquiries from businesses evaluating software and technology solutions."],
+["gear","IT and Software Development Companies","Reach businesses looking for development, integration, digital transformation and technical services."],
+["megaphone","Marketing and Advertising Agencies","Attract companies looking for SEO, AI search optimization, paid advertising, social media and digital growth support."],
+["briefcase","Consulting and Professional Services","Connect with decision-makers researching strategic, operational and professional expertise."],
+["award","Financial and Business Services","Attract relevant prospects through clear service information, educational resources and targeted campaigns."],
+["layers","Enterprise Solutions Providers","Develop targeted acquisition strategies around specific business requirements, technical capabilities and enterprise needs."],
+["bolt","Startups and Growing Businesses","Build an initial acquisition framework, validate audience demand and identify suitable lead generation channels."]
+];
+const qual=[
+["target","Fit","Does the prospect match your ideal customer profile?",["Industry","Company size","Geographic market","Business model","Job role","Relevant requirements"]],
+["eye","Intent","Is the prospect demonstrating a genuine interest in your solution?",["Service or product enquiries","Demo or consultation requests","Pricing-related questions","Relevant content engagement","Repeat visits to important service pages"]],
+["check","Readiness","Is the prospect ready to explore a purchase or sales conversation?",["Project requirements","Budget suitability","Purchase timeline","Decision-making involvement","Existing business need"]]
+];
+const why=[
+["target","Strategy Before Campaigns","We begin by understanding your ideal customer, market and commercial objectives before selecting acquisition channels."],
+["globe","Multi-Channel Lead Generation","We connect SEO, AI search, paid advertising, social media and content to create a more coordinated acquisition strategy."],
+["filter","Lead Quality Over Lead Volume","We consider customer fit, buying intent and readiness rather than focusing only on the number of enquiries."],
+["mouse","Conversion-Focused Thinking","We improve the journey from advertisement or search result to landing page, enquiry and follow-up."],
+["gear","Intelligent Automation","We help connect lead capture, CRM systems and follow-up workflows to improve operational consistency."],
+["chart","Transparent Performance Measurement","We focus on meaningful indicators such as qualified leads, acquisition cost and pipeline contribution."],
+["trend","Built Around Business Growth","We align lead generation with the larger objective of creating valuable customer relationships and sustainable revenue opportunities."]
+];
+const faqs=[
+["What are B2B lead generation services?","B2B lead generation services help businesses identify, attract and engage potential business customers. They can include audience research, SEO, paid advertising, LinkedIn marketing, content strategy, landing-page optimization, lead capture, qualification and nurturing."],
+["What does a B2B lead generation agency do?","A B2B lead generation agency develops strategies and campaigns to attract relevant business prospects and create sales opportunities. Depending on the scope, it may manage digital acquisition channels, optimize conversion journeys, improve lead qualification and connect marketing activities with CRM and sales workflows."],
+["How do you generate qualified B2B leads?","Qualified B2B leads are generated by defining an ideal customer profile, reaching relevant decision-makers, communicating a clear value proposition and creating suitable conversion opportunities. Leads are then evaluated against criteria such as company fit, requirements, intent and buying readiness."],
+["Which channels are best for B2B lead generation?","Google Ads can capture active search demand, LinkedIn can reach professional audiences, SEO can attract relevant organic traffic, and content marketing can educate potential buyers. Meta advertising, AI search and outbound prospecting may also support acquisition, depending on the target market and business model."],
+["What is the difference between B2B lead generation and demand generation?","Lead generation focuses on identifying prospects and capturing their information or interest so they can be qualified and followed up. Demand generation is broader and focuses on building awareness, educating the market and creating interest in a product or service. Demand generation can support lead generation by developing future buying interest."],
+["What is the difference between inbound and outbound lead generation?","Inbound lead generation attracts prospects through search, content, advertising and other discovery channels. Outbound lead generation proactively identifies and contacts relevant businesses or decision-makers. Many B2B companies combine both approaches to capture existing demand and create new opportunities."],
+["How much does B2B lead generation cost?","Costs depend on your industry, target audience, geographic market, competition, advertising budget, service scope and qualification requirements. A useful evaluation should consider cost per qualified lead and customer acquisition economics, not only the price of generating an individual contact."],
+["How long does B2B lead generation take to produce results?","The timeline varies based on the channels used, existing brand visibility, competition, campaign budget and sales cycle. Paid campaigns may generate enquiries relatively quickly, while SEO, content marketing and organic authority development generally require sustained effort. Converting B2B leads into customers can take longer because multiple decision-makers may be involved."],
+["How do you measure B2B lead generation performance?","We recommend tracking total leads, qualified lead rate, cost per qualified lead, conversion rates, MQL-to-SQL progression, sales opportunities, customer acquisition cost and pipeline contribution. The most useful metrics depend on your sales process and available tracking data."],
+["What is a good cost per lead for B2B businesses?","There is no universal benchmark. A suitable cost per lead depends on your industry, average deal value, conversion rate, customer lifetime value, sales cycle and lead quality. A more expensive lead may still be commercially valuable if it has a stronger likelihood of becoming a customer."],
+["What is an ideal customer profile (ICP)?","An ideal customer profile describes the type of company most likely to benefit from your product or service. It can include industry, company size, location, business model, operating requirements and other characteristics that determine customer suitability."],
+["How can LinkedIn help generate B2B leads?","LinkedIn can support B2B lead generation through company-page visibility, thought leadership, professional audience targeting, LinkedIn Ads, Lead Gen Forms and relevant relationship-building activities. It is particularly useful when your target audience includes identifiable professional roles and business decision-makers."],
+["What is lead scoring in B2B marketing?","Lead scoring is a method of assigning values to prospects based on factors such as company fit, job role, engagement and buying intent. It helps marketing and sales teams prioritize leads and determine which prospects may be ready for further engagement."],
+["Why are my marketing campaigns generating leads but not sales?","Possible reasons include poor audience fit, unclear positioning, low-intent enquiries, unsuitable offers, weak follow-up, long sales cycles or a mismatch between marketing and sales qualification criteria. Reviewing the full journey from acquisition to sales acceptance can help identify the problem."],
+["Can lead generation be automated?","Yes. Businesses can automate enquiry notifications, CRM updates, lead assignment, follow-up reminders, email nurturing and other repeatable workflows. Automation should support timely and relevant communication while maintaining appropriate human involvement in sales conversations."],
+["Does IdeaWonder AI provide cold email and LinkedIn outreach?","We can support outreach strategy, prospect segmentation, messaging and campaign planning as part of an agreed acquisition scope. Execution depends on the platforms, available data, account permissions and applicable privacy, anti-spam and platform rules."],
+["Can B2B lead generation work internationally?","Yes. Businesses can develop acquisition strategies for multiple countries and markets through search, paid advertising, professional targeting, content and appropriate outreach. International campaigns should account for local audience behavior, language, market competition and applicable data protection requirements."],
+["How do I get started with IdeaWonder AI's lead generation services?","Start with a review of your business, ideal customer profile, existing marketing channels and current lead acquisition process. We can identify opportunities to improve audience targeting, discoverability, conversion and lead management before recommending a strategy."]
+];
+
+/* ---------- BUILD ---------- */
+const mqw=["DEMAND GENERATION","FROM IDEAL CUSTOMER TO OPPORTUNITY","QUALIFIED PIPELINE SYSTEM","ATTRACT • QUALIFY • CONVERT"];
+$('#mq').innerHTML=[0,1].map(()=>mqw.map(w=>`<span>${w}</span><span>✦</span>`).join('')).join('');
+
+// hero 0: cloud of random leads
+const lp=[[6,10,10],[44,8,13],[68,16,9],[18,24,12],[52,28,8],[76,34,11],[8,40,9],[34,44,13],[62,50,10],[80,58,8],[14,60,12],[46,64,9],[70,72,12],[8,78,10],[36,84,8],[62,88,11]];
+$('#leadcloud').innerHTML=lp.map((d,i)=>`<div class="lc" style="left:${d[0]}cqw;top:${d[1]}cqh;--w:${d[2]}cqw;--dl:${(i%7)*.5}s"><i></i><b></b></div>`).join('');
+
+// hero 2: funnel dots
+const pass=[44,50,56,47],drop=[16,26,34,66,74,84,22,78];
+$('#fnl').insertAdjacentHTML('beforeend',
+ pass.map((x,i)=>`<i class="fd" style="--x:${x}cqw;--dl:${i*1.0}s"></i>`).join('')+
+ drop.map((x,i)=>`<i class="fd x" style="--x:${x}cqw;--sx:${x<50?-9:9}cqw;--dl:${i*.52}s"></i>`).join(''));
+
+// hero 4: orbit nodes (logos + icons)
+const arms=[['li'],['i','search'],['go'],['i','pen'],['me'],['oa']];
+$('#arms').innerHTML=arms.map((a,i)=>`<div class="arm" style="--b:${-150+i*60}"><div class="spoke"></div><div class="npos"><div class="node">${a[0]==='i'?ic(a[1]):logo(a[0])}</div></div></div>`).join('');
+
+$('#problems').innerHTML=problems.map((c,i)=>`<div class="spot rv" style="--d:${(i%3)*.08}s"><span class="num">0${i+1}</span><div class="tile">${ic(c[0])}</div><h3>${c[1]}</h3><p>${c[2]}</p></div>`).join('');
+$('#chips').innerHTML=whatChips.map((c,i)=>`<span class="chipx rv" style="--d:${i*.05}s">${ic(c[0])}${c[1]}</span>`).join('');
+$('#flow').innerHTML=flow.map((f,i)=>`<div class="fn1" style="--i:${i*2}">${f[0]==='li'?logo('li'):ic(f[0])}${f[1]}</div>${i<flow.length-1?`<span class="arr" style="--i:${i*2+1}">→</span>`:''}`).join('');
+$('#channels').innerHTML=channels.map((c,i)=>`<div class="spot rv" style="--d:${(i%4)*.08}s"><div class="pic">${c[0].l?logo(c[0].l):ic(c[0].i)}</div><h3>${c[1]}</h3><p>${c[2]}</p></div>`).join('');
+$('#journey').insertAdjacentHTML('beforeend',stages.map((j,i)=>`<div class="jn rv" style="--i:${i};--d:${i*.1}s"><div class="nd">${ic(j[0])}</div><div class="spot"><em>Step 0${i+1}</em><h3>${j[1]}</h3><p>${j[2]}</p></div></div>`).join(''));
+$('#inb').innerHTML=inbound.map(x=>`<span class="tg">${x}</span>`).join('');
+$('#outb').innerHTML=outbound.map(x=>`<span class="tg">${x}</span>`).join('');
+$('#industries').innerHTML=industries.map((c,i)=>`<div class="spot rv" style="--d:${(i%4)*.08}s"><span class="wm">0${i+1}</span><div class="tile">${ic(c[0])}</div><h3>${c[1]}</h3><p>${c[2]}</p></div>`).join('')+
+ `<a class="spot rv" href="/contact" style="--d:.24s;background:var(--blue);color:#fff;border-color:var(--blue);display:flex;flex-direction:column;justify-content:center"><h3 style="margin:0 0 12px;color:#fff">Different business? Let's build a strategy for your market.</h3><span class="btn sm" style="align-self:flex-start;background:#fff;color:var(--blue);border-color:#fff">Talk to our team ${ic('arrow')}</span></a>`;
+$('#qual').innerHTML=qual.map((q,i)=>`<div class="spot rv" data-k="${i}" style="--d:${i*.1}s"><span class="num">0${i+1}</span><div class="tile">${ic(q[0])}</div><h3>${q[1]}</h3><p style="color:#fff;font-weight:600;margin-bottom:14px">${q[2]}</p><div class="mlabel" style="margin-top:0">Consider</div>${q[3].map(x=>`<span class="tg">${x}</span>`).join('')}</div>`).join('');
+$('#why').innerHTML=why.map((c,i)=>`<div class="spot rv ${i==6?'span2':''}" style="--d:${(i%4)*.08}s;${i==6?'grid-column:span 2':''}"><span class="num">0${i+1}</span><div class="tile">${ic(c[0])}</div><h3>${c[1]}</h3><p>${c[2]}</p></div>`).join('');
+$('#faq').innerHTML=faqs.map((f,i)=>`<div class="fq rv" style="--d:${(i%2)*.06}s"><div class="hd"><span class="nn">${String(i+1).padStart(2,'0')}</span><h4>${f[0]}</h4><div class="pm">+</div></div><div class="bd"><div><p>${f[1]}</p></div></div></div>`).join('');
+
+/* service tabs */
+function showSvc(i){const s=services[i];
+ const main=s.lg?logo(s.lg):ic(s.ico);
+ $('#panel').innerHTML=`<div class="pico"><div class="r"></div><div class="main">${main}</div><div class="mini" style="top:2px;right:8px">${ic('spark')}</div><div class="mini" style="bottom:6px;left:0">${ic('check')}</div></div><h3>${s.t}</h3><p class="stl">${s.s}</p><p class="d">${s.d}</p>${s.row?`<div class="lrow">${s.row.map(k=>`<span class="lgt">${logo(k)}</span>`).join('')}</div>`:''}<p style="font-weight:600;margin-bottom:14px">${s.h}</p><ul class="lst">${s.l.map((x,k)=>`<li style="--i:${k}">${x}</li>`).join('')}</ul><div class="deliv"><b>Deliverable</b>${s.r}</div>`;
+ fixLogos()}
+$('#tabs').innerHTML=services.map((s,i)=>`<button class="tab ${i?'':'on'}" data-i="${i}">${s.lg?`<span class="tl2">${logo(s.lg)}</span>`:ic(s.ico)}<span>${s.t}</span></button>`).join('');
+showSvc(0);
+$('#tabs').addEventListener('click',e=>{const b=e.target.closest('.tab');if(!b)return;$$('.tab').forEach(t=>t.classList.remove('on'));b.classList.add('on');showSvc(+b.dataset.i)});
+
+/* venn <-> qualified cards highlight */
+const vcs=$$('.vc');
+$$('#qual .spot').forEach(c=>{c.addEventListener('mouseenter',()=>vcs.forEach(v=>v.classList.toggle('hl',v.dataset.k===c.dataset.k)));c.addEventListener('mouseleave',()=>vcs.forEach(v=>v.classList.remove('hl')))});
+vcs.forEach(v=>{v.addEventListener('mouseenter',()=>v.classList.add('hl'));v.addEventListener('mouseleave',()=>v.classList.remove('hl'))});
+
+/* faq */
+document.addEventListener('click',e=>{const c=e.target.closest('.fq');if(c)c.classList.toggle('open')});
+
+/* split headings */
+$$('.split').forEach(el=>{
+ const walk=n=>[...n.childNodes].forEach(c=>{
+  if(c.nodeType===3){const f=document.createDocumentFragment();c.textContent.split(/(\s+)/).forEach(t=>{if(!t.trim()){f.append(t);return}const w=document.createElement('span');w.className='w';w.innerHTML=`<span>${t}</span>`;f.append(w)});c.replaceWith(f)}
+  else if(c.nodeType===1)walk(c)});
+ walk(el);el.querySelectorAll('.w span').forEach((s,i)=>s.style.transitionDelay=i*40+'ms');
+});
+
+/* observers */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+$$('.rv,.split,.calwrap,.ladder,.flow,#journey').forEach(el=>io.observe(el));
+fixLogos();
+
+/* HERO STORY */
+const story=$('#story'),stage=$('#stage'),N=5;let cur=-1;
+function storyUpdate(){
+ const r=story.getBoundingClientRect(),total=story.offsetHeight-innerHeight;
+ const p=Math.min(Math.max(-r.top/total,0),.9999),s=Math.floor(p*N);
+ stage.style.setProperty('--p',p.toFixed(4));
+ if(s!==cur){cur=s;stage.dataset.s=s;
+  $$('#stage .e').forEach(el=>{const i=+el.dataset.in,o=el.dataset.out?+el.dataset.out:99;el.classList.toggle('on',s>=i&&s<o)});
+  $$('.copy').forEach((c,i)=>c.classList.toggle('on',i===s));
+  $$('.dots i').forEach((d,i)=>d.classList.toggle('on',i<=s));}
+}
+
+/* SCROLL */
+const fls=$$('.fl');
+function onScroll(){
+ const h=document.documentElement;
+ $('#prog').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+ storyUpdate();
+ fls.forEach(f=>{const host=f.closest('section,.fcard,.sticky')||f.parentElement,b=host.getBoundingClientRect();
+  if(b.bottom<-200||b.top>innerHeight+200)return;
+  const off=(b.top+b.height/2-innerHeight/2)*(+f.dataset.s||.1);
+  f.style.transform=`translate3d(0,${off.toFixed(1)}px,0) rotate(${(off*.25).toFixed(1)}deg)`});
+}
+addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);onScroll();
+
+/* pointer fx */
+document.addEventListener('mousemove',e=>{const s=e.target.closest&&e.target.closest('.spot');
+ if(s){const r=s.getBoundingClientRect();s.style.setProperty('--mx',e.clientX-r.left+'px');s.style.setProperty('--my',e.clientY-r.top+'px')}});
+$$('.mag').forEach(b=>{b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.2}px,${(e.clientY-r.top-r.height/2)*.35}px)`});b.addEventListener('mouseleave',()=>b.style.transform='')});
+</script>
+</body>
+</html>
