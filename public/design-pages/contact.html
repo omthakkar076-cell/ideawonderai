@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Build Your Growth Strategy | Contact IdeaWonder AI | IdeaWonder AI</title>
+<meta name="description" content="Tell us about your business, growth goals and current challenges. Start a conversation with IdeaWonder AI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1446ff;--blue2:#0a2bd0;--sky:#a9c6ff;--ink:#0a0a0a;--sp:0}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,sans-serif;line-height:1.65;color:var(--ink);background:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;letter-spacing:-.02em;line-height:1.08}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px;position:relative}
+svg.ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.sprite{position:absolute;width:0;height:0;overflow:hidden}
+
+/* THEMES: white bg = black text, blue bg = white text */
+.lt{--fg:#0a0a0a;--mut:#23283d;--card:#f2f6ff;--line:#d6e1ff;--spot:rgba(20,70,255,.14);--tile:var(--blue);--tilefg:#fff;background:#fff;color:var(--fg);background-image:radial-gradient(rgba(20,70,255,.13) 1.2px,transparent 1.3px);background-size:30px 30px}
+.bl{--fg:#fff;--mut:rgba(255,255,255,.84);--card:rgba(255,255,255,.11);--line:rgba(255,255,255,.3);--spot:rgba(255,255,255,.22);--tile:#fff;--tilefg:var(--blue);color:#fff;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(160deg,var(--blue),var(--blue2));background-size:64px 64px,64px 64px,auto}
+section{position:relative;padding:130px 0;overflow:hidden}
+.grad{background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
+.lt .grad{background-image:linear-gradient(90deg,#1446ff,#5a8dff,#1446ff)}
+.bl .grad{background-image:linear-gradient(90deg,#fff,#a9c6ff,#fff)}
+@keyframes shine{to{background-position:200% center}}
+#prog{position:fixed;top:0;left:0;height:4px;width:0;background:var(--blue);z-index:300;box-shadow:0 0 12px var(--blue)}
+
+/* NAV */
+nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:250;width:min(1120px,calc(100% - 28px));display:flex;align-items:center;justify-content:space-between;padding:8px 12px 8px 22px;border:1px solid #dbe5ff;border-radius:100px;background:rgba(255,255,255,.86);backdrop-filter:blur(16px);box-shadow:0 12px 40px -16px rgba(20,70,255,.35);color:var(--ink)}
+.logo{display:flex;align-items:center;font-family:'Space Grotesk';font-weight:700;font-size:20px}
+.logo img{height:34px;width:auto;display:block}
+nav ul{display:flex;gap:30px;list-style:none;font-size:14px;font-weight:500}
+nav ul a{opacity:.7}nav ul a:hover,nav ul .on{opacity:1;color:var(--blue)}
+@media(max-width:820px){nav ul{display:none}}
+
+/* BUTTONS */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 28px;border-radius:100px;font-weight:600;font-size:15px;border:1.5px solid currentColor;transition:.35s;overflow:hidden;cursor:pointer;background:transparent;font-family:inherit;color:inherit}
+.btn.sm{padding:11px 22px;font-size:14px}
+.lt .btn.pri,nav .btn.pri{background:var(--blue);color:#fff;border-color:var(--blue);box-shadow:0 14px 34px -10px rgba(20,70,255,.6)}
+.bl .btn.pri{background:#fff;color:var(--blue);border-color:#fff;box-shadow:0 14px 34px -10px rgba(0,0,0,.4)}
+.btn.pri:hover{transform:translateY(-3px)}
+.btn.gh:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+.btn::after{content:"";position:absolute;top:0;left:-100%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg)}
+.btn:hover::after{left:150%;transition:.8s}
+.btn[disabled]{opacity:.7;pointer-events:none}
+.mag{transition:transform .25s}
+
+/* COMMON */
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);border:1px solid #c9d8ff;background:#eef3ff;padding:8px 16px;border-radius:100px;margin-bottom:22px;font-weight:600}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--blue);animation:pulse 1.5s infinite}
+@keyframes pulse{50%{opacity:.3;transform:scale(.6)}}
+.kick{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);display:flex;align-items:center;gap:12px;margin-bottom:22px;font-weight:600}
+.bl .kick{color:#fff}
+.kick b{font-family:'Space Grotesk';background:var(--blue);color:#fff;padding:3px 10px;border-radius:100px;letter-spacing:.06em}
+.bl .kick b{background:#fff;color:var(--blue)}
+.kick::after{content:"";height:2px;width:56px;background:currentColor;opacity:.5}
+h2{font-size:clamp(32px,4.5vw,58px);max-width:940px;margin-bottom:24px}
+.sub{color:var(--mut);font-size:18px;max-width:760px}
+.split .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em}
+.split .w span{display:inline-block;transform:translateY(112%) rotate(5deg);transition:transform .85s cubic-bezier(.2,.8,.2,1)}
+.split.in .w span{transform:none}
+.rv{opacity:0;transform:translateY(44px);transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+.spot{position:relative;border:1px solid var(--line);border-radius:26px;background:var(--card);padding:32px;overflow:hidden;transition:transform .45s,border-color .4s,box-shadow .4s}
+.spot::before{content:"";position:absolute;inset:0;background:radial-gradient(360px circle at var(--mx,50%) var(--my,50%),var(--spot),transparent 60%);opacity:0;transition:.4s}
+.spot:hover{transform:translateY(-8px);box-shadow:0 30px 60px -28px rgba(20,70,255,.55)}
+.spot:hover::before{opacity:1}
+.spot>*{position:relative}
+.spot h3{font-size:22px;margin:16px 0 10px}
+.spot p{color:var(--mut);font-size:15px}
+.tile{width:60px;height:60px;border-radius:20px;display:grid;place-items:center;font-size:28px;background:var(--tile);color:var(--tilefg);transition:.5s;position:relative}
+.tile::after{content:"";position:absolute;inset:-7px;border-radius:26px;border:1.5px dashed currentColor;opacity:0;transition:.5s;color:var(--tile)}
+.spot:hover .tile{transform:rotate(-8deg) scale(1.1)}.spot:hover .tile::after{opacity:.6;rotate:20deg}
+.num{font-family:'Space Grotesk';font-size:13px;font-weight:700;letter-spacing:.14em;opacity:.7;position:absolute!important;top:26px;right:28px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:50px}
+@media(max-width:900px){.g3{grid-template-columns:1fr}}
+.fl{position:absolute;pointer-events:none;color:var(--blue);will-change:transform;animation:bobx 7s ease-in-out infinite}
+.bl .fl{color:#fff}
+.fl svg{width:100%;height:100%;display:block}
+@keyframes bobx{50%{translate:0 -18px}}
+@keyframes spin{to{rotate:360deg}}
+
+/* ============ CONTACT HERO ============ */
+.hero2{padding:150px 0 110px}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:56px;grid-template-areas:"a form" "b form";align-items:start}
+.ca{grid-area:a}.cb{grid-area:b}.cform{grid-area:form;position:sticky;top:100px}
+@media(max-width:980px){.cgrid{grid-template-columns:1fr;grid-template-areas:"a" "form" "b"}.cform{position:static}}
+h1{font-size:clamp(34px,4.6vw,62px);margin-bottom:22px;font-weight:700;animation:h1in 1s cubic-bezier(.2,.8,.2,1) both}
+@keyframes h1in{from{opacity:0;transform:translateY(30px)}}
+.lead{color:var(--mut);font-size:18px;max-width:560px}
+.first{margin-top:28px;padding:32px}
+.first .kk{font-size:11px;letter-spacing:.18em;font-weight:700;color:var(--blue)}
+.first h3{font-size:clamp(22px,2.4vw,30px);margin:10px 0 12px}
+.first p{font-size:16px}
+.imp{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.imp span{display:inline-flex;align-items:center;gap:10px;padding:11px 18px;border-radius:100px;background:#fff;border:1.5px solid #c9d8ff;font-weight:600;font-size:14.5px;animation:chipglow 4.5s ease-in-out infinite;animation-delay:var(--dl,0s)}
+.imp span .ic{font-size:19px;color:var(--blue)}
+@keyframes chipglow{0%,100%{box-shadow:0 0 0 0 rgba(20,70,255,0)}15%{box-shadow:0 0 0 6px rgba(20,70,255,.14);border-color:var(--blue)}35%{box-shadow:0 0 0 0 rgba(20,70,255,0)}}
+
+/* brand stage */
+.brand{container-type:size;position:relative;height:310px;margin-top:28px;border-radius:34px;background:linear-gradient(155deg,#1b50ff,#0a2bd0 70%);color:#fff;overflow:hidden;box-shadow:0 40px 80px -30px rgba(20,70,255,.65)}
+.brand::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:34px 34px;translate:0 calc(var(--sp)*-60px)}
+.brand .glow{position:absolute;width:70cqh;height:70cqh;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.45),transparent 65%);left:50%;top:50%;translate:-50% -50%;scale:calc(.9 + var(--sp)*.5)}
+.borbit{position:absolute;left:50%;top:50%;width:0;height:0;--R:38cqh}
+.bring{position:absolute;left:calc(var(--R)*-1);top:calc(var(--R)*-1);width:calc(var(--R)*2);height:calc(var(--R)*2);border:1.5px dashed rgba(255,255,255,.6);border-radius:50%;rotate:calc(var(--sp)*-140deg)}
+.bring.b{left:calc(var(--R)*-.66);top:calc(var(--R)*-.66);width:calc(var(--R)*1.32);height:calc(var(--R)*1.32);border-style:solid;border-color:rgba(255,255,255,.2)}
+.arm{position:absolute;left:0;top:0;transform:rotate(calc(var(--b)*1deg + var(--sp)*240deg))}
+.spoke{position:absolute;left:0;top:-1px;width:var(--R);height:2px;background:linear-gradient(90deg,rgba(255,255,255,.05),rgba(255,255,255,.8))}
+.npos{position:absolute;left:var(--R);top:0;transform:translate(-50%,-50%) rotate(calc((var(--b)*1deg + var(--sp)*240deg)*-1))}
+.node{display:grid;place-items:center;width:13cqh;height:13cqh;border-radius:50%;background:#fff;color:var(--blue);font-size:6.4cqh;box-shadow:0 8px 18px -6px rgba(0,0,0,.5)}
+.bcore{position:absolute;left:50%;top:50%;translate:-50% -50%;text-align:center;font-family:'Space Grotesk';line-height:.95;z-index:3}
+.bcore b{display:block;font-size:11cqh;letter-spacing:-.02em}
+.bcore span{display:block;font-size:11cqh;font-weight:400;letter-spacing:-.02em;opacity:.95}
+.blab{position:absolute;top:50%;translate:0 -50%;font-size:max(10px,3cqh);letter-spacing:.16em;font-weight:700;display:flex;align-items:center;gap:8px;z-index:3}
+.blab.l{left:22px}.blab.r{right:22px}
+.blab .ic{font-size:18px;animation:nudge 1.4s ease-in-out infinite}
+.blab.l .ic{animation-name:nudgeR}
+.blab.r{flex-direction:row-reverse}
+.blab.r .ic{animation-name:nudgeL}
+@keyframes nudgeR{50%{transform:translateX(6px)}}
+@keyframes nudgeL{50%{transform:translateX(-6px)}}
+@media(max-width:560px){.blab{font-size:9px;letter-spacing:.1em}.blab.l{left:10px}.blab.r{right:10px}}
+
+/* direct contact placeholder */
+.reach{margin-top:28px;padding:26px}
+.reach .row{display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px dashed #c9d8ff}
+.reach .row:last-of-type{border-bottom:0}
+.reach .row .tile{width:44px;height:44px;font-size:20px;border-radius:14px}
+.reach .row b{font-family:'Space Grotesk';font-size:17px}
+.reach .row small{display:block;color:#5b6283;font-size:13px}
+.reach .cap{margin-top:12px;font-size:13.5px;color:var(--mut)}
+
+/* ============ FORM CARD ============ */
+.fcard{position:relative;border-radius:34px;background:#fff;border:1px solid #d6e1ff;padding:38px;box-shadow:0 50px 100px -40px rgba(20,70,255,.55);overflow:hidden}
+.fcard::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,var(--blue),#5a8dff,var(--blue));background-size:200% 100%;animation:shine 5s linear infinite}
+.fcard.shake{animation:shake .45s}
+@keyframes shake{20%{transform:translateX(-8px)}40%{transform:translateX(8px)}60%{transform:translateX(-5px)}80%{transform:translateX(5px)}}
+.fhead{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}
+.ftag{font-size:11px;letter-spacing:.16em;font-weight:700;color:var(--blue)}
+.fcount{font-family:'Space Grotesk';font-size:14px;padding:5px 14px;border-radius:100px;background:#eef3ff;color:var(--blue);font-weight:600}
+.fcount b{font-weight:700}
+.progbar{display:flex;gap:8px;margin-bottom:26px}
+.seg{flex:1;height:5px;border-radius:5px;background:#dfe8ff;position:relative;overflow:hidden}
+.seg::after{content:"";position:absolute;inset:0;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.seg.on::after{transform:scaleX(1)}
+.fh2{font-size:clamp(26px,2.8vw,36px);margin:0 0 8px;max-width:none}
+.fsub{color:#4a5170;font-size:15.5px;margin-bottom:24px}
+.step{display:none}
+.step.on{display:block;animation:stepin .55s cubic-bezier(.2,.8,.2,1)}
+.step.back.on{animation-name:stepback}
+@keyframes stepin{from{opacity:0;transform:translateX(34px)}}
+@keyframes stepback{from{opacity:0;transform:translateX(-34px)}}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fgrid .full{grid-column:1/-1}
+@media(max-width:560px){.fgrid{grid-template-columns:1fr}.fcard{padding:26px}}
+
+/* fields (reuse these classes for your step 2/3 fields) */
+.fld{position:relative}
+.fld input,.fld select,.fld textarea{width:100%;padding:26px 16px 10px;border:1.5px solid #d6e1ff;border-radius:16px;background:#f7f9ff;font:500 15.5px Inter,sans-serif;color:var(--ink);outline:0;transition:border-color .25s,box-shadow .25s,background .25s;appearance:none;-webkit-appearance:none}
+.fld textarea{min-height:120px;resize:vertical;line-height:1.5}
+.fld label{position:absolute;left:17px;top:18px;font-size:15px;color:#4a5170;pointer-events:none;transition:.22s cubic-bezier(.2,.8,.2,1);transform-origin:left top}
+.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--blue);background:#fff;box-shadow:0 0 0 4px rgba(20,70,255,.12)}
+.fld input:focus+label,.fld input:not(:placeholder-shown)+label,.fld textarea:focus+label,.fld textarea:not(:placeholder-shown)+label,.fld.sel label{top:8px;font-size:11px;letter-spacing:.07em;font-weight:600;text-transform:uppercase;color:var(--blue)}
+.fld .req{color:var(--blue)}
+.fld.sel::after{content:"";position:absolute;right:18px;top:50%;width:9px;height:9px;border-right:2px solid var(--blue);border-bottom:2px solid var(--blue);transform:translateY(-70%) rotate(45deg);pointer-events:none;transition:.3s}
+.fld.sel:focus-within::after{transform:translateY(-30%) rotate(225deg)}
+.fld select{padding-right:44px;cursor:pointer}
+.fld select:invalid{color:#6a7192}
+.fld .msg{display:block;min-height:0;max-height:0;overflow:hidden;font-size:12.5px;font-weight:500;color:#d6293e;padding-left:6px;transition:.3s}
+.fld.bad input,.fld.bad select,.fld.bad textarea{border-color:#d6293e;background:#fff7f8}
+.fld.bad .msg{max-height:30px;margin-top:6px}
+.fld.ok input,.fld.ok select{border-color:#7fa0ff}
+.choices{display:flex;flex-wrap:wrap;gap:10px}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.opt span{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:100px;border:1.5px solid #d6e1ff;background:#f7f9ff;font-weight:600;font-size:14px;transition:.3s}
+.opt:hover span{border-color:var(--blue)}
+.opt input:checked+span{background:var(--blue);color:#fff;border-color:var(--blue);box-shadow:0 10px 22px -10px rgba(20,70,255,.7)}
+.opt input:focus-visible+span{box-shadow:0 0 0 4px rgba(20,70,255,.2)}
+.slot{border:2px dashed #c9d8ff;border-radius:18px;padding:26px;text-align:center;color:#5b6283;font-size:14px;background:#f7f9ff}
+.fnav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:26px}
+.fnav .btn.pri{margin-left:auto;min-width:170px}
+.btn .spin{width:18px;height:18px;border-radius:50%;border:2.5px solid rgba(255,255,255,.4);border-top-color:#fff;animation:spin .8s linear infinite;display:none}
+.btn.loading .spin{display:block}
+.btn.loading span{display:none}
+.fsec{display:flex;align-items:center;gap:10px;margin-top:20px;font-size:13px;color:#4a5170}
+.fsec .ic{font-size:18px;color:var(--blue)}
+.done{padding:30px 6px;text-align:center}
+.done .ck{width:96px;height:96px;margin:10px auto 22px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:46px;position:relative;animation:pop .7s cubic-bezier(.2,.8,.2,1)}
+.done .ck::before,.done .ck::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--blue);animation:ripple 2.4s infinite}
+.done .ck::after{animation-delay:1.2s}
+@keyframes pop{from{transform:scale(.3);opacity:0}}
+@keyframes ripple{from{transform:scale(1);opacity:.8}to{transform:scale(1.8);opacity:0}}
+.done h3{font-size:30px;margin-bottom:10px}
+.done p{color:#4a5170}
+
+/* MARQUEE */
+.mqband{background:var(--blue);padding:24px 0;overflow:hidden;transform:rotate(-1.4deg);margin:0 -30px;position:relative;z-index:3;box-shadow:0 30px 60px -30px rgba(20,70,255,.7)}
+.mqband div{display:flex;gap:56px;width:max-content;animation:mq 30s linear infinite;font-family:'Space Grotesk';font-size:clamp(22px,3vw,36px);font-weight:700;white-space:nowrap;color:#fff}
+.mqband span:nth-child(3n+1){color:transparent;-webkit-text-stroke:1.2px #fff}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* IMPROVE cards */
+.lnk{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.lnk a{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:100px;border:1px solid var(--line);background:rgba(255,255,255,.1);font-size:13.5px;font-weight:600;transition:.3s}
+.lnk a:hover{background:#fff;color:var(--blue);transform:translateY(-3px)}
+.lnk a .ic{font-size:15px}
+
+.next{text-align:center;padding:90px 0 110px}
+.next h2{margin-inline:auto;font-size:clamp(30px,4vw,48px)}
+.svcs{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:34px}
+.svcs a{padding:13px 24px;border-radius:100px;border:1.5px solid var(--blue);color:var(--blue);font-weight:600;font-size:15px;transition:.3s;background:#fff}
+.svcs a:hover{background:var(--blue);color:#fff;transform:translateY(-4px)}
+footer{background:linear-gradient(160deg,var(--blue),var(--blue2));color:#fff;padding:80px 0 40px;font-size:14px}
+.fg{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr 1fr;gap:34px}
+footer h5{font-family:'Space Grotesk';font-size:12px;letter-spacing:.18em;margin-bottom:16px}
+footer a{display:block;margin-bottom:10px;opacity:.85}footer a:hover{opacity:1;transform:translateX(3px)}
+footer a.flogo{display:inline-flex;background:#fff;padding:10px 18px;border-radius:16px;opacity:1;margin:0}
+footer a.flogo:hover{transform:none}
+footer a.flogo img{height:34px;width:auto;display:block}
+.fbar{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:50px;padding-top:24px;border-top:1px solid rgba(255,255,255,.3)}
+.fbar span a{display:inline;margin-left:18px}
+.cta-strip{margin-top:56px;padding:34px;border-radius:28px;background:#fff;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.cta-strip small{color:var(--blue);letter-spacing:.16em;font-size:11px;font-weight:700}
+.cta-strip h3{font-size:26px;margin-top:6px}
+footer .cta-strip a.btn.pri{background:var(--blue);color:#fff;border-color:var(--blue);opacity:1;margin:0}
+@media(max-width:900px){.fg{grid-template-columns:1fr 1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.split .w span{opacity:1!important;transform:none!important}}
+
+/* Original IdeaWonder brand lockup: tagline sits below the logo */
+nav a.logo{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;gap:2px!important;line-height:1!important}
+nav a.logo img{display:block;width:205px;height:43px;object-fit:contain;object-position:left center}
+nav .brand-tagline{display:block;margin:0 0 0 2px;color:#6b9cff;font-size:7px;font-weight:800;letter-spacing:.19em;line-height:1.2;white-space:nowrap}
+@media(max-width:760px){nav a.logo img{width:165px;height:36px}nav .brand-tagline{font-size:6px;letter-spacing:.15em}}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+
+<!-- ICON + SHAPE SPRITE -->
+<svg class="sprite" aria-hidden="true"><defs>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.5 7.2L4 20l1-4.5A8 8 0 1 1 21 12z"/></symbol>
+<symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 17v4M17 19h4"/></symbol>
+<symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></symbol>
+<symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></symbol>
+<symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></symbol>
+<symbol id="i-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-left" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.5 7.2L4 20l1-4.5A8 8 0 1 1 21 12z"/><path d="M9 9c.5 2.5 2.5 4.5 5 5l1.2-1.3-2-1-.8.7c-.9-.4-1.6-1.1-2-2l.7-.8-1-2z"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></symbol>
+<symbol id="i-megaphone" viewBox="0 0 24 24"><path d="M3 11v2a1 1 0 0 0 1 1h3l8 4V6L7 10H4a1 1 0 0 0-1 1zM19 9a4 4 0 0 1 0 6"/></symbol>
+<symbol id="s-star" viewBox="0 0 100 100"><path fill="currentColor" d="M50 0C54 30 70 46 100 50 70 54 54 70 50 100 46 70 30 54 0 50 30 46 46 30 50 0z"/></symbol>
+<symbol id="s-ring" viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="5"/><circle cx="50" cy="50" r="26" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="3 6"/></symbol>
+<symbol id="s-dots" viewBox="0 0 100 100"><g fill="currentColor"><circle cx="10" cy="10" r="4"/><circle cx="35" cy="10" r="4"/><circle cx="60" cy="10" r="4"/><circle cx="85" cy="10" r="4"/><circle cx="10" cy="35" r="4"/><circle cx="35" cy="35" r="4"/><circle cx="60" cy="35" r="4"/><circle cx="85" cy="35" r="4"/><circle cx="10" cy="60" r="4"/><circle cx="35" cy="60" r="4"/><circle cx="60" cy="60" r="4"/><circle cx="85" cy="60" r="4"/><circle cx="10" cy="85" r="4"/><circle cx="35" cy="85" r="4"/><circle cx="60" cy="85" r="4"/><circle cx="85" cy="85" r="4"/></g></symbol>
+<symbol id="s-plus" viewBox="0 0 100 100"><path d="M50 12v76M12 50h76" stroke="currentColor" stroke-width="12" stroke-linecap="round"/></symbol>
+<symbol id="s-bubble" viewBox="0 0 120 100"><path fill="currentColor" d="M20 0h80a20 20 0 0 1 20 20v36a20 20 0 0 1-20 20H62L36 98V76H20A20 20 0 0 1 0 56V20A20 20 0 0 1 20 0z"/></symbol>
+</defs></svg>
+
+<nav>
+  <a class="logo" href="/"><img src="/brand/ideawonder-logo-horizontal.png" alt="IdeaWonder AI" onerror="this.replaceWith(document.createTextNode('IdeaWonder AI'))"><span class="brand-tagline">IMAGINE MORE. GROW SMARTER.</span></a>
+  <ul><li><a href="/">About</a></li><li><a href="/services/seo-ai-search">Services</a></li><li><a class="on" href="/contact">Contact</a></li></ul>
+  <a class="btn pri sm" href="/contact">Build Your Growth Strategy</a>
+</nav>
+
+<!-- ============ CONTACT HERO ============ -->
+<section class="lt hero2">
+  <svg class="fl" data-s=".14" style="width:120px;top:14%;right:3%"><use href="#s-ring"/></svg>
+  <svg class="fl" data-s="-.1" style="width:110px;top:52%;left:1%;opacity:.35"><use href="#s-dots"/></svg>
+  <svg class="fl" data-s=".12" style="width:70px;bottom:6%;right:46%"><use href="#s-star"/></svg>
+  <div class="wrap">
+    <div class="cgrid">
+
+      <!-- LEFT: intro -->
+      <div class="ca">
+        <div class="eyebrow">Your next growth chapter starts here</div>
+        <h1>Let's put intelligence <span class="grad">behind your growth.</span></h1>
+        <p class="lead">Share a little about your business and the opportunities you want to pursue. We’ll use this to understand your requirements and discuss a suitable next step.</p>
+      </div>
+
+      <!-- RIGHT: form -->
+      <div class="cform">
+        <div class="fcard" id="fcard">
+          <form id="lead" novalidate autocomplete="on">
+            <div class="fhead"><span class="ftag">GROWTH STRATEGY ENQUIRY</span><span class="fcount" id="fcount"><b>01</b> / 03</span></div>
+            <div class="progbar" id="progbar"><i class="seg on"></i><i class="seg"></i><i class="seg"></i></div>
+
+            <!-- STEP 1 -->
+            <div class="step on" data-step="1">
+              <h2 class="fh2">Let's start with your business.</h2>
+              <p class="fsub">A few details help us understand who we're speaking with.</p>
+              <div class="fgrid">
+                <div class="fld"><input id="f-name" name="fullName" type="text" placeholder=" " required autocomplete="name"><label for="f-name">Full name <span class="req">*</span></label><small class="msg">Please enter your full name</small></div>
+                <div class="fld"><input id="f-email" name="businessEmail" type="email" placeholder=" " required autocomplete="email"><label for="f-email">Business email <span class="req">*</span></label><small class="msg">Please enter a valid business email</small></div>
+                <div class="fld"><input id="f-company" name="companyName" type="text" placeholder=" " required autocomplete="organization"><label for="f-company">Company name <span class="req">*</span></label><small class="msg">Please enter your company name</small></div>
+                <div class="fld"><input id="f-site" name="websiteUrl" type="text" inputmode="url" placeholder=" " autocomplete="url"><label for="f-site">Website URL</label><small class="msg"></small></div>
+                <div class="fld sel"><select id="f-ind" name="industry" required>
+                  <option value="" disabled selected>Select industry</option>
+                  <option>Technology &amp; SaaS</option>
+                  <option>Finance &amp; Fintech</option>
+                  <option>Professional Services</option>
+                  <option>Manufacturing &amp; Industrial</option>
+                  <option>E-commerce &amp; Consumer</option>
+                  <option>Startup</option>
+                  <option>Other</option>
+                </select><label for="f-ind">Industry <span class="req">*</span></label><small class="msg">Please select your industry</small></div>
+                <div class="fld"><input id="f-market" name="targetMarket" type="text" placeholder=" "><label for="f-market">Target market</label><small class="msg"></small></div>
+              </div>
+            </div>
+
+            <!-- STEP 2: PASTE YOUR EXISTING STEP 2 FIELDS HERE (delete the .slot div) -->
+            <div class="step" data-step="2">
+              <div class="slot">Step 2 fields go here — use the same markup pattern as step 1</div>
+            </div>
+
+            <!-- STEP 3: PASTE YOUR EXISTING STEP 3 FIELDS HERE (delete the .slot div) -->
+            <div class="step" data-step="3">
+              <div class="slot">Step 3 fields go here — use the same markup pattern as step 1</div>
+            </div>
+
+            <div class="fnav">
+              <button type="button" class="btn gh sm" id="back" hidden><svg class="ic"><use href="#i-left"/></svg> Back</button>
+              <button type="submit" class="btn pri mag" id="next"><span id="nexttxt">Continue →</span><i class="spin"></i></button>
+            </div>
+            <p class="fsec"><svg class="ic"><use href="#i-shield"/></svg>Your information is sent securely to our lead-storage backend.</p>
+          </form>
+
+          <!-- SUCCESS STATE (replace copy with your existing success message) -->
+          <div class="done" id="done" hidden>
+            <div class="ck"><svg class="ic" style="stroke-width:2.6"><use href="#i-check"/></svg></div>
+            <h3>Thank you.</h3>
+            <p>Your enquiry has been received. We'll review the details and get back to you with a suitable next step.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- LEFT (continued) -->
+      <div class="cb">
+        <div class="spot first rv">
+          <div class="kk">THE FIRST STEP</div>
+          <h3>A better conversation starts with better context.</h3>
+          <p>Tell us what you want to improve: discoverability, customer acquisition or operational efficiency.</p>
+          <div class="imp">
+            <span style="--dl:0s"><svg class="ic"><use href="#i-eye"/></svg>Discoverability</span>
+            <span style="--dl:1.5s"><svg class="ic"><use href="#i-target"/></svg>Customer acquisition</span>
+            <span style="--dl:3s"><svg class="ic"><use href="#i-gear"/></svg>Operational efficiency</span>
+          </div>
+        </div>
+
+        <div class="brand rv" aria-hidden="true">
+          <div class="glow"></div>
+          <div class="borbit">
+            <div class="bring"></div><div class="bring b"></div>
+            <div class="arm" style="--b:-90"><div class="spoke"></div><div class="npos"><div class="node"><svg class="ic"><use href="#i-search"/></svg></div></div></div>
+            <div class="arm" style="--b:30"><div class="spoke"></div><div class="npos"><div class="node"><svg class="ic"><use href="#i-spark"/></svg></div></div></div>
+            <div class="arm" style="--b:150"><div class="spoke"></div><div class="npos"><div class="node"><svg class="ic"><use href="#i-trend"/></svg></div></div></div>
+          </div>
+          <div class="blab l">DISCOVER <svg class="ic"><use href="#i-right"/></svg></div>
+          <div class="bcore"><b>IDEA</b><span>WONDER</span></div>
+          <div class="blab r">GROW <svg class="ic"><use href="#i-left"/></svg></div>
+        </div>
+
+        <!-- Replace with confirmed official contact details when available -->
+        <div class="spot reach rv">
+          <div class="row"><div class="tile"><svg class="ic"><use href="#i-mail"/></svg></div><div><b>Email</b><small>—</small></div></div>
+          <div class="row"><div class="tile"><svg class="ic"><use href="#i-phone"/></svg></div><div><b>WhatsApp</b><small>—</small></div></div>
+          <p class="cap">Email and WhatsApp contact details can be added once official business contact information is confirmed.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div style="overflow:hidden;padding:30px 0;background:linear-gradient(#fff 50%,#0a2bd0 50%)"><div class="mqband"><div id="mq"></div></div></div>
+
+<!-- WHAT TO IMPROVE (links to services) -->
+<section class="bl" style="padding:110px 0 120px">
+  <svg class="fl" data-s=".14" style="width:100px;top:8%;right:6%;opacity:.5"><use href="#s-bubble"/></svg>
+  <svg class="fl" data-s="-.1" style="width:120px;bottom:6%;left:3%;opacity:.3"><use href="#s-dots"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>01</b> The first step</div>
+    <h2 class="split">Tell us what you want to improve. <span class="grad">We'll point you to the right place to start.</span></h2>
+    <div class="g3">
+      <div class="spot rv"><span class="num">01</span><div class="tile"><svg class="ic"><use href="#i-eye"/></svg></div><h3>Discoverability</h3><p>Be found, understood and recommended across search and AI search.</p>
+        <div class="lnk"><a href="/services/seo-ai-search">SEO Services <svg class="ic"><use href="#i-arrow"/></svg></a><a href="/services/seo-ai-search">AI Search Optimization <svg class="ic"><use href="#i-arrow"/></svg></a></div></div>
+      <div class="spot rv" style="--d:.1s"><span class="num">02</span><div class="tile"><svg class="ic"><use href="#i-target"/></svg></div><h3>Customer acquisition</h3><p>Attract relevant audiences and turn interest into qualified opportunities.</p>
+        <div class="lnk"><a href="/services/performance-marketing">Performance Marketing <svg class="ic"><use href="#i-arrow"/></svg></a><a href="/services/social-media-marketing">Social Media Marketing <svg class="ic"><use href="#i-arrow"/></svg></a><a href="/services/lead-generation">B2B Lead Generation <svg class="ic"><use href="#i-arrow"/></svg></a></div></div>
+      <div class="spot rv" style="--d:.2s"><span class="num">03</span><div class="tile"><svg class="ic"><use href="#i-gear"/></svg></div><h3>Operational efficiency</h3><p>Connect systems and automate workflows so your teams work smarter.</p>
+        <div class="lnk"><a href="/services/business-automation">AI &amp; Business Automation <svg class="ic"><use href="#i-arrow"/></svg></a><a href="/services/business-automation">Marketing Automation <svg class="ic"><use href="#i-arrow"/></svg></a></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="lt next">
+  <svg class="fl" data-s=".12" style="width:90px;top:12%;left:6%"><use href="#s-star"/></svg>
+  <svg class="fl" data-s="-.12" style="width:110px;bottom:10%;right:5%;opacity:.4"><use href="#s-ring"/></svg>
+  <div class="wrap">
+    <div class="kick" style="justify-content:center"><b>GO</b> Explore our services</div>
+    <h2 class="split">Not ready to write yet? <span class="grad">Explore what we do.</span></h2>
+    <div class="svcs">
+      <a href="/services/seo-ai-search">SEO / GEO / AEO</a>
+      <a href="/services/performance-marketing">Performance Marketing</a>
+      <a href="/services/social-media-marketing">Social Media Marketing</a>
+      <a href="/services/lead-generation">Lead Generation</a>
+      <a href="/services/business-automation">Business Automation</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fg">
+      <div><a class="flogo" href="/"><img src="/brand/ideawonder-logo-horizontal.png" alt="IdeaWonder AI" onerror="this.replaceWith(document.createTextNode('IdeaWonder AI'))"></a><p style="max-width:300px;margin-top:16px;opacity:.9">An AI-first growth and automation agency helping B2B businesses strengthen digital visibility, acquire customers and scale operations through intelligent marketing and automation.</p></div>
+      <div><h5>EXPLORE</h5><a href="/">Home</a><a href="/">About Us</a><a href="/services/seo-ai-search">Services</a><a href="/contact">Contact</a></div>
+      <div><h5>GET DISCOVERED</h5><a href="/services/seo-ai-search">SEO Services</a><a href="/services/seo-ai-search">AI Search Optimization</a></div>
+      <div><h5>GET CUSTOMERS</h5><a href="/services/performance-marketing">Performance Marketing</a><a href="/services/social-media-marketing">Social Media Marketing</a><a href="/services/lead-generation">B2B Lead Generation</a></div>
+      <div><h5>SCALE SMARTER</h5><a href="/services/business-automation">AI &amp; Business Automation</a><a href="/services/business-automation">Marketing Automation</a></div>
+    </div>
+    <div class="cta-strip"><div><small>YOUR NEXT GROWTH CHAPTER STARTS HERE</small><h3>Have a growth challenge or an idea worth exploring?</h3></div><a class="btn pri" href="#lead">Start a conversation <svg class="ic"><use href="#i-arrow"/></svg></a></div>
+    <div class="fbar"><span>© 2026 IdeaWonder AI. All rights reserved. Imagine More. Market Smarter. Grow Faster.</span><span><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/cookies">Cookies</a></span></div>
+  </div>
+</footer>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+
+/* marquee */
+const mqw=["LET'S PUT INTELLIGENCE BEHIND YOUR GROWTH","DISCOVER","IDEA WONDER","GROW"];
+$('#mq').innerHTML=[0,1].map(()=>mqw.map(w=>`<span>${w}</span><span>✦</span>`).join('')).join('');
+
+/* ============ MULTI-STEP FORM ============ */
+const form=$('#lead'),steps=$$('.step'),segs=$$('#progbar .seg'),TOTAL=steps.length;
+let cur=0;
+const pad=n=>String(n).padStart(2,'0');
+function show(i,back){
+  cur=i;
+  steps.forEach((s,k)=>{s.classList.toggle('on',k===i);s.classList.toggle('back',!!back&&k===i)});
+  segs.forEach((s,k)=>s.classList.toggle('on',k<=i));
+  $('#fcount').innerHTML=`<b>${pad(i+1)}</b> / ${pad(TOTAL)}`;
+  $('#back').hidden=i===0;
+  $('#nexttxt').textContent=i===TOTAL-1?'Submit enquiry':'Continue →';
+  $('#fcard').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+const emailOk=v=>/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim());
+function validate(stepEl){
+  let ok=true,first=null;
+  stepEl.querySelectorAll('[required]').forEach(el=>{
+    const fld=el.closest('.fld');
+    let good=el.value.trim()!=='';
+    if(good&&el.type==='email')good=emailOk(el.value);
+    if(el.type==='checkbox')good=el.checked;
+    if(fld){fld.classList.toggle('bad',!good);fld.classList.toggle('ok',good)}
+    if(!good){ok=false;first=first||el}
+  });
+  if(!ok){first.focus({preventScroll:true});const c=$('#fcard');c.classList.remove('shake');void c.offsetWidth;c.classList.add('shake')}
+  return ok;
+}
+/* live clearing of errors */
+form.addEventListener('input',e=>{const f=e.target.closest('.fld');if(f&&f.classList.contains('bad')){
+  const el=e.target;let good=el.value.trim()!=='';if(good&&el.type==='email')good=emailOk(el.value);if(good)f.classList.remove('bad')}});
+form.addEventListener('change',e=>{const f=e.target.closest('.fld');if(f&&e.target.tagName==='SELECT'&&e.target.value)f.classList.remove('bad')});
+$('#back').addEventListener('click',()=>show(Math.max(0,cur-1),true));
+
+/* ---- HOOK: connect your EXISTING backend call here ----
+   `payload` contains every field in the form keyed by its name="" attribute.
+   Replace the body of submitLead with your current request (fetch/axios/server action). */
+async function submitLead(payload){
+  if(window.submitLead)return window.submitLead(payload);
+  console.warn('Connect your existing backend call in submitLead()',payload);
+  await new Promise(r=>setTimeout(r,900));
+}
+
+form.addEventListener('submit',async e=>{
+  e.preventDefault();
+  if(!validate(steps[cur]))return;
+  if(cur<TOTAL-1){show(cur+1);return}
+  const btn=$('#next');btn.classList.add('loading');btn.disabled=true;
+  try{
+    const data={};new FormData(form).forEach((v,k)=>{data[k]=data[k]!==undefined?[].concat(data[k],v):v});
+    await submitLead(data);
+    form.hidden=true;$('#done').hidden=false;
+  }catch(err){
+    console.error(err);
+    btn.classList.remove('loading');btn.disabled=false;
+    alert('Something went wrong. Please try again.');   // replace with your existing error handling
+  }
+});
+
+/* ============ PAGE EFFECTS ============ */
+$$('.split').forEach(el=>{
+ const walk=n=>[...n.childNodes].forEach(c=>{
+  if(c.nodeType===3){const f=document.createDocumentFragment();c.textContent.split(/(\s+)/).forEach(t=>{if(!t.trim()){f.append(t);return}const w=document.createElement('span');w.className='w';w.innerHTML=`<span>${t}</span>`;f.append(w)});c.replaceWith(f)}
+  else if(c.nodeType===1)walk(c)});
+ walk(el);el.querySelectorAll('.w span').forEach((s,i)=>s.style.transitionDelay=i*40+'ms');
+});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+$$('.rv,.split').forEach(el=>io.observe(el));
+
+const fls=$$('.fl');
+function onScroll(){
+ const h=document.documentElement;
+ $('#prog').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+ document.documentElement.style.setProperty('--sp',Math.min(h.scrollTop/innerHeight,2).toFixed(3));
+ fls.forEach(f=>{const host=f.closest('section')||f.parentElement,b=host.getBoundingClientRect();
+  if(b.bottom<-200||b.top>innerHeight+200)return;
+  const off=(b.top+b.height/2-innerHeight/2)*(+f.dataset.s||.1);
+  f.style.transform=`translate3d(0,${off.toFixed(1)}px,0) rotate(${(off*.25).toFixed(1)}deg)`});
+}
+addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);onScroll();
+
+document.addEventListener('mousemove',e=>{const s=e.target.closest&&e.target.closest('.spot');
+ if(s){const r=s.getBoundingClientRect();s.style.setProperty('--mx',e.clientX-r.left+'px');s.style.setProperty('--my',e.clientY-r.top+'px')}});
+$$('.mag').forEach(b=>{b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.15}px,${(e.clientY-r.top-r.height/2)*.3}px)`});b.addEventListener('mouseleave',()=>b.style.transform='')});
+</script>
+</body>
+</html>
