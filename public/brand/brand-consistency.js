@@ -2,7 +2,7 @@
 const old=document.querySelector('#nav')||document.querySelector('body>nav');if(old)old.remove();
 const header=document.createElement('header');header.id='iw-site-header';header.innerHTML=`
 <div class="iw-nav-inner">
-<a class="iw-logo" href="/" aria-label="IdeaWonder AI home"><img src="/brand/ideawonder-logo-horizontal.png" alt="IdeaWonder AI"></a>
+<a class="iw-logo" href="/" aria-label="IdeaWonder AI home"><img src="/brand/ideawonder-logo-horizontal.webp" alt="IdeaWonder AI"></a>
 <button class="iw-burger" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
 <ul class="iw-links">
 <li class="iw-service"><button class="iw-service-toggle" type="button" aria-expanded="false">Services⌄</button><div class="iw-dropdown">
