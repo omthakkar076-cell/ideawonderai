@@ -4,7 +4,7 @@ const pages: Record<string,string> = {
  "services/seo":"/design-pages/seo-ai-search.html",
  "services/ai-search-optimization":"/design-pages/seo-ai-search.html",
  "services/social-media-marketing":"/design-pages/social-media-marketing.html",
- "services/performance-marketing":"/design-pages/performance-marketing.html",
+ "services/performance-marketing":"/design-pages/performance-wrapper.html",
  "services/lead-generation":"/design-pages/lead-generation.html",
  "services/b2b-lead-generation":"/design-pages/lead-generation.html",
  "services/business-automation":"/design-pages/business-automation.html",
