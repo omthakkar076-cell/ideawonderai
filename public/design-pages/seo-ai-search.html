@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Digital Marketing & Automation Agency | IdeaWonder AI</title>
+<meta name="description" content="Grow your business with AI-powered SEO, GEO, paid advertising, lead generation, social media marketing and business automation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1446ff;--blue2:#0a2bd0;--sky:#a9c6ff;--ink:#0a0a0a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,sans-serif;line-height:1.65;color:var(--ink);background:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,.disp{font-family:'Space Grotesk',sans-serif;letter-spacing:-.02em;line-height:1.08}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px;position:relative}
+svg.ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.sprite{position:absolute;width:0;height:0;overflow:hidden}
+
+/* THEMES */
+.lt{--fg:#0a0a0a;--mut:#23283d;--card:#f2f6ff;--line:#d6e1ff;--spot:rgba(20,70,255,.14);--tile:var(--blue);--tilefg:#fff;background:#fff;color:var(--fg)}
+.bl{--fg:#fff;--mut:rgba(255,255,255,.82);--card:rgba(255,255,255,.11);--line:rgba(255,255,255,.3);--spot:rgba(255,255,255,.22);--tile:#fff;--tilefg:var(--blue);background:linear-gradient(160deg,var(--blue),var(--blue2));color:#fff}
+.lt{background-image:radial-gradient(rgba(20,70,255,.13) 1.2px,transparent 1.3px);background-size:30px 30px}
+.bl{background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(160deg,var(--blue),var(--blue2));background-size:64px 64px,64px 64px,auto}
+section{position:relative;padding:130px 0;overflow:hidden}
+.grad{background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
+.lt .grad{background-image:linear-gradient(90deg,#1446ff,#5a8dff,#1446ff)}
+.bl .grad{background-image:linear-gradient(90deg,#fff,#a9c6ff,#fff)}
+@keyframes shine{to{background-position:200% center}}
+
+#prog{position:fixed;top:0;left:0;height:4px;width:0;background:var(--blue);z-index:300;box-shadow:0 0 12px var(--blue)}
+
+/* NAV */
+nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:250;width:min(1120px,calc(100% - 28px));display:flex;align-items:center;justify-content:space-between;padding:8px 12px 8px 22px;border:1px solid #dbe5ff;border-radius:100px;background:rgba(255,255,255,.86);backdrop-filter:blur(16px);box-shadow:0 12px 40px -16px rgba(20,70,255,.35);color:var(--ink)}
+.logo{font-family:'Space Grotesk';font-weight:700;font-size:20px;display:flex;align-items:center}
+.logo img{height:34px;width:auto;display:block}
+nav ul{display:flex;gap:30px;list-style:none;font-size:14px;font-weight:500}
+nav ul a{opacity:.7}nav ul a:hover,nav ul .on{opacity:1;color:var(--blue)}
+@media(max-width:820px){nav ul{display:none}}
+
+/* BUTTONS */
+.btn{position:relative;display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:100px;font-weight:600;font-size:15px;border:1.5px solid currentColor;transition:.35s;overflow:hidden;cursor:pointer;background:transparent;font-family:inherit;color:inherit}
+.btn.sm{padding:11px 22px;font-size:14px}
+.lt .btn.pri,nav .btn.pri{background:var(--blue);color:#fff;border-color:var(--blue);box-shadow:0 14px 34px -10px rgba(20,70,255,.6)}
+.bl .btn.pri{background:#fff;color:var(--blue);border-color:#fff;box-shadow:0 14px 34px -10px rgba(0,0,0,.4)}
+.btn.pri:hover{transform:translateY(-3px)}
+.btn.gh:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+.bl .btn.gh:hover{background:#fff;color:var(--blue)}
+.btn::after{content:"";position:absolute;top:0;left:-100%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg)}
+.btn:hover::after{left:150%;transition:.8s}
+.mag{transition:transform .25s}
+
+/* HERO STORY */
+.hero{background:#fff;background-image:radial-gradient(rgba(20,70,255,.14) 1.2px,transparent 1.3px);background-size:30px 30px}
+.story{height:540vh;position:relative}
+.sticky{position:sticky;top:0;height:100vh;display:grid;grid-template-columns:1fr 1.05fr;gap:44px;align-items:center;padding:96px max(24px,calc((100vw - 1200px)/2)) 36px;overflow:hidden}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);border:1px solid #c9d8ff;background:#eef3ff;padding:8px 16px;border-radius:100px;margin-bottom:22px;font-weight:600}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--blue);animation:pulse 1.5s infinite}
+@keyframes pulse{50%{opacity:.3;transform:scale(.6)}}
+h1{font-size:clamp(34px,4.6vw,62px);margin-bottom:22px;color:var(--ink);font-weight:700;animation:h1in 1s cubic-bezier(.2,.8,.2,1) both}
+h1 .grad{display:inline}
+@keyframes h1in{from{opacity:0;transform:translateY(30px)}}
+.copies{display:grid;min-height:176px}
+.copy{grid-area:1/1;font-size:clamp(16px,1.35vw,19px);color:var(--mut);opacity:0;transform:translateY(26px);filter:blur(6px);transition:.7s cubic-bezier(.2,.8,.2,1);pointer-events:none}
+.copy.on{opacity:1;transform:none;filter:none}
+.copy.big{font-family:'Space Grotesk';font-size:clamp(24px,2.6vw,36px);font-weight:600;color:var(--ink);line-height:1.2}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.dots{display:flex;gap:8px;margin-top:30px;align-items:center}
+.dots i{height:5px;width:36px;border-radius:5px;background:#d6e1ff;position:relative;overflow:hidden}
+.dots i::after{content:"";position:absolute;inset:0;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:.6s}
+.dots i.on::after{transform:scaleX(1)}
+.dots span{font-size:11px;letter-spacing:.2em;color:var(--mut);margin-left:8px;font-weight:600}
+
+/* STAGE */
+.stage{--p:0;--sp:0;container-type:size;position:relative;height:min(80vh,660px);border-radius:40px;background:linear-gradient(155deg,#1b50ff,#0a2bd0 70%);color:#fff;overflow:hidden;box-shadow:0 50px 100px -30px rgba(20,70,255,.65)}
+.stage::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:8cqw 8cqw;translate:0 calc(var(--p)*-16cqw)}
+.stage .glow{position:absolute;width:70cqw;height:70cqw;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.4),transparent 65%);left:50%;top:48%;translate:-50% -50%;scale:calc(.8 + var(--p)*.7)}
+.e{opacity:0;transform:translateY(5cqh) scale(.92);filter:blur(8px);transition:opacity .8s,transform .9s cubic-bezier(.2,.8,.2,1),filter .8s;transition-delay:var(--d,0s);pointer-events:none}
+.e.on{opacity:1;transform:none;filter:none}
+.e:not(.on){transition-delay:0s}
+.schip{position:absolute;left:6cqw;top:5cqh;font-size:max(10px,1.9cqw);letter-spacing:.16em;font-weight:600;padding:1.4cqw 3cqw;border-radius:100px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.4)}
+.sbar{position:absolute;left:6cqw;right:6cqw;top:13cqh;display:flex;gap:2.5cqw;align-items:center;padding:2.4cqw 3.4cqw;border-radius:100px;background:#fff;color:var(--ink);font-size:max(12px,2.6cqw);box-shadow:0 2cqw 5cqw -2cqw rgba(0,0,0,.4)}
+.sbar svg{color:var(--blue);font-size:3.4cqw}
+.sbar .cr{width:2px;height:1.2em;background:var(--blue);animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.serp{position:absolute;left:6cqw;right:6cqw;top:27cqh;display:flex;flex-direction:column;gap:3cqh}
+.row{display:flex;gap:3cqw;align-items:flex-start}
+.fav{width:5cqw;height:5cqw;border-radius:50%;background:rgba(255,255,255,.55);flex:none;margin-top:.6cqw}
+.tx{flex:1}.tx b,.tx u,.tx s{display:block;border-radius:6px;height:1.7cqw;margin-bottom:1.1cqw}
+.tx b{background:#fff;width:70%;height:2.4cqw}.tx u{background:rgba(255,255,255,.55);width:45%;text-decoration:none}.tx s{background:rgba(255,255,255,.22);width:92%;text-decoration:none}
+.orbx{position:absolute;left:50%;top:16cqh;margin-left:-8cqw;width:16cqw;height:16cqw;border-radius:50%;background:#fff;color:var(--blue);display:grid;place-items:center;font-size:8cqw;box-shadow:0 0 0 2cqw rgba(255,255,255,.18),0 0 0 4.5cqw rgba(255,255,255,.1),0 0 8cqw rgba(255,255,255,.55)}
+.orbx svg{animation:spin 10s linear infinite}
+@keyframes spin{to{rotate:360deg}}
+.bub2{position:absolute;max-width:74%;padding:2.6cqw 3.6cqw;border-radius:4.6cqw;background:rgba(255,255,255,.17);border:1px solid rgba(255,255,255,.4);font-size:max(11.5px,2.5cqw);line-height:1.4;backdrop-filter:blur(6px)}
+.bub2.l{left:6cqw;border-bottom-left-radius:1cqw}.bub2.r{right:6cqw;border-bottom-right-radius:1cqw;background:rgba(255,255,255,.28)}
+.recs{position:absolute;left:7cqw;right:7cqw;top:30cqh;display:flex;flex-direction:column;gap:2.6cqh}
+.rc{display:flex;align-items:center;gap:3cqw;padding:2.4cqw 3cqw;border-radius:3.4cqw;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.32)}
+.rc .av{width:7cqw;height:7cqw;border-radius:2cqw;background:rgba(255,255,255,.7);flex:none}
+.rc .ls{flex:1}.rc .ls i{display:block;height:1.8cqw;border-radius:6px;background:rgba(255,255,255,.5);margin:1cqw 0}.rc .ls i+i{width:60%;background:rgba(255,255,255,.25)}
+.rc>svg{font-size:4.5cqw}
+.rc.you{background:transparent;border:2px dashed #fff;font-weight:600;font-size:max(13px,2.8cqw);justify-content:center;gap:2cqw;animation:ypulse 1.8s infinite}
+@keyframes ypulse{50%{background:rgba(255,255,255,.2)}}
+.orbit{position:absolute;left:50%;top:56cqh;width:0;height:0;--R:27cqw;transition:translate .9s cubic-bezier(.2,.8,.2,1),scale .9s cubic-bezier(.2,.8,.2,1)}
+#stage[data-s="4"] .orbit{translate:0 18cqh;scale:.7}
+.ring{position:absolute;left:calc(var(--R)*-1);top:calc(var(--R)*-1);width:calc(var(--R)*2);height:calc(var(--R)*2);border:1.5px dashed rgba(255,255,255,.6);border-radius:50%;rotate:calc(var(--p)*-120deg)}
+.ring.b{left:calc(var(--R)*-.62);top:calc(var(--R)*-.62);width:calc(var(--R)*1.24);height:calc(var(--R)*1.24);border-style:solid;border-color:rgba(255,255,255,.2)}
+.arm{position:absolute;left:0;top:0;transform:rotate(calc(var(--b)*1deg + var(--p)*220deg))}
+.spoke{position:absolute;left:0;top:-1px;width:var(--R);height:2px;background:linear-gradient(90deg,rgba(255,255,255,.05),rgba(255,255,255,.8))}
+.npos{position:absolute;left:var(--R);top:0;transform:translate(-50%,-50%) rotate(calc((var(--b)*1deg + var(--p)*220deg)*-1))}
+.node{display:flex;align-items:center;gap:1.6cqw;padding:1.9cqw 3cqw;border-radius:100px;background:#fff;color:var(--ink);font-weight:700;font-size:max(11px,2.5cqw);white-space:nowrap;box-shadow:0 2cqw 4cqw -1.5cqw rgba(0,0,0,.5)}
+.node svg{color:var(--blue);font-size:3.4cqw}
+.core{position:absolute;left:0;top:0;translate:-50% -50%;width:22cqw;height:22cqw;border-radius:50%;background:#fff;color:var(--ink);display:grid;place-items:center;text-align:center;font-family:'Space Grotesk';font-weight:700;font-size:max(12px,2.8cqw);line-height:1.1;box-shadow:0 0 0 2cqw rgba(255,255,255,.2),0 0 9cqw rgba(255,255,255,.7);animation:cp 2.4s infinite}
+.core svg{color:var(--blue);display:block;margin:0 auto 1cqw;font-size:6cqw}
+@keyframes cp{50%{box-shadow:0 0 0 3.6cqw rgba(255,255,255,.12),0 0 12cqw rgba(255,255,255,.85)}}
+.ansc{position:absolute;left:7cqw;right:7cqw;top:10cqh;padding:3.6cqw;border-radius:4cqw;background:#fff;color:var(--ink);box-shadow:0 4cqw 9cqw -3cqw rgba(0,0,0,.55)}
+.ansc small{display:flex;align-items:center;gap:1.4cqw;color:var(--blue);font-weight:700;font-size:max(9.5px,1.9cqw);letter-spacing:.14em;text-transform:uppercase}
+.ansc h4{font-size:max(18px,4.4cqw);margin:1.4cqw 0 2.2cqw}
+.ansc .ch2{display:flex;gap:1.6cqw;flex-wrap:wrap}
+.ansc .ch2 span{display:inline-flex;gap:1.1cqw;align-items:center;padding:1.2cqw 2.4cqw;border-radius:100px;background:#eef3ff;color:var(--blue);font-weight:600;font-size:max(10.5px,2.1cqw)}
+.scroll{position:absolute;left:50%;bottom:4px;translate:-50% 0;font-size:10px;letter-spacing:.3em;font-weight:600;color:var(--mut);display:flex;flex-direction:column;align-items:center;gap:6px}
+.scroll::after{content:"";width:2px;height:26px;background:linear-gradient(var(--blue),transparent);animation:sd 1.6s infinite}
+@keyframes sd{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@media(max-width:960px){.sticky{grid-template-columns:1fr;grid-template-rows:auto 1fr;gap:16px;padding-top:84px}.stage{height:44vh;order:-1}.copies{min-height:150px}.dots,.scroll{display:none}h1{font-size:30px;margin-bottom:12px}.eyebrow{margin-bottom:12px}.cta-row{margin-top:14px}}
+
+/* FLOATING DECOR */
+.fl{position:absolute;pointer-events:none;color:var(--blue);will-change:transform;animation:bobx 7s ease-in-out infinite}
+.bl .fl{color:#fff}
+.fl svg{width:100%;height:100%;display:block}
+@keyframes bobx{50%{translate:0 -18px}}
+
+/* COMMON */
+.kick{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);display:flex;align-items:center;gap:12px;margin-bottom:22px;font-weight:600}
+.bl .kick{color:#fff}
+.kick b{font-family:'Space Grotesk';background:var(--blue);color:#fff;padding:3px 10px;border-radius:100px;letter-spacing:.06em}
+.bl .kick b{background:#fff;color:var(--blue)}
+.kick::after{content:"";height:2px;width:56px;background:currentColor;opacity:.5}
+h2{font-size:clamp(32px,4.5vw,58px);max-width:920px;margin-bottom:24px}
+.sub{color:var(--mut);font-size:18px;max-width:740px}
+.split .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em}
+.split .w span{display:inline-block;transform:translateY(112%) rotate(5deg);transition:transform .85s cubic-bezier(.2,.8,.2,1)}
+.split.in .w span{transform:none}
+.rv{opacity:0;transform:translateY(44px);transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+.spot{position:relative;border:1px solid var(--line);border-radius:26px;background:var(--card);padding:32px;overflow:hidden;transition:transform .45s,border-color .4s,box-shadow .4s}
+.spot::before{content:"";position:absolute;inset:0;background:radial-gradient(360px circle at var(--mx,50%) var(--my,50%),var(--spot),transparent 60%);opacity:0;transition:.4s}
+.spot:hover{transform:translateY(-8px);box-shadow:0 30px 60px -28px rgba(20,70,255,.55)}
+.spot:hover::before{opacity:1}
+.spot>*{position:relative}
+.spot h3{font-size:22px;margin:16px 0 10px}
+.spot p{color:var(--mut);font-size:15px}
+.tile{width:60px;height:60px;border-radius:20px;display:grid;place-items:center;font-size:28px;background:var(--tile);color:var(--tilefg);transition:.5s;position:relative}
+.tile::after{content:"";position:absolute;inset:-7px;border-radius:26px;border:1.5px dashed currentColor;opacity:0;transition:.5s;color:var(--tile)}
+.spot:hover .tile{transform:rotate(-8deg) scale(1.1)}.spot:hover .tile::after{opacity:.6;rotate:20deg}
+.num{font-family:'Space Grotesk';font-size:13px;font-weight:700;letter-spacing:.14em;opacity:.7;position:absolute!important;top:26px;right:28px}
+.big{position:absolute!important;right:18px;bottom:-14px;font-family:'Space Grotesk';font-weight:700;font-size:72px;opacity:.07;line-height:1}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:50px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:50px}
+.g2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+@media(max-width:1000px){.g4,.g3{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.g4,.g3,.g2{grid-template-columns:1fr}}
+.callout{margin-top:50px;padding:36px 40px;border-radius:30px;font-family:'Space Grotesk';font-size:clamp(20px,2.4vw,28px);line-height:1.3;position:relative;overflow:hidden}
+.lt .callout{background:var(--blue);color:#fff}
+.lt .callout .grad{background-image:linear-gradient(90deg,#fff,#a9c6ff,#fff)}
+.bl .callout{background:#fff;color:var(--ink)}
+.bl .callout .grad{background-image:linear-gradient(90deg,#1446ff,#5a8dff,#1446ff)}
+.note{margin-top:28px;color:var(--mut);font-size:15px;border-left:3px solid currentColor;padding-left:18px;max-width:840px}
+
+/* PILLS */
+.ov{padding:70px 0 90px}
+.pills{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pill{display:flex;gap:18px;align-items:center;padding:24px;border-radius:26px;background:var(--card);border:1px solid var(--line);transition:.4s;position:relative}
+.pill:hover{transform:translateY(-8px);box-shadow:0 30px 60px -28px rgba(20,70,255,.55);border-color:var(--blue)}
+.pill h4{font-size:21px}.pill p{font-size:14px;color:var(--mut)}
+.pill .ar{position:absolute;top:16px;right:20px;opacity:.5;transition:.3s}.pill:hover .ar{opacity:1;transform:translate(3px,-3px)}
+@media(max-width:760px){.pills{grid-template-columns:1fr}}
+
+/* MARQUEE */
+.mqband{background:var(--blue);padding:24px 0;overflow:hidden;transform:rotate(-1.4deg);margin:0 -30px;position:relative;z-index:3;box-shadow:0 30px 60px -30px rgba(20,70,255,.7)}
+.mqband div{display:flex;gap:56px;width:max-content;animation:mq 30s linear infinite;font-family:'Space Grotesk';font-size:clamp(22px,3vw,36px);font-weight:700;white-space:nowrap;color:#fff}
+.mqband span:nth-child(3n+1){color:transparent;-webkit-text-stroke:1.2px #fff}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* EVOLUTION */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:50px;align-items:start}
+@media(max-width:900px){.cols{grid-template-columns:1fr}}
+.ptxt p{color:var(--mut);margin-bottom:18px;font-size:17px}
+.ptxt p.hl{color:var(--fg);font-weight:600;font-size:20px}
+.scene{position:relative;height:300px;margin-top:20px}
+.sring{position:absolute;left:50%;top:50%;translate:-50% -50%;border:1.5px dashed rgba(255,255,255,.6);border-radius:50%;animation:spin 24s linear infinite}
+.sring.a{width:250px;height:250px}.sring.b{width:170px;height:170px;animation-direction:reverse;border-style:solid;border-color:rgba(255,255,255,.25)}
+.score{position:absolute;left:50%;top:50%;translate:-50% -50%;width:84px;height:84px;border-radius:50%;background:#fff;color:var(--blue);display:grid;place-items:center;font-size:38px;box-shadow:0 0 0 14px rgba(255,255,255,.16),0 0 60px rgba(255,255,255,.6)}
+.sorb{position:absolute;left:50%;top:50%;margin:-26px 0 0 -26px;width:52px;height:52px;border-radius:16px;background:#fff;color:var(--blue);display:grid;place-items:center;font-size:24px;animation:orb 14s linear infinite;box-shadow:0 14px 30px -10px rgba(0,0,0,.5)}
+@keyframes orb{from{transform:rotate(0) translateX(var(--R)) rotate(0)}to{transform:rotate(360deg) translateX(var(--R)) rotate(-360deg)}}
+.bubbles{display:flex;flex-direction:column;gap:16px}
+.bub{align-self:flex-start;max-width:94%;padding:18px 22px;border-radius:24px 24px 24px 6px;background:var(--card);border:1px solid var(--line);font-size:16px;font-weight:500;opacity:0;transform:translateX(-40px) scale(.94);transition:.7s cubic-bezier(.2,.8,.2,1);display:flex;gap:14px;align-items:center}
+.bub:nth-child(even){align-self:flex-end;border-radius:24px 24px 6px 24px;background:#fff;color:var(--ink);transform:translateX(40px) scale(.94)}
+.bub.in{opacity:1;transform:none}
+.bub .ic{font-size:22px;color:#fff}.bub:nth-child(even) .ic{color:var(--blue)}
+
+/* CHALLENGES */
+.ch{cursor:pointer;padding:28px}
+.ch .hd{display:flex;gap:16px;align-items:center}
+.ch h3{font-size:19px;margin:0;flex:1}
+.pm{flex:none;width:34px;height:34px;border-radius:50%;border:1.5px solid currentColor;display:grid;place-items:center;transition:.4s;font-size:20px;line-height:1}
+.open>.hd .pm{transform:rotate(45deg);background:var(--blue);color:#fff;border-color:var(--blue)}
+.bd{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s}
+.open>.bd{grid-template-rows:1fr}.bd>div{overflow:hidden}
+.ch.open{background:#fff;color:var(--ink);--mut:#23283d;--tile:var(--blue);--tilefg:#fff}
+.ch .bd p{padding-top:16px}
+
+/* SERVICES */
+.svc{display:grid;grid-template-columns:350px 1fr;gap:28px;margin-top:50px;align-items:start}
+.tabs{display:flex;flex-direction:column;gap:8px;position:sticky;top:110px}
+.tab{display:flex;gap:14px;align-items:center;text-align:left;padding:15px 18px;border-radius:18px;border:1.5px solid var(--line);background:#fff;color:var(--ink);font:600 15px Inter;cursor:pointer;transition:.35s}
+.tab .ic{font-size:20px;color:var(--blue)}
+.tab:hover{border-color:var(--blue);transform:translateX(4px)}
+.tab.on{background:var(--blue);color:#fff;border-color:var(--blue);transform:translateX(10px);box-shadow:0 18px 36px -14px rgba(20,70,255,.7)}
+.tab.on .ic{color:#fff}
+.panel{border-radius:34px;padding:46px;background:linear-gradient(155deg,var(--blue),var(--blue2));color:#fff;min-height:640px;position:relative;overflow:hidden;box-shadow:0 40px 80px -30px rgba(20,70,255,.6)}
+.panel::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:44px 44px}
+.pbody{position:relative;animation:swap .65s cubic-bezier(.2,.8,.2,1)}
+@keyframes swap{from{opacity:0;transform:translateY(26px)}}
+.pico{position:absolute;right:0;top:-6px;width:150px;height:150px}
+.pico .main{position:absolute;inset:25px;border-radius:34px;background:#fff;color:var(--blue);display:grid;place-items:center;font-size:56px;animation:bobx 5s ease-in-out infinite;box-shadow:0 20px 40px -12px rgba(0,0,0,.45)}
+.pico .r{position:absolute;inset:0;border-radius:50%;border:1.5px dashed rgba(255,255,255,.6);animation:spin 14s linear infinite}
+.pico .mini{position:absolute;width:30px;height:30px;border-radius:10px;background:rgba(255,255,255,.25);display:grid;place-items:center;font-size:16px;border:1px solid rgba(255,255,255,.5)}
+.panel h3{font-size:clamp(26px,3vw,38px);margin-bottom:12px;max-width:430px}
+.panel .stl{font-size:18px;margin-bottom:12px;font-weight:500;max-width:520px;color:var(--sky)}
+.panel p.d{color:rgba(255,255,255,.85);margin-bottom:22px;max-width:600px}
+.lst{display:grid;grid-template-columns:1fr 1fr;gap:10px 22px;list-style:none;margin-bottom:26px}
+.lst li{font-size:14.5px;padding-left:30px;position:relative;opacity:0;animation:li .5s forwards;animation-delay:calc(var(--i)*55ms + .15s)}
+@keyframes li{from{opacity:0;transform:translateX(-14px)}to{opacity:1;transform:none}}
+.lst li::before{content:"";position:absolute;left:0;top:3px;width:19px;height:19px;border-radius:50%;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231446ff' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/11px no-repeat}
+.deliv{padding:20px 24px;border-radius:20px;background:#fff;color:var(--ink);font-size:15px}
+.deliv b{color:var(--blue);display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:4px}
+.pnote{margin:0 0 18px;font-size:14px;font-style:italic;color:var(--sky)}
+@media(max-width:960px){.svc{grid-template-columns:1fr}.tabs{position:static;flex-direction:row;overflow-x:auto;padding-bottom:8px}.tab{flex:none;white-space:nowrap}.tab.on{transform:none}.lst{grid-template-columns:1fr}.panel{padding:28px}.pico{display:none}}
+
+/* PLATFORMS - real brand logos */
+.pic{width:64px;height:64px;border-radius:20px;display:grid;place-items:center;font:700 26px 'Space Grotesk';background:#fff;color:var(--blue);transition:.5s;box-shadow:0 14px 28px -12px rgba(0,0,0,.4)}
+.pic img{width:34px;height:34px;object-fit:contain;display:block}
+.pic.duo{width:auto;padding:0 14px;gap:10px;display:flex}
+.pic.duo img{width:30px;height:30px}
+.spot:hover .pic{transform:rotate(-8deg) scale(1.1)}
+
+/* VENN */
+.venn{position:relative;height:470px;margin:60px auto 30px;max-width:580px}
+.vc{position:absolute;width:296px;height:296px;border-radius:50%;display:grid;place-items:center;font-family:'Space Grotesk';font-weight:700;font-size:27px;color:#fff;background:rgba(20,70,255,.7);border:2px solid #fff;transition:.5s;cursor:pointer;animation:bobx 8s ease-in-out infinite}
+.vc small{display:block;font-size:11px;font-weight:600;letter-spacing:.12em;text-align:center;opacity:.9}
+.vc.a{left:0;top:0}.vc.b{right:0;top:0;animation-delay:-2.5s;background:rgba(10,43,208,.7)}.vc.c{left:50%;margin-left:-148px;bottom:0;animation-delay:-5s;background:rgba(60,100,255,.7)}
+.vc.a span{transform:translate(-46px,-36px)}.vc.b span{transform:translate(46px,-36px)}.vc.c span{transform:translateY(54px)}
+.vc.hl{transform:scale(1.08);z-index:5;box-shadow:0 30px 60px -20px rgba(20,70,255,.8)}
+.vcore{position:absolute;left:50%;top:50%;transform:translate(-50%,-38%);z-index:6;text-align:center;font-family:'Space Grotesk';font-weight:700;font-size:14px;line-height:1.1;padding:20px 18px;border-radius:50%;background:#fff;color:var(--ink);border:3px solid var(--blue);box-shadow:0 0 0 8px rgba(20,70,255,.15);animation:cp2 2.4s infinite}
+@keyframes cp2{50%{box-shadow:0 0 0 16px rgba(20,70,255,.08)}}
+@media(max-width:600px){.venn{height:340px;transform:scale(.62);transform-origin:top center;margin-bottom:-120px}}
+
+/* TIMELINE */
+.tl{position:relative;margin-top:70px;padding-left:76px}
+.tl::before{content:"";position:absolute;left:25px;top:0;bottom:0;width:3px;background:rgba(255,255,255,.25);border-radius:3px}
+.tl .fill{position:absolute;left:25px;top:0;width:3px;height:0;background:#fff;border-radius:3px;box-shadow:0 0 18px #fff}
+.st{position:relative;padding:28px 34px;border:1px solid var(--line);border-radius:26px;background:var(--card);margin-bottom:22px;transition:.45s}
+.st:hover{transform:translateX(10px);background:rgba(255,255,255,.18)}
+.st .dot{position:absolute;left:-76px;top:22px;width:54px;height:54px;border-radius:50%;background:var(--blue2);border:3px solid rgba(255,255,255,.3);display:grid;place-items:center;font-size:24px;transition:.5s}
+.st.on .dot{background:#fff;color:var(--blue);border-color:#fff;box-shadow:0 0 0 8px rgba(255,255,255,.2),0 0 34px rgba(255,255,255,.7)}
+.st small{letter-spacing:.16em;font-size:11px;text-transform:uppercase;font-weight:600;opacity:.85}
+.st h3{font-size:28px;margin:4px 0 8px}.st p{color:var(--mut)}
+
+/* MEASURE */
+.meas{display:grid;grid-template-columns:1fr 1.05fr;gap:60px;align-items:center;margin-top:50px}
+@media(max-width:900px){.meas{grid-template-columns:1fr}}
+.dash{border:1px solid var(--line);border-radius:32px;padding:28px;background:#fff;box-shadow:0 40px 80px -36px rgba(20,70,255,.55)}
+.dash .row2{display:flex;justify-content:space-between;font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;font-weight:600}
+.dash .row2 span:last-child{color:var(--blue)}
+.chart{width:100%;height:auto;display:block;overflow:visible}
+.chart .ln{fill:none;stroke-width:4;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2.2s cubic-bezier(.2,.8,.2,1)}
+.chart .l1{stroke:var(--blue)}.chart .l2{stroke:#0a0a0a;stroke-width:3}
+.chart .l2{stroke-dasharray:.03 .025;stroke-dashoffset:0;opacity:0;transition:opacity 1s 1.2s}
+.dash.in .l1{stroke-dashoffset:0}.dash.in .l2{opacity:1}
+.chart .area{opacity:0;transition:opacity 1.2s 1.2s}.dash.in .area{opacity:1}
+.chart .pt{opacity:0;transform-box:fill-box;transform-origin:center;scale:0;transition:.5s 1.8s}.dash.in .pt{opacity:1;scale:1}
+.legend{display:flex;gap:18px;margin-top:14px;flex-wrap:wrap;font-size:13px;font-weight:500}
+.legend span{display:flex;align-items:center;gap:8px}.legend i{width:22px;height:4px;border-radius:4px;background:var(--blue)}.legend span+span i{background:repeating-linear-gradient(90deg,#0a0a0a 0 4px,transparent 4px 7px)}
+.capx{font-size:10.5px;letter-spacing:.1em;margin-top:12px;opacity:.6}
+
+/* FAQ */
+.faq{margin-top:50px;display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+@media(max-width:900px){.faq{grid-template-columns:1fr}}
+.fq{border:1px solid var(--line);border-radius:22px;background:var(--card);cursor:pointer;transition:.35s}
+.fq:hover{transform:translateY(-3px)}
+.fq .hd{display:flex;gap:14px;align-items:center;padding:20px 22px}
+.fq .hd h4{flex:1;font-size:16.5px;font-weight:600;line-height:1.3}
+.fq .nn{font-family:'Space Grotesk';font-weight:700;font-size:13px;opacity:.7}
+.fq .bd p{padding:0 22px 22px;color:var(--mut);font-size:15px}
+.fq.open{background:#fff;color:var(--ink);--mut:#23283d}
+
+/* FINAL */
+.final{padding:110px 0 70px}
+.fcard{position:relative;border-radius:48px;padding:90px 50px;text-align:center;color:#fff;overflow:hidden;background:linear-gradient(150deg,var(--blue),var(--blue2));box-shadow:0 60px 120px -40px rgba(20,70,255,.7)}
+.fcard::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(circle at 50% 50%,#000,transparent 75%)}
+.fcard::after{content:"";position:absolute;width:700px;height:700px;left:50%;top:50%;translate:-50% -50%;background:conic-gradient(from 0deg,rgba(255,255,255,.35),transparent 30%,rgba(255,255,255,.2),transparent 70%,rgba(255,255,255,.35));border-radius:50%;animation:spin 20s linear infinite;filter:blur(40px);opacity:.5}
+.fcard>*{position:relative;z-index:2}
+.fcard .kick{justify-content:center;color:#fff}.fcard .kick b{background:#fff;color:var(--blue)}
+.fcard h2{margin-inline:auto;font-size:clamp(34px,5.2vw,68px);color:#fff}
+.fcard .grad{background-image:linear-gradient(90deg,#fff,#a9c6ff,#fff)}
+.fcard .sub{margin:0 auto 14px;color:rgba(255,255,255,.88)}
+.fcard .cta-row{justify-content:center}
+.fcard .btn.pri{background:#fff;color:var(--blue);border-color:#fff}
+.fcard .btn.gh:hover{background:#fff;color:var(--blue)}
+.fcard .fl{color:#fff;opacity:.6;z-index:1}
+.next{text-align:center;padding:60px 0 110px}
+.next h2{margin-inline:auto;font-size:clamp(30px,4vw,48px)}
+.svcs{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:34px}
+.svcs a{padding:13px 24px;border-radius:100px;border:1.5px solid var(--blue);color:var(--blue);font-weight:600;font-size:15px;transition:.3s;background:#fff}
+.svcs a:hover{background:var(--blue);color:#fff;transform:translateY(-4px)}
+
+footer{background:linear-gradient(160deg,var(--blue),var(--blue2));color:#fff;padding:80px 0 40px;font-size:14px}
+.fg{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr 1fr;gap:34px}
+footer h5{font-family:'Space Grotesk';font-size:12px;letter-spacing:.18em;margin-bottom:16px}
+footer a{display:block;margin-bottom:10px;opacity:.85}footer a:hover{opacity:1;transform:translateX(3px)}
+footer a.flogo{display:inline-flex;background:#fff;padding:10px 18px;border-radius:16px;opacity:1;margin:0;color:var(--ink)}
+footer a.flogo:hover{transform:none}
+footer a.flogo img{height:34px;width:auto;display:block}
+.fb{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:50px;padding-top:24px;border-top:1px solid rgba(255,255,255,.3)}
+.fb span a{display:inline;margin-left:18px}
+.cta-strip{margin-top:56px;padding:34px;border-radius:28px;background:#fff;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.cta-strip small{color:var(--blue);letter-spacing:.16em;font-size:11px;font-weight:700}
+.cta-strip h3{font-size:26px;margin-top:6px}
+footer .cta-strip a.btn.pri{background:var(--blue);color:#fff;border-color:var(--blue);opacity:1;margin:0}
+@media(max-width:900px){.fg{grid-template-columns:1fr 1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.bub,.split .w span{opacity:1!important;transform:none!important}.e.on{opacity:1}}
+
+/* Original IdeaWonder brand lockup: tagline sits below the logo */
+nav a.logo{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;gap:2px!important;line-height:1!important}
+nav a.logo img{display:block;width:205px;height:43px;object-fit:contain;object-position:left center}
+nav .brand-tagline{display:block;margin:0 0 0 2px;color:#6b9cff;font-size:7px;font-weight:800;letter-spacing:.19em;line-height:1.2;white-space:nowrap}
+@media(max-width:760px){nav a.logo img{width:165px;height:36px}nav .brand-tagline{font-size:6px;letter-spacing:.15em}}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+
+<!-- UI ICON + SHAPE SPRITE (transparent vector artwork) -->
+<svg class="sprite" aria-hidden="true"><defs>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.5 7.2L4 20l1-4.5A8 8 0 1 1 21 12z"/></symbol>
+<symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 17v4M17 19h4"/></symbol>
+<symbol id="i-chip" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+<symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></symbol>
+<symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></symbol>
+<symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></symbol>
+<symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></symbol>
+<symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+<symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
+<symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></symbol>
+<symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2 20c0-4 3-6 7-6s7 2 7 6"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14c3 0 5 1.8 5 5"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+<symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></symbol>
+<symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 1-1 1.7M12 17h.01"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></symbol>
+<symbol id="s-star" viewBox="0 0 100 100"><path fill="currentColor" d="M50 0C54 30 70 46 100 50 70 54 54 70 50 100 46 70 30 54 0 50 30 46 46 30 50 0z"/></symbol>
+<symbol id="s-ring" viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="5"/><circle cx="50" cy="50" r="26" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="3 6"/></symbol>
+<symbol id="s-dots" viewBox="0 0 100 100"><g fill="currentColor"><circle cx="10" cy="10" r="4"/><circle cx="35" cy="10" r="4"/><circle cx="60" cy="10" r="4"/><circle cx="85" cy="10" r="4"/><circle cx="10" cy="35" r="4"/><circle cx="35" cy="35" r="4"/><circle cx="60" cy="35" r="4"/><circle cx="85" cy="35" r="4"/><circle cx="10" cy="60" r="4"/><circle cx="35" cy="60" r="4"/><circle cx="60" cy="60" r="4"/><circle cx="85" cy="60" r="4"/><circle cx="10" cy="85" r="4"/><circle cx="35" cy="85" r="4"/><circle cx="60" cy="85" r="4"/><circle cx="85" cy="85" r="4"/></g></symbol>
+<symbol id="s-plus" viewBox="0 0 100 100"><path d="M50 12v76M12 50h76" stroke="currentColor" stroke-width="12" stroke-linecap="round"/></symbol>
+<symbol id="s-bubble" viewBox="0 0 120 100"><path fill="currentColor" d="M20 0h80a20 20 0 0 1 20 20v36a20 20 0 0 1-20 20H62L36 98V76H20A20 20 0 0 1 0 56V20A20 20 0 0 1 20 0z"/></symbol>
+</defs></svg>
+
+<nav>
+  <a class="logo" href="/"><img src="/brand/ideawonder-logo-horizontal.png" alt="IdeaWonder AI" onerror="this.replaceWith(document.createTextNode('IdeaWonder AI'))"><span class="brand-tagline">IMAGINE MORE. GROW SMARTER.</span></a>
+  <ul><li><a href="/">About</a></li><li><a class="on" href="/services/seo-ai-search">Services</a></li><li><a href="/contact">Contact</a></li></ul>
+  <a class="btn pri sm" href="/contact">Build Your Growth Strategy</a>
+</nav>
+
+<!-- ============ HERO: SCROLL STORY ============ -->
+<div class="hero story" id="story">
+  <div class="sticky">
+    <div>
+      <div class="eyebrow">IdeaWonder AI / Services / Search + AI Discovery</div>
+      <h1>Be the Brand AI Search Finds, Understands and Recommends. <span class="grad">AI Search Finds, Understands and Recommends.</span></h1>
+      <div class="copies">
+        <p class="copy on">Search is no longer limited to a list of links.</p>
+        <p class="copy">People are asking AI assistants for recommendations, comparing businesses through conversational search and using generative engines to research solutions before making decisions.</p>
+        <p class="copy big">Is your brand visible when those conversations happen?</p>
+        <p class="copy">IdeaWonder AI helps businesses strengthen their presence across AI-powered search and discovery experiences through a connected strategy combining Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), Large Language Model Optimization (LLMO) and AI Search Optimization.</p>
+        <p class="copy">From improving how search systems understand your business to creating content that demonstrates genuine expertise, we help build the foundations for stronger visibility in the evolving search landscape.</p>
+      </div>
+      <div class="cta-row">
+        <a class="btn pri mag" href="/contact">Build Your AI Search Strategy <svg class="ic"><use href="#i-arrow"/></svg></a>
+        <a class="btn gh" href="#service-content">Explore Our Approach</a>
+      </div>
+      <div class="dots"><i class="on"></i><i></i><i></i><i></i><i></i><span>SCROLL TO EXPLORE</span></div>
+    </div>
+
+    <!-- STAGE -->
+    <div class="stage" id="stage" data-s="0">
+      <div class="glow"></div>
+      <div class="schip e" data-in="0" data-out="1">GOOGLE + AI SEARCH</div>
+      <div class="schip e" data-in="1" data-out="3">ANSWER ENGINE</div>
+      <div class="schip e" data-in="3">SEARCH + AI DISCOVERY</div>
+
+      <div class="sbar e" data-in="0" data-out="1"><svg class="ic"><use href="#i-search"/></svg><span>marketing agency</span><i class="cr"></i></div>
+      <div class="serp">
+        <div class="row e" data-in="0" data-out="1" style="--d:.1s"><i class="fav"></i><div class="tx"><b></b><u></u><s></s></div></div>
+        <div class="row e" data-in="0" data-out="1" style="--d:.2s"><i class="fav"></i><div class="tx"><b style="width:60%"></b><u></u><s></s></div></div>
+        <div class="row e" data-in="0" data-out="1" style="--d:.3s"><i class="fav"></i><div class="tx"><b style="width:76%"></b><u></u><s></s></div></div>
+        <div class="row e" data-in="0" data-out="1" style="--d:.4s"><i class="fav"></i><div class="tx"><b style="width:55%"></b><u></u><s></s></div></div>
+      </div>
+
+      <div class="orbx e" data-in="1" data-out="3"><svg class="ic"><use href="#i-spark"/></svg></div>
+      <div class="bub2 l e" data-in="1" data-out="2" style="top:34cqh;--d:.15s">Which digital marketing agency can help a B2B company generate qualified leads?</div>
+      <div class="bub2 r e" data-in="1" data-out="2" style="top:51cqh;--d:.45s">What is the best approach to improving visibility in AI search?</div>
+      <div class="bub2 l e" data-in="1" data-out="2" style="top:66cqh;--d:.75s">How do I compare SEO agencies that understand generative search?</div>
+
+      <div class="recs">
+        <div class="rc e" data-in="2" data-out="3" style="--d:.1s"><i class="av"></i><div class="ls"><i></i><i></i></div><svg class="ic"><use href="#i-check"/></svg></div>
+        <div class="rc e" data-in="2" data-out="3" style="--d:.25s"><i class="av"></i><div class="ls"><i></i><i></i></div><svg class="ic"><use href="#i-check"/></svg></div>
+        <div class="rc e" data-in="2" data-out="3" style="--d:.4s"><i class="av"></i><div class="ls"><i></i><i></i></div><svg class="ic"><use href="#i-check"/></svg></div>
+        <div class="rc you e" data-in="2" data-out="3" style="--d:.6s"><svg class="ic" style="font-size:5cqw"><use href="#i-help"/></svg>Your brand</div>
+      </div>
+
+      <div class="orbit e" data-in="3">
+        <div class="ring"></div><div class="ring b"></div>
+        <div class="arm" style="--b:-135"><div class="spoke"></div><div class="npos"><div class="node"><svg class="ic"><use href="#i-chat"/></svg>AEO</div></div></div>
+        <div class="arm" style="--b:-45"><div class="spoke"></div><div class="npos"><div class="node"><svg class="ic"><use href="#i-spark"/></svg>GEO</div></div></div>
+        <div class="arm" style="--b:45"><div class="spoke"></div><div class="npos"><div class="node"><svg class="ic"><use href="#i-chip"/></svg>LLMO</div></div></div>
+        <div class="arm" style="--b:135"><div class="spoke"></div><div class="npos"><div class="node"><svg class="ic"><use href="#i-globe"/></svg>AI SEARCH</div></div></div>
+        <div class="core"><div><svg class="ic"><use href="#i-target"/></svg>Your<br>brand</div></div>
+      </div>
+      <div class="ansc e" data-in="4" style="--d:.2s">
+        <small><svg class="ic"><use href="#i-spark"/></svg> Your brand, everywhere</small>
+        <h4>Be the answer. Be discovered.</h4>
+        <div class="ch2"><span><svg class="ic"><use href="#i-eye"/></svg>Brand visibility</span><span><svg class="ic"><use href="#i-award"/></svg>Topical authority</span><span><svg class="ic"><use href="#i-link"/></svg>AI citations</span></div>
+      </div>
+    </div>
+    <div class="scroll">SCROLL</div>
+  </div>
+</div>
+
+<!-- OVERVIEW PILLS -->
+<section class="lt ov">
+  <svg class="fl" data-s=".12" style="width:90px;top:10%;right:8%"><use href="#s-star"/></svg>
+  <svg class="fl" data-s="-.1" style="width:110px;bottom:6%;left:3%;opacity:.35"><use href="#s-dots"/></svg>
+  <div class="wrap">
+    <div class="pills">
+      <a class="pill rv" href="#service-content"><div class="tile"><svg class="ic"><use href="#i-eye"/></svg></div><div><h4>Brand visibility</h4><p>Relevant search results and AI discovery</p></div><svg class="ic ar"><use href="#i-arrow"/></svg></a>
+      <a class="pill rv" style="--d:.1s" href="#service-content"><div class="tile"><svg class="ic"><use href="#i-award"/></svg></div><div><h4>Topical authority</h4><p>Trusted content. Clear brand signals.</p></div><svg class="ic ar"><use href="#i-arrow"/></svg></a>
+      <a class="pill rv" style="--d:.2s" href="#service-content"><div class="tile"><svg class="ic"><use href="#i-link"/></svg></div><div><h4>AI citations</h4><p>Be present in the answers that matter</p></div><svg class="ic ar"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<div style="overflow:hidden;padding:30px 0"><div class="mqband"><div id="mq"></div></div></div>
+
+<!-- APPROACH -->
+<section class="lt" id="service-content" style="padding:120px 0 110px">
+  <svg class="fl" data-s=".15" style="width:140px;top:14%;right:6%"><use href="#s-ring"/></svg>
+  <svg class="fl" data-s="-.12" style="width:60px;bottom:14%;left:8%"><use href="#s-plus"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>01</b> The IdeaWonder Approach</div>
+    <h2 class="split">Be the answer. Be discovered. <span class="grad">Search visibility ecosystem</span></h2>
+    <p class="sub rv">Strategy, creative execution and connected systems—built around your business objectives.</p>
+  </div>
+</section>
+
+<!-- EVOLUTION -->
+<section class="bl">
+  <svg class="fl" data-s=".14" style="width:120px;top:8%;right:5%;opacity:.5"><use href="#s-bubble"/></svg>
+  <svg class="fl" data-s="-.1" style="width:90px;bottom:10%;right:46%;opacity:.4"><use href="#s-star"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>02</b> The Search Evolution</div>
+    <h2 class="split">Your Next Customer May Ask AI Before They Ever Visit <span class="grad">Google.</span></h2>
+    <div class="cols">
+      <div class="ptxt">
+        <p class="rv">The way people discover businesses is changing.</p>
+        <p class="rv">Instead of searching only with short keywords, users increasingly ask detailed questions, explore recommendations, compare alternatives and seek contextual answers through AI-powered experiences.</p>
+        <p class="rv hl">They ask:</p>
+        <div class="scene rv">
+          <div class="sring a"></div><div class="sring b"></div>
+          <div class="score"><svg class="ic"><use href="#i-spark"/></svg></div>
+          <div class="sorb" style="--R:125px"><svg class="ic"><use href="#i-search"/></svg></div>
+          <div class="sorb" style="--R:125px;animation-delay:-4.6s"><svg class="ic"><use href="#i-chat"/></svg></div>
+          <div class="sorb" style="--R:125px;animation-delay:-9.3s"><svg class="ic"><use href="#i-globe"/></svg></div>
+        </div>
+      </div>
+      <div class="bubbles" id="bubbles">
+        <div class="bub"><svg class="ic"><use href="#i-search"/></svg>Which digital marketing agency can help a B2B company generate qualified leads?</div>
+        <div class="bub"><svg class="ic"><use href="#i-chat"/></svg>What is the best approach to improving visibility in AI search?</div>
+        <div class="bub"><svg class="ic"><use href="#i-gear"/></svg>Which marketing automation services can help a growing business?</div>
+        <div class="bub"><svg class="ic"><use href="#i-search"/></svg>How do I compare SEO agencies that understand generative search?</div>
+        <div class="bub"><svg class="ic"><use href="#i-users"/></svg>What should I consider before choosing an AI automation partner?</div>
+      </div>
+    </div>
+    <div class="g2" style="margin-top:50px">
+      <div class="spot rv"><div class="tile"><svg class="ic"><use href="#i-target"/></svg></div><h3 style="font-size:20px;font-weight:600">These are not just informational searches. They can influence awareness, consideration and purchasing decisions.</h3></div>
+      <div class="spot rv" style="--d:.1s"><div class="tile"><svg class="ic"><use href="#i-layers"/></svg></div><p style="margin-top:16px;font-size:16px;color:#fff">Your business needs more than a website that targets traditional keywords. It needs a digital presence that communicates its expertise, services, positioning and value clearly across evolving discovery experiences.</p></div>
+    </div>
+    <div class="callout rv"><span class="grad">AI Search Optimization helps prepare your brand for this new search environment.</span> The objective is to make your business easier to discover, understand and evaluate when potential customers use search engines, answer engines and AI-powered assistants.</div>
+  </div>
+</section>
+
+<!-- WHAT IS -->
+<section class="lt">
+  <svg class="fl" data-s=".13" style="width:130px;top:6%;right:4%;opacity:.4"><use href="#s-dots"/></svg>
+  <svg class="fl" data-s="-.15" style="width:100px;bottom:8%;left:2%"><use href="#s-ring"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>03</b> What Is AI Search Optimization?</div>
+    <h2 class="split">What Is AI Search Optimization and <span class="grad">Why Does Your Business Need It?</span></h2>
+    <p class="sub rv">AI Search Optimization is the process of strengthening a brand's digital presence so its information, expertise and content are easier for search engines and AI-powered discovery systems to access, understand and potentially reference.</p>
+    <p class="sub rv" style="margin-top:16px;color:var(--ink);font-weight:600">It brings together several related optimization disciplines:</p>
+    <div class="g4">
+      <div class="spot rv"><span class="big">AEO</span><div class="tile"><svg class="ic"><use href="#i-chat"/></svg></div><h3>Answer Engine Optimization (AEO)</h3><p>Improving how effectively your content addresses user questions and supports answer-oriented discovery.</p></div>
+      <div class="spot rv" style="--d:.1s"><span class="big">GEO</span><div class="tile"><svg class="ic"><use href="#i-spark"/></svg></div><h3>Generative Engine Optimization (GEO)</h3><p>Strengthening the quality, relevance and authority of your digital presence to improve discoverability in generative AI search experiences.</p></div>
+      <div class="spot rv" style="--d:.2s"><span class="big">LLMO</span><div class="tile"><svg class="ic"><use href="#i-chip"/></svg></div><h3>Large Language Model Optimization (LLMO)</h3><p>Improving the clarity, consistency and accessibility of your brand information across experiences powered by large language models.</p></div>
+      <div class="spot rv" style="--d:.3s"><span class="big">AI</span><div class="tile"><svg class="ic"><use href="#i-globe"/></svg></div><h3>AI Search Optimization</h3><p>The broader strategy connecting content, technical SEO, brand information, digital authority and search visibility across traditional and AI-powered discovery platforms.</p></div>
+    </div>
+    <p class="note rv">These disciplines overlap. They are not four completely independent ranking systems or guaranteed shortcuts into AI-generated responses.</p>
+    <div class="callout rv">At IdeaWonder AI, we combine them into one integrated service designed around a simple objective: <span class="grad">Help the right audience discover your brand, understand your expertise and consider your business when searching for solutions.</span></div>
+  </div>
+</section>
+
+<!-- WHY MATTERS -->
+<section class="bl">
+  <svg class="fl" data-s=".12" style="width:100px;top:7%;right:6%;opacity:.5"><use href="#s-star"/></svg>
+  <svg class="fl" data-s="-.12" style="width:120px;bottom:6%;left:3%;opacity:.3"><use href="#s-dots"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>04</b> Why AI Search Visibility Matters</div>
+    <h2 class="split">If AI Is Part of the Discovery Journey, Your Brand Should Be Part of the <span class="grad">Conversation.</span></h2>
+    <p class="sub rv">Your potential customers are researching businesses in new ways. If your digital presence does not communicate your expertise clearly, you risk missing opportunities to influence that research.</p>
+    <p class="sub rv" style="margin-top:14px;color:#fff;font-weight:600">Here are the challenges an integrated AI search strategy addresses.</p>
+    <div class="g3" id="challenges"></div>
+    <div class="callout rv">The opportunity is not to chase every new AI platform. It is to build a digital presence that <span class="grad">remains discoverable as customer search behavior evolves.</span></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="lt">
+  <svg class="fl" data-s=".13" style="width:130px;top:5%;right:3%"><use href="#s-ring"/></svg>
+  <svg class="fl" data-s="-.1" style="width:70px;top:46%;left:1%"><use href="#s-plus"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>05</b> Our AI Search Optimization Services</div>
+    <h2 class="split">One Connected Strategy. <span class="grad">Every Important Layer of AI Discovery.</span></h2>
+    <p class="sub rv">IdeaWonder AI combines content optimization, technical foundations, brand positioning and authority development to strengthen your business's presence across modern search experiences.</p>
+    <div class="svc rv">
+      <div class="tabs" id="tabs"></div>
+      <div class="panel"><div class="pbody" id="panel"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PLATFORMS (original brand logos) -->
+<section class="bl">
+  <svg class="fl" data-s=".14" style="width:110px;top:6%;right:5%;opacity:.5"><use href="#s-star"/></svg>
+  <svg class="fl" data-s="-.12" style="width:90px;bottom:8%;left:4%;opacity:.5"><use href="#s-ring"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>06</b> Platforms and Discovery Experiences</div>
+    <h2 class="split">Build Visibility Across the <span class="grad">Search Experiences</span> Your Customers Use.</h2>
+    <p class="sub rv">AI-powered discovery is developing across search engines, conversational assistants and generative platforms. Our strategy considers the platforms most relevant to your target audience and business category.</p>
+    <div class="g3">
+      <div class="spot rv"><div class="pic"><img src="https://cdn.simpleicons.org/google/4285F4" alt="Google logo" data-fb="G" onerror="this.outerHTML='<b>G</b>'"></div><h3>Google Search, AI Overviews and AI Mode</h3><p>Strengthen your website's search foundations, content quality and relevance to support discovery across Google's evolving search experiences.</p></div>
+      <div class="spot rv" style="--d:.08s"><div class="pic"><img src="https://cdn.simpleicons.org/openai/0a0a0a" alt="ChatGPT / OpenAI logo" onerror="this.outerHTML='<b>AI</b>'"></div><h3>ChatGPT</h3><p>Improve the clarity, credibility and accessibility of your business information for eligible search and browsing experiences within ChatGPT.</p></div>
+      <div class="spot rv" style="--d:.16s"><div class="pic"><img src="https://cdn.simpleicons.org/microsoftbing/258FFA" alt="Microsoft Bing logo" onerror="this.outerHTML='<b>B</b>'"></div><h3>Microsoft Bing and Copilot</h3><p>Build stronger content and technical foundations for discoverability across Microsoft's search and AI-powered experiences.</p></div>
+      <div class="spot rv"><div class="pic"><img src="https://cdn.simpleicons.org/perplexity/1FB8CD" alt="Perplexity logo" onerror="this.outerHTML='<b>P</b>'"></div><h3>Perplexity</h3><p>Develop useful, well-supported content that can serve as a relevant source in answer-oriented research and discovery.</p></div>
+      <div class="spot rv" style="--d:.08s"><div class="pic"><img src="https://cdn.simpleicons.org/googlegemini/8E75B2" alt="Google Gemini logo" onerror="this.outerHTML='<b>G</b>'"></div><h3>Google Gemini</h3><p>Strengthen the consistency and depth of your digital brand information for AI-assisted discovery experiences.</p></div>
+      <div class="spot rv" style="--d:.16s"><div class="pic"><svg class="ic" style="font-size:30px"><use href="#i-spark"/></svg></div><h3>Other Emerging AI Search Platforms</h3><p>Prepare your digital presence for evolving conversational search tools and AI-powered discovery environments as they become relevant to your audience.</p></div>
+    </div>
+    <p class="note rv">Platform visibility depends on each system's sources, retrieval processes, eligibility requirements and changing behavior. Our service focuses on improving the underlying factors your business can influence, not guaranteeing inclusion in any AI-generated answer.</p>
+  </div>
+</section>
+
+<!-- TOGETHER -->
+<section class="lt">
+  <svg class="fl" data-s=".13" style="width:100px;top:6%;left:4%"><use href="#s-star"/></svg>
+  <svg class="fl" data-s="-.12" style="width:120px;bottom:8%;right:3%;opacity:.4"><use href="#s-dots"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>07</b> How AEO, GEO, LLMO and AI Search Work Together</div>
+    <h2 class="split">Different Optimization Disciplines. <span class="grad">One Unified Search Strategy.</span></h2>
+    <p class="sub rv">AEO, GEO and LLMO are often discussed separately, but their objectives overlap. Treating them as completely isolated services can lead to duplicated work and disconnected strategies. Here is how we connect them.</p>
+    <div class="venn rv">
+      <div class="vc a" data-k="0"><span>AEO<small>QUESTIONS</small></span></div>
+      <div class="vc b" data-k="1"><span>GEO<small>GENERATIVE</small></span></div>
+      <div class="vc c" data-k="2"><span>LLMO<small>BRAND</small></span></div>
+      <div class="vcore">AI<br>SEARCH</div>
+    </div>
+    <div class="g4" id="vcards" style="margin-top:20px">
+      <div class="spot rv" data-k="0"><div class="tile"><svg class="ic"><use href="#i-chat"/></svg></div><h3>Answer Engine Optimization (AEO)</h3><p><b style="color:var(--ink)">Focus: Questions and answers.</b><br>We make your website content more effective at addressing specific questions through useful explanations, relevant context and clear organization.</p></div>
+      <div class="spot rv" data-k="1" style="--d:.08s"><div class="tile"><svg class="ic"><use href="#i-spark"/></svg></div><h3>Generative Engine Optimization (GEO)</h3><p><b style="color:var(--ink)">Focus: Generative search discoverability.</b><br>We strengthen the quality, authority and relevance of your digital presence for generative AI search experiences.</p></div>
+      <div class="spot rv" data-k="2" style="--d:.16s"><div class="tile"><svg class="ic"><use href="#i-chip"/></svg></div><h3>Large Language Model Optimization (LLMO)</h3><p><b style="color:var(--ink)">Focus: Brand understanding and information consistency.</b><br>We improve how clearly your business, services and expertise are represented across your digital information sources.</p></div>
+      <div class="spot rv" data-k="3" style="--d:.24s"><div class="tile"><svg class="ic"><use href="#i-globe"/></svg></div><h3>AI Search Optimization</h3><p><b style="color:var(--ink)">Focus: The complete discovery ecosystem.</b><br>We bring together content, technical SEO, brand authority, answer optimization and visibility monitoring into one coordinated strategy.</p></div>
+    </div>
+    <div class="callout rv"><b>Our approach:</b> Rather than selling four disconnected optimization packages, <span class="grad">IdeaWonder AI combines the most relevant activities into a single AI search strategy</span> based on your business goals.</div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="bl">
+  <svg class="fl" data-s=".12" style="width:110px;top:5%;right:5%;opacity:.5"><use href="#s-star"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>08</b> Our AI Search Optimization Process</div>
+    <h2 class="split">From Search Visibility Gaps to a <span class="grad">Stronger Digital Presence.</span></h2>
+    <p class="sub rv">We follow a structured process to connect research, strategy, execution and performance improvement.</p>
+    <div class="tl" id="tl"><div class="fill" id="fill"></div>
+      <div class="st"><div class="dot"><svg class="ic"><use href="#i-search"/></svg></div><small>Step 01</small><h3>Discover</h3><p>Understand your business, target audience, services, competitors and existing digital visibility.</p></div>
+      <div class="st"><div class="dot"><svg class="ic"><use href="#i-doc"/></svg></div><small>Step 02</small><h3>Audit</h3><p>Assess website quality, technical foundations, content coverage, brand information and visibility across selected AI search experiences.</p></div>
+      <div class="st"><div class="dot"><svg class="ic"><use href="#i-target"/></svg></div><small>Step 03</small><h3>Strategize</h3><p>Build a prioritized roadmap covering AEO, GEO, LLMO, content, technical SEO and authority development.</p></div>
+      <div class="st"><div class="dot"><svg class="ic"><use href="#i-gear"/></svg></div><small>Step 04</small><h3>Optimize</h3><p>Improve website pages, strengthen brand information, develop relevant content and implement technical recommendations.</p></div>
+      <div class="st"><div class="dot"><svg class="ic"><use href="#i-chart"/></svg></div><small>Step 05</small><h3>Monitor</h3><p>Track available search performance, brand mentions, citations, competitor observations and organic conversions.</p></div>
+      <div class="st"><div class="dot"><svg class="ic"><use href="#i-trend"/></svg></div><small>Step 06</small><h3>Evolve</h3><p>Refine the strategy as your business grows, search behavior changes and AI-powered discovery experiences develop.</p></div>
+    </div>
+    <div class="callout rv" style="margin-top:30px">A continuous process designed to keep your brand <span class="grad">relevant, understandable and discoverable.</span></div>
+  </div>
+</section>
+
+<!-- B2B -->
+<section class="lt">
+  <svg class="fl" data-s=".13" style="width:120px;top:6%;right:4%"><use href="#s-ring"/></svg>
+  <svg class="fl" data-s="-.12" style="width:80px;bottom:8%;left:3%"><use href="#s-star"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>09</b> AI Search Optimization for B2B Businesses</div>
+    <h2 class="split">Make Your Expertise Visible <span class="grad">Before Buyers Make Their Decision.</span></h2>
+    <p class="sub rv">B2B customers rarely choose a provider after one search. They investigate business challenges, compare solutions, evaluate expertise and look for evidence that a company understands their requirements.</p>
+    <p class="sub rv" style="margin-top:14px;color:var(--ink);font-weight:600">Your digital presence should support that entire research journey.</p>
+    <div class="g3">
+      <div class="spot rv"><span class="big">01</span><div class="tile"><svg class="ic"><use href="#i-chip"/></svg></div><h3>SaaS and Technology Companies</h3><p>Explain product capabilities, integrations, use cases, implementation requirements and technical differentiators.</p></div>
+      <div class="spot rv" style="--d:.08s"><span class="big">02</span><div class="tile"><svg class="ic"><use href="#i-trend"/></svg></div><h3>Marketing and Digital Agencies</h3><p>Build visibility around SEO, performance marketing, lead generation, digital strategy and marketing automation expertise.</p></div>
+      <div class="spot rv" style="--d:.16s"><span class="big">03</span><div class="tile"><svg class="ic"><use href="#i-users"/></svg></div><h3>Consulting and Professional Services</h3><p>Demonstrate subject knowledge through detailed service explanations, industry insights and problem-focused resources.</p></div>
+      <div class="spot rv"><span class="big">04</span><div class="tile"><svg class="ic"><use href="#i-shield"/></svg></div><h3>Financial and Business Services</h3><p>Make complex services easier to understand through clear, accurate and well-organized information.</p></div>
+      <div class="spot rv" style="--d:.08s"><span class="big">05</span><div class="tile"><svg class="ic"><use href="#i-layers"/></svg></div><h3>Enterprise Solutions Providers</h3><p>Develop content that addresses technical evaluation, integration, scalability, security and business requirements.</p></div>
+      <div class="spot rv" style="--d:.16s"><span class="big">06</span><div class="tile"><svg class="ic"><use href="#i-bolt"/></svg></div><h3>Growing B2B Companies</h3><p>Establish a stronger digital presence by building clear brand information, useful content and consistent visibility across relevant search experiences.</p></div>
+    </div>
+    <p class="note rv">Our strategies are adapted to the industry, audience, sales cycle and competitive environment of each business.</p>
+  </div>
+</section>
+
+<!-- WHY IDEAWONDER -->
+<section class="bl">
+  <svg class="fl" data-s=".12" style="width:110px;top:6%;right:5%;opacity:.5"><use href="#s-star"/></svg>
+  <svg class="fl" data-s="-.1" style="width:120px;bottom:6%;left:3%;opacity:.3"><use href="#s-dots"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>10</b> Why IdeaWonder AI?</div>
+    <h2 class="split">AI Search Is Evolving. <span class="grad">Your Strategy Should Be Built on What Actually Matters.</span></h2>
+    <p class="sub rv">At IdeaWonder AI, we combine modern search thinking with practical digital marketing foundations.</p>
+    <div class="g4">
+      <div class="spot rv"><span class="num">01</span><div class="tile"><svg class="ic"><use href="#i-link"/></svg></div><h3>One Integrated Strategy</h3><p>AEO, GEO, LLMO and SEO work together. We connect them rather than creating disconnected optimization activities.</p></div>
+      <div class="spot rv" style="--d:.08s"><span class="num">02</span><div class="tile"><svg class="ic"><use href="#i-users"/></svg></div><h3>Audience-First Content</h3><p>We prioritize real customer questions, useful insights and commercially relevant information over keyword-filled, generic content.</p></div>
+      <div class="spot rv" style="--d:.16s"><span class="num">03</span><div class="tile"><svg class="ic"><use href="#i-gear"/></svg></div><h3>Strong SEO Foundations</h3><p>We address crawlability, indexing, technical quality, content relevance and website structure as part of the wider AI search strategy.</p></div>
+      <div class="spot rv" style="--d:.24s"><span class="num">04</span><div class="tile"><svg class="ic"><use href="#i-target"/></svg></div><h3>Clear Brand Positioning</h3><p>We help communicate what your business does, who it serves and why its expertise is relevant.</p></div>
+      <div class="spot rv"><span class="num">05</span><div class="tile"><svg class="ic"><use href="#i-award"/></svg></div><h3>Meaningful Authority Development</h3><p>We focus on credible content and relevant digital references instead of artificial mentions or manipulative tactics.</p></div>
+      <div class="spot rv" style="--d:.08s"><span class="num">06</span><div class="tile"><svg class="ic"><use href="#i-chart"/></svg></div><h3>Measurement With Transparency</h3><p>We distinguish between measurable organic search performance and AI visibility observations that may vary by platform, location, prompt and time.</p></div>
+      <div class="spot rv" style="--d:.16s;grid-column:span 2"><span class="num">07</span><div class="tile"><svg class="ic"><use href="#i-trend"/></svg></div><h3>Built Around Business Growth</h3><p>We connect discoverability with the bigger picture: relevant traffic, qualified enquiries, buyer confidence and sustainable growth.</p></div>
+    </div>
+    <div class="callout rv"><b>Our philosophy:</b> <span class="grad">Don't optimize for AI trends alone. Build a brand that deserves to be discovered.</span></div>
+  </div>
+</section>
+
+<!-- MEASURING -->
+<section class="lt">
+  <svg class="fl" data-s=".12" style="width:100px;top:6%;right:4%"><use href="#s-star"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>11</b> Measuring AI Search Performance</div>
+    <h2 class="split">Beyond Rankings. <span class="grad">Measure the Visibility That Creates Opportunities.</span></h2>
+    <div class="meas">
+      <div>
+        <p class="sub rv">Traditional search rankings are only one part of a broader discovery journey.</p>
+        <p class="sub rv" style="margin-top:16px">We use a combination of available performance data and structured observations to understand how your digital presence is evolving.</p>
+        <p class="sub rv" style="margin-top:16px">AI platforms do not all provide the same reporting access. Some visibility measurements may be based on sampled prompts and repeated observations rather than complete platform-wide data.</p>
+        <p class="sub rv" style="margin-top:16px;color:var(--ink);font-weight:600">We report what can be measured, explain what cannot and use the findings to guide the next stage of optimization.</p>
+      </div>
+      <div class="dash rv" id="dash">
+        <div class="row2"><span>Visibility report</span><span>Illustrative</span></div>
+        <svg class="chart" viewBox="0 0 400 230">
+          <defs><linearGradient id="ag" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1446ff" stop-opacity=".28"/><stop offset="1" stop-color="#1446ff" stop-opacity="0"/></linearGradient></defs>
+          <g stroke="#d6e1ff" stroke-width="1"><path d="M0 40H400M0 90H400M0 140H400M0 190H400"/></g>
+          <path class="area" d="M0 190 C60 180 90 150 140 138 S230 96 280 76 S360 36 400 24 V210 H0z" fill="url(#ag)"/>
+          <path class="ln l1" pathLength="1" d="M0 190 C60 180 90 150 140 138 S230 96 280 76 S360 36 400 24"/>
+          <path class="ln l2" pathLength="1" d="M0 205 C60 196 100 176 150 160 S240 140 290 112 S360 84 400 60"/>
+          <circle class="pt" cx="140" cy="138" r="7" fill="#fff" stroke="#1446ff" stroke-width="4"/>
+          <circle class="pt" cx="280" cy="76" r="7" fill="#fff" stroke="#1446ff" stroke-width="4"/>
+          <circle class="pt" cx="400" cy="24" r="8" fill="#1446ff"/>
+        </svg>
+        <div class="legend"><span><i></i>Trackable search performance</span><span><i></i>Sampled AI visibility observations</span></div>
+        <div class="capx">VISUAL IS ILLUSTRATIVE AND DOES NOT REPRESENT REAL RESULTS</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="bl">
+  <svg class="fl" data-s=".12" style="width:110px;top:5%;right:5%;opacity:.5"><use href="#s-bubble"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>12</b> Frequently Asked Questions</div>
+    <h2 class="split">AI Search Optimization: <span class="grad">What Businesses Need to Know.</span></h2>
+    <div class="faq" id="faq"></div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="lt final">
+  <div class="wrap">
+    <div class="fcard rv">
+      <svg class="fl" data-s=".1" style="width:90px;top:8%;left:6%"><use href="#s-star"/></svg>
+      <svg class="fl" data-s="-.1" style="width:70px;bottom:10%;right:8%"><use href="#s-star"/></svg>
+      <svg class="fl" data-s=".1" style="width:130px;top:10%;right:5%;opacity:.4"><use href="#s-ring"/></svg>
+      <div class="kick"><b>13</b> Final CTA</div>
+      <h2>The Future of Search Is Being Built Now. <span class="grad">Make Sure Your Brand Is Ready.</span></h2>
+      <p class="sub">Your next customer could discover your business through a traditional search, an AI-generated answer or a recommendation from a conversational assistant.</p>
+      <p class="sub">Build a digital presence that communicates your expertise, strengthens your visibility and gives your business more opportunities to be discovered.</p>
+      <p class="sub" style="color:#fff;font-weight:600">Let's create an AI search strategy built around your audience, your market and your growth ambitions.</p>
+      <div class="cta-row">
+        <a class="btn pri mag" href="/contact">Build Your AI Search Strategy <svg class="ic"><use href="#i-arrow"/></svg></a>
+        <a class="btn gh" href="/contact" style="color:#fff">Talk to Our Team</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="lt next">
+  <div class="wrap">
+    <div class="kick" style="justify-content:center"><b>GO</b> Let's build what's next</div>
+    <h2 class="split">Ready to make your <span class="grad">next move?</span></h2>
+    <p class="sub rv" style="margin:0 auto 30px">Let's understand your objectives, identify the right opportunities and create a plan that moves your business forward.</p>
+    <a class="btn pri mag" href="/contact">Book a Strategy Call <svg class="ic"><use href="#i-arrow"/></svg></a>
+    <div class="kick" style="justify-content:center;margin-top:70px">Explore other services</div>
+    <div class="svcs">
+      <a href="/services/seo-ai-search">SEO / GEO / AEO</a>
+      <a href="/services/performance-marketing">Performance Marketing</a>
+      <a href="/services/social-media-marketing">Social Media Marketing</a>
+      <a href="/services/lead-generation">Lead Generation</a>
+      <a href="/services/business-automation">Business Automation</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fg">
+      <div><a class="flogo" href="/"><img src="/brand/ideawonder-logo-horizontal.png" alt="IdeaWonder AI" onerror="this.replaceWith(document.createTextNode('IdeaWonder AI'))"></a><p style="max-width:300px;margin-top:16px;opacity:.9">An AI-first growth and automation agency helping B2B businesses strengthen digital visibility, acquire customers and scale operations through intelligent marketing and automation.</p></div>
+      <div><h5>EXPLORE</h5><a href="/">Home</a><a href="/">About Us</a><a href="/services/seo-ai-search">Services</a><a href="/contact">Contact</a></div>
+      <div><h5>GET DISCOVERED</h5><a href="/services/seo-ai-search">SEO Services</a><a href="/services/seo-ai-search">AI Search Optimization</a></div>
+      <div><h5>GET CUSTOMERS</h5><a href="/services/performance-marketing">Performance Marketing</a><a href="/services/social-media-marketing">Social Media Marketing</a><a href="/services/lead-generation">B2B Lead Generation</a></div>
+      <div><h5>SCALE SMARTER</h5><a href="/services/business-automation">AI &amp; Business Automation</a><a href="/services/business-automation">Marketing Automation</a></div>
+    </div>
+    <div class="cta-strip"><div><small>YOUR NEXT GROWTH CHAPTER STARTS HERE</small><h3>Have a growth challenge or an idea worth exploring?</h3></div><a class="btn pri" href="/contact">Start a conversation <svg class="ic"><use href="#i-arrow"/></svg></a></div>
+    <div class="fb"><span>© 2026 IdeaWonder AI. All rights reserved. Imagine More. Market Smarter. Grow Faster.</span><span><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/cookies">Cookies</a></span></div>
+  </div>
+</footer>
+
+<script>
+const challenges=[
+["eye","Your Brand Is Missing From AI Search Conversations","Your business may have a website and an established SEO presence, but its information may not be surfaced in relevant AI-generated responses or recommendations."],
+["help","AI Systems Have Limited Context About Your Business","Unclear service descriptions, inconsistent business information and weak content organization can make it harder to interpret what your company does and whom it serves."],
+["chat","Your Content Does Not Address Real Buyer Questions","Pages targeting broad keywords may fail to answer the detailed questions prospects ask when comparing providers and evaluating solutions."],
+["award","Your Digital Authority Is Underdeveloped","A website alone does not communicate the complete picture of a brand. Relevant industry content, credible references, consistent business information and genuine expertise all contribute to a stronger digital presence."],
+["trend","Your Competitors Are Building Search Visibility Beyond Traditional Rankings","Businesses are exploring how to strengthen their presence across AI-powered discovery platforms. Relying only on conventional ranking reports may leave important visibility opportunities unexplored."],
+["chart","You Lack a Clear Way to Measure AI Visibility","Traditional organic traffic metrics do not capture every aspect of AI-powered discovery. Businesses need a broader measurement approach that distinguishes trackable search performance from sampled AI visibility observations."]
+];
+const svcIcons=["search","chat","spark","chip","doc","gear","award","chart"];
+const services=[
+{t:"AI Search Visibility Audit",s:"Understand where your brand stands before deciding where to improve.",d:"We assess your existing digital presence to identify opportunities, weaknesses and gaps affecting AI and search discoverability.",h:"Our audit can include:",l:["Website content and SEO foundations.","Brand visibility across selected AI search platforms.","Existing brand mentions and references.","Competitor visibility comparisons.","Service and topic coverage.","Brand information consistency.","Technical accessibility and indexability.","Question-based search opportunities.","Content quality and authority signals."],r:"An AI search visibility assessment with prioritized recommendations and an actionable optimization roadmap."},
+{t:"Answer Engine Optimization (AEO)",s:"Make your expertise easier to discover through question-led searches.",d:"We optimize your content to address the questions your target audience asks when researching problems, evaluating services and comparing potential providers.",h:"Our AEO services include:",l:["Customer question and search-intent research.","Conversational and long-tail keyword analysis.","Question-led content planning.","Direct and context-rich answer development.","Service-page content optimization.","FAQ and educational content development.","Descriptive headings and logical content structure.","Internal linking and topic organization.","Relevant search-result feature optimization."],r:"A question-focused content strategy that makes your website more useful, relevant and understandable."},
+{t:"Generative Engine Optimization (GEO)",s:"Strengthen your brand's discoverability across generative AI search experiences.",d:"GEO focuses on improving the quality and context of information associated with your business, helping search systems find and interpret relevant brand content.",h:"Our GEO services include:",l:["Generative search visibility analysis.","Brand entity and business information optimization.","Topic and content authority development.","Brand positioning and differentiation.","Relevant digital PR and reference opportunities.","Content credibility and source quality improvements.","Competitor AI visibility analysis.","Generative search content strategy.","AI visibility monitoring where measurable."],r:"A generative search optimization roadmap designed to strengthen your brand's digital footprint and discoverability."},
+{t:"Large Language Model Optimization (LLMO)",s:"Make your business information clearer, more consistent and easier to interpret.",d:"Large language model experiences rely on information from different sources and systems. A coherent digital presence helps establish a clearer picture of your business, services, expertise and market positioning.",h:"Our LLMO services include:",l:["Brand information and entity consistency.","Business description optimization.","Service and product information clarity.","Topic and expertise alignment.","Structured website content recommendations.","Relevant external reference development.","Content accuracy and consistency reviews.","Brand positioning across digital properties.","LLM visibility assessment where practical."],r:"A brand information framework designed to improve the clarity and consistency of your digital identity across LLM-driven discovery environments."},
+{t:"AI-Focused Content Strategy",s:"Create content that demonstrates expertise instead of simply repeating information already available online.",d:"We build content strategies around your audience's problems, buying questions, industry topics and commercial objectives.",h:"Our services include:",l:["AI search keyword and topic research.","Informational and commercial content mapping.","Topic cluster development.","Expert-led educational content.","Industry insights and thought leadership.","Comparison and alternative pages.","In-depth guides and resource pages.","Content gap identification.","Existing content improvement and consolidation."],r:"A connected content plan that supports traditional SEO, answer-oriented discovery and generative search visibility."},
+{t:"Technical SEO for AI Search",s:"Strong content needs a technically accessible website.",d:"We strengthen the technical foundations that help search engines and other systems access, process and understand your website.",h:"Our technical optimization can cover:",l:["Crawlability and indexability.","XML sitemap and robots.txt review.","Website architecture and internal linking.","Page speed and mobile experience.","JavaScript rendering considerations.","Canonicalization and duplicate content.","Semantic HTML recommendations.","Relevant structured data implementation.","Content accessibility and discoverability.","Technical SEO issue resolution."],n:"We prioritize established technical SEO best practices rather than relying on unverified AI-specific technical shortcuts.",r:"A technical improvement roadmap focused on accessibility, clarity, usability and search readiness."},
+{t:"Brand Authority and Digital Presence",s:"AI search visibility is influenced by more than the content published on your website.",d:"We help strengthen the consistency and credibility of your brand's digital footprint through relevant, genuine and useful information.",h:"Our approach includes:",l:["Brand positioning and messaging consistency.","Business profile information alignment.","Relevant industry publications and references.","Digital PR opportunities.","Expert-led content development.","Relevant third-party mentions.","Industry and topic association.","Competitor brand presence analysis."],n:"We focus on meaningful authority-building opportunities, not manufactured mentions or low-quality link schemes.",r:"A brand authority development strategy aligned with your industry, expertise and target audience."},
+{t:"AI Search Visibility Monitoring and Reporting",s:"Optimization needs measurement to remain useful.",d:"We evaluate your visibility using available search data, platform observations and business performance indicators.",h:"Our reporting can include:",l:["Organic impressions and clicks.","Search query performance.","AI-related search performance where reporting is available.","Brand mentions across selected AI platforms.","Citation and source observations.","Competitor visibility comparisons.","Priority topic coverage.","Organic landing-page engagement.","Lead and conversion contribution."],r:"A performance report showing what is improving, where opportunities remain and what should be optimized next."}
+];
+const faqs=[
+["What is AI Search Optimization?","AI Search Optimization is the process of improving a brand's digital presence for discovery across AI-powered search engines, answer engines and conversational assistants. It combines content strategy, technical SEO, brand information optimization and authority development to help systems understand relevant business information and potentially surface it in search experiences."],
+["What is the difference between AEO, GEO and LLMO?","AEO focuses on making website content useful and discoverable in response to user questions. GEO focuses on strengthening brand and content visibility in generative AI search experiences. LLMO focuses on improving the clarity and consistency of brand information for large language model-driven experiences. All three overlap and can be integrated into a broader AI Search Optimization strategy."],
+["Is AI Search Optimization different from traditional SEO?","AI Search Optimization expands the discovery strategy to consider AI-powered search and conversational experiences. However, it does not replace SEO. Technical accessibility, indexing, relevant content, internal linking and a useful website experience remain important foundations for search visibility."],
+["Can SEO help my business appear in ChatGPT and Google AI Overviews?","Strong SEO foundations and useful, relevant content can support discoverability across eligible AI search experiences. However, each platform uses its own systems and sources. No agency can guarantee that a website will be cited, recommended or included in a specific AI-generated answer."],
+["How can my business improve its visibility in ChatGPT?","Start by ensuring your website clearly communicates your business, services, expertise and relevant information. Publish genuinely useful content, maintain accessible website pages, strengthen your digital presence and build credible references. Visibility also depends on ChatGPT's available tools, search access, sources and retrieval systems."],
+["Does my business need separate AEO, GEO and LLMO services?","Not necessarily. These disciplines have overlapping objectives and activities. An integrated AI Search Optimization strategy can combine question-led content, generative search visibility, brand information consistency and technical SEO without duplicating work across separate service packages."],
+["Is AI Search Optimization relevant for small and growing businesses?","Yes. Smaller businesses can begin by developing clear service pages, useful educational content, consistent business information and strong technical foundations. The strategy should prioritize relevant opportunities based on available resources, competition and business goals."],
+["Does AI Search Optimization require special schema markup or an llms.txt file?","There is no universal AI-specific schema or special file that guarantees visibility in Google's AI search features. Google advises website owners to focus on foundational SEO, useful content and technical accessibility. Structured data can still be useful for supported search features when implemented correctly. Other systems may have their own documentation and requirements."],
+["Can AI-generated content improve AI search visibility?","AI tools can support research, planning and content development, but simply publishing large volumes of AI-generated articles does not guarantee visibility. Content should be accurate, original, relevant and useful, with meaningful expertise and human review. Scaled low-value content can create search quality and spam-policy risks."],
+["How long does AI Search Optimization take to show results?","There is no fixed timeline. Results depend on your website's current condition, content quality, technical accessibility, industry competition, publishing activity and platform behavior. Improvements to existing pages may be reflected differently from broader brand authority and visibility development. It is best approached as an ongoing strategy."],
+["How do you measure visibility in AI search engines?","We evaluate available organic search data, AI-related search reporting where provided, brand mentions, citations, source appearances and competitor observations. We can also conduct structured prompt-based checks across selected platforms. These checks are indicative, not a complete record of every response generated for every user."],
+["Which AI platforms does IdeaWonder AI consider?","Depending on the target audience and business requirements, our strategy may consider Google AI Overviews, Google AI Mode, ChatGPT, Microsoft Copilot, Perplexity, Google Gemini and other relevant AI-powered discovery experiences."],
+["Is GEO the same as AI SEO?","GEO is one discipline within the broader AI search optimization landscape. It focuses on improving brand and content discoverability in generative AI experiences. AI SEO and AI Search Optimization are often used more broadly to describe the combination of traditional SEO foundations and strategies for evolving AI-powered discovery."],
+["Can AI Search Optimization generate B2B leads?","It can contribute to B2B lead generation by helping potential buyers discover relevant information, understand your expertise and explore your services. Actual lead outcomes depend on search demand, content relevance, your offer, conversion experience and the quality of your sales process."],
+["Why should I choose an AI Search Optimization agency?","An experienced agency can help connect technical SEO, content strategy, brand positioning, authority development and visibility measurement into one coordinated plan. The important consideration is whether its approach is transparent, evidence-led and aligned with your commercial goals rather than based on promises of guaranteed AI rankings."],
+["How do I get started with IdeaWonder AI?","Start with an AI search visibility assessment. We can review your current website, brand presence, content and relevant search opportunities to identify the areas that deserve attention and develop a strategy around your business goals."]
+];
+
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const ic=n=>`<svg class="ic"><use href="#i-${n}"/></svg>`;
+
+const mqw=["GOOGLE + AI SEARCH","ANSWER ENGINE","SEARCH + AI DISCOVERY","BE THE ANSWER","BE DISCOVERED"];
+$('#mq').innerHTML=[0,1].map(()=>mqw.map(w=>`<span>${w}</span><span>✦</span>`).join('')).join('');
+$('#challenges').innerHTML=challenges.map((c,i)=>`<div class="spot ch rv" style="--d:${(i%3)*.08}s"><div class="hd"><div class="tile" style="width:48px;height:48px;font-size:22px;border-radius:16px">${ic(c[0])}</div><h3>${c[1]}</h3><div class="pm">+</div></div><div class="bd"><div><p>${c[2]}</p></div></div></div>`).join('');
+$('#tabs').innerHTML=services.map((s,i)=>`<button class="tab ${i?'':'on'}" data-i="${i}">${ic(svcIcons[i])}<span>${s.t}</span></button>`).join('');
+function showSvc(i){const s=services[i],m=svcIcons[i];
+ $('#panel').innerHTML=`<div class="pico"><div class="r"></div><div class="main">${ic(m)}</div><div class="mini" style="top:2px;right:8px">${ic('spark')}</div><div class="mini" style="bottom:6px;left:0">${ic('check')}</div></div><h3>${s.t}</h3><p class="stl">${s.s}</p><p class="d">${s.d}</p><p style="font-weight:600;margin-bottom:14px">${s.h}</p><ul class="lst">${s.l.map((x,k)=>`<li style="--i:${k}">${x}</li>`).join('')}</ul>${s.n?`<p class="pnote">${s.n}</p>`:''}<div class="deliv"><b>Deliverable</b>${s.r}</div>`}
+showSvc(0);
+$('#tabs').addEventListener('click',e=>{const b=e.target.closest('.tab');if(!b)return;$$('.tab').forEach(t=>t.classList.remove('on'));b.classList.add('on');showSvc(+b.dataset.i)});
+$('#faq').innerHTML=faqs.map((f,i)=>`<div class="fq rv" style="--d:${(i%2)*.06}s"><div class="hd"><span class="nn">${String(i+1).padStart(2,'0')}</span><h4>${f[0]}</h4><div class="pm">+</div></div><div class="bd"><div><p>${f[1]}</p></div></div></div>`).join('');
+document.addEventListener('click',e=>{const c=e.target.closest('.ch,.fq');if(c)c.classList.toggle('open')});
+
+$$('.split').forEach(el=>{
+ const walk=n=>[...n.childNodes].forEach(c=>{
+  if(c.nodeType===3){const f=document.createDocumentFragment();c.textContent.split(/(\s+)/).forEach(t=>{if(!t.trim()){f.append(t);return}const w=document.createElement('span');w.className='w';w.innerHTML=`<span>${t}</span>`;f.append(w)});c.replaceWith(f)}
+  else if(c.nodeType===1)walk(c)});
+ walk(el);el.querySelectorAll('.w span').forEach((s,i)=>s.style.transitionDelay=i*40+'ms');
+});
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+$$('.rv,.split,#dash').forEach(el=>io.observe(el));
+const bio=new IntersectionObserver(es=>{if(es[0].isIntersecting){$$('.bub').forEach((b,i)=>setTimeout(()=>b.classList.add('in'),i*650));bio.disconnect()}},{threshold:.25});
+bio.observe($('#bubbles'));
+
+const story=$('#story'),stage=$('#stage'),N=5;let cur=-1;
+function storyUpdate(){
+ const r=story.getBoundingClientRect(),total=story.offsetHeight-innerHeight;
+ const p=Math.min(Math.max(-r.top/total,0),.9999),s=Math.floor(p*N);
+ stage.style.setProperty('--p',p.toFixed(4));stage.style.setProperty('--sp',(p*N-s).toFixed(3));
+ if(s!==cur){cur=s;stage.dataset.s=s;
+  $$('#stage .e').forEach(el=>{const i=+el.dataset.in,o=el.dataset.out?+el.dataset.out:99;el.classList.toggle('on',s>=i&&s<o)});
+  $$('.copy').forEach((c,i)=>c.classList.toggle('on',i===s));
+  $$('.dots i').forEach((d,i)=>d.classList.toggle('on',i<=s));}
+}
+
+const fls=$$('.fl'),sts=$$('.st');
+function onScroll(){
+ const h=document.documentElement;
+ $('#prog').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+ storyUpdate();
+ const tl=$('#tl'),r=tl.getBoundingClientRect(),mid=innerHeight*.62;
+ $('#fill').style.height=Math.max(0,Math.min(r.height,mid-r.top))+'px';
+ sts.forEach(s=>s.classList.toggle('on',s.getBoundingClientRect().top<mid));
+ fls.forEach(f=>{const host=f.closest('section,.fcard,.sticky')||f.parentElement,b=host.getBoundingClientRect();
+  if(b.bottom<-200||b.top>innerHeight+200)return;
+  const off=(b.top+b.height/2-innerHeight/2)*(+f.dataset.s||.1);
+  f.style.transform=`translate3d(0,${off.toFixed(1)}px,0) rotate(${(off*.25).toFixed(1)}deg)`});
+}
+addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);onScroll();
+
+document.addEventListener('mousemove',e=>{const s=e.target.closest&&e.target.closest('.spot');
+ if(s){const r=s.getBoundingClientRect();s.style.setProperty('--mx',e.clientX-r.left+'px');s.style.setProperty('--my',e.clientY-r.top+'px')}});
+$$('.mag').forEach(b=>{b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.2}px,${(e.clientY-r.top-r.height/2)*.35}px)`});b.addEventListener('mouseleave',()=>b.style.transform='')});
+const vcs=$$('.vc');
+$$('#vcards .spot').forEach(c=>{c.addEventListener('mouseenter',()=>{const k=c.dataset.k;vcs.forEach(v=>v.classList.toggle('hl',v.dataset.k===k||k==='3'))});c.addEventListener('mouseleave',()=>vcs.forEach(v=>v.classList.remove('hl')))});
+vcs.forEach(v=>{v.addEventListener('mouseenter',()=>v.classList.add('hl'));v.addEventListener('mouseleave',()=>v.classList.remove('hl'))});
+</script>
+</body>
+</html>
