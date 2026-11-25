@@ -58,7 +58,7 @@ h2{font-size:clamp(30px,4.3vw,53px);line-height:1.1}
 
 /* nav */
 #nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--mist-30);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
-#nav.hide{transform:translateY(-100%)}
+/* Navbar intentionally remains visible; no scroll-hide state. */
 #bar{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:var(--blue);transform:scaleX(0);transform-origin:0 50%}
 .nav-in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:72px}
 .logo{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;flex:none;padding:4px 10px 3px;border-radius:12px;background:linear-gradient(145deg,#101a31,#07101f);box-shadow:0 5px 18px rgba(8,13,24,.16);transition:transform .25s,box-shadow .25s}
@@ -404,7 +404,7 @@ footer .eyebrow{color:#fff}
 footer .btn{background:linear-gradient(110deg,#fff,#eaf1ff);color:#1746d5;border-color:#fff}
 
 /* IdeaWonder brand navigation refresh */
-#nav{background:rgba(7,24,58,.97);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(111,166,255,.2);box-shadow:0 8px 30px rgba(3,12,32,.16)}
+#nav{position:fixed!important;top:0!important;left:0!important;right:0!important;z-index:9999!important;transform:none!important;visibility:visible!important;opacity:1!important;background:rgba(7,24,58,.97);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(111,166,255,.2);box-shadow:0 8px 30px rgba(3,12,32,.16)}
 #nav .nav-in{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:34px}
 #nav .logo{display:flex;align-items:center;justify-content:flex-start;flex:none;padding:0;background:transparent;box-shadow:none;border-radius:0}
 #nav .logo:hover{transform:translateY(-1px);box-shadow:none}
@@ -436,7 +436,7 @@ footer .btn{background:linear-gradient(110deg,#fff,#eaf1ff);color:#1746d5;border
 
 <header id="nav">
   <div class="wrap nav-in">
-    <a class="logo" href="#top" aria-label="IdeaWonder AI home"><img src="brand/ideawonder-logo-horizontal.png" alt="IdeaWonder AI" /></a>
+    <a class="logo" href="#top" aria-label="IdeaWonder AI home"><img src="/brand/ideawonder-logo-horizontal.png" alt="IdeaWonder AI" /></a>
     <nav class="menu" id="menu" aria-label="Primary navigation">
       <div class="dd"><button class="dd-t" type="button" aria-expanded="false">Service <span class="chev">⌄</span></button>
         <div class="dd-m">
@@ -750,7 +750,7 @@ footer .btn{background:linear-gradient(110deg,#fff,#eaf1ff);color:#1746d5;border
 <footer data-obj="0,0,1,0,0" id="footer">
   <div class="wrap">
     <div class="f-top">
-      <div><a class="logo" href="#top" aria-label="IdeaWonder AI home"><img src="brand/ideawonder-logo-horizontal.png" alt="IdeaWonder AI" /><span class="logo-tagline">IMAGINE MORE. GROW SMARTER.</span></a>
+      <div><a class="logo" href="#top" aria-label="IdeaWonder AI home"><img src="/brand/ideawonder-logo-horizontal.png" alt="IdeaWonder AI" /><span class="logo-tagline">IMAGINE MORE. GROW SMARTER.</span></a>
         <p>An AI-first growth and automation agency helping B2B businesses strengthen digital visibility, acquire customers and scale operations through intelligent marketing and automation.</p></div>
       <div class="f-col"><h4>EXPLORE</h4><a href="#top">Home</a><a href="#system">About Us</a><a href="#capabilities">Services</a><a href="#cta">Contact</a></div>
       <div class="f-col"><h4>GET DISCOVERED</h4><a href="#capabilities">SEO Services</a><a href="#capabilities">AI Search Optimization</a></div>
@@ -814,7 +814,8 @@ function updateTarget(){
 function onScroll(){
   var y=window.scrollY,d=y-lastY;lastY=y;S.vel=S.vel*.8+d*.2;
   var max=root.scrollHeight-innerHeight;bar.style.transform='scaleX('+(max>0?y/max:0)+')';
-  if(!menu.classList.contains('open')){if(d>4&&y>240)nav.classList.add('hide');else if(d<-4||y<240)nav.classList.remove('hide');}
+  /* Keep the primary navigation visible while scrolling. */
+  nav.classList.remove('hide');
   updateTarget();
 }
 addEventListener('scroll',onScroll,{passive:true});
@@ -900,7 +901,7 @@ var $=function(s,c){return (c||document).querySelector(s)}, $$=function(s,c){ret
 gsap.registerPlugin(ScrollTrigger);
 gsap.defaults({ease:'power3.out'});
 
-gsap.from('#nav',{yPercent:-100,duration:.9,delay:.1});
+/* Navbar is visible immediately; no off-screen entrance animation. */
 
 /* split words for scrubbed heading reveal */
 function splitWords(el){
