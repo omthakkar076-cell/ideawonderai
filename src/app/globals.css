@@ -63,8 +63,8 @@ main { width: 100%; height: 100svh; overflow: hidden; }
 .brand-lockup .brand-logo{width:232px;height:54px;object-fit:contain;object-position:left center}
 .brand-tagline{display:block;padding-left:2px;color:#a9c9ff;font-size:8px;font-weight:800;line-height:1.2;letter-spacing:.19em;white-space:nowrap}
 .footer-brand-lockup{display:flex;flex-direction:column;align-items:flex-start;gap:5px}
-.footer-brand-lockup .footer-brand{display:flex;align-items:center;min-height:0;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important}
-.footer-brand-lockup .footer-brand img{display:block;width:min(100%,270px);height:auto;max-height:76px;object-fit:contain;object-position:left center}
-.footer-tagline{display:block;margin:0 0 8px 2px;color:#75e4ff;font-size:8px;font-weight:800;letter-spacing:.17em}
+.footer-brand-lockup .footer-brand{display:inline-flex;align-items:center;min-height:0;padding:8px 14px!important;border:0!important;border-radius:12px;background:#fff!important;box-shadow:none!important}
+.footer-brand-lockup .footer-brand img{display:block;width:205px;height:38px;max-height:none;object-fit:contain;object-position:left center}
+.footer-tagline{display:none}
 .footer-brand-col>p{margin-top:10px}
 @media(max-width:760px){.brand-lockup .brand-logo{width:178px;height:44px}.brand-tagline{font-size:6.5px;letter-spacing:.16em}}

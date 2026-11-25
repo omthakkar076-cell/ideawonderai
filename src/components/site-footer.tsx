@@ -4,7 +4,7 @@ const serviceLinks = [["SEO / AI Search", "/services/seo-ai-search"], ["Social M
 export function SiteFooter() { return <footer className="site-footer">
   <div className="footer-glow"/><div className="footer-main container">
     <div className="footer-brand-col">
-      <div className="footer-brand-lockup"><Link href="/" className="footer-brand"><img src="/brand/ideawonder-logo-horizontal.png" alt="IdeaWonder AI" width="280" height="95"/></Link><span className="footer-tagline">IMAGINE MORE. GROW SMARTER.</span></div>
+      <div className="footer-brand-lockup"><Link href="/" className="footer-brand"><img src="/brand/ideawonder-logo-horizontal.png" alt="IdeaWonder AI" width="232" height="54"/></Link></div>
       <p>An AI-first growth and automation agency helping B2B businesses strengthen digital visibility, acquire customers and scale operations through intelligent marketing and automation.</p>
     </div>
     <div className="footer-col"><h4>EXPLORE</h4><Link href="/">Home</Link><Link href="/case-study">Case Study</Link><Link href="/blogs">Blog & Insights</Link><Link href="/contact">Contact Us</Link></div>

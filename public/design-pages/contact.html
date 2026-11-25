@@ -219,9 +219,9 @@ footer{background:linear-gradient(160deg,var(--blue),var(--blue2));color:#fff;pa
 .fg{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr 1fr;gap:34px}
 footer h5{font-family:'Space Grotesk';font-size:12px;letter-spacing:.18em;margin-bottom:16px}
 footer a{display:block;margin-bottom:10px;opacity:.85}footer a:hover{opacity:1;transform:translateX(3px)}
-footer a.flogo{display:inline-flex;background:#fff;padding:10px 18px;border-radius:16px;opacity:1;margin:0}
+footer a.flogo{display:inline-flex;background:#fff;padding:8px 14px;border-radius:12px;opacity:1;margin:0;box-shadow:none}
 footer a.flogo:hover{transform:none}
-footer a.flogo img{height:34px;width:auto;display:block}
+footer a.flogo img{height:38px;width:205px;object-fit:contain;object-position:left center;display:block}
 .fbar{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:50px;padding-top:24px;border-top:1px solid rgba(255,255,255,.3)}
 .fbar span a{display:inline;margin-left:18px}
 .cta-strip{margin-top:56px;padding:34px;border-radius:28px;background:#fff;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
@@ -290,47 +290,23 @@ nav .brand-tagline{display:block;margin:0 0 0 2px;color:#6b9cff;font-size:7px;fo
       <div class="cform">
         <div class="fcard" id="fcard">
           <form id="lead" novalidate autocomplete="on">
-            <div class="fhead"><span class="ftag">GROWTH STRATEGY ENQUIRY</span><span class="fcount" id="fcount"><b>01</b> / 03</span></div>
-            <div class="progbar" id="progbar"><i class="seg on"></i><i class="seg"></i><i class="seg"></i></div>
-
-            <!-- STEP 1 -->
-            <div class="step on" data-step="1">
-              <h2 class="fh2">Let's start with your business.</h2>
-              <p class="fsub">A few details help us understand who we're speaking with.</p>
-              <div class="fgrid">
-                <div class="fld"><input id="f-name" name="fullName" type="text" placeholder=" " required autocomplete="name"><label for="f-name">Full name <span class="req">*</span></label><small class="msg">Please enter your full name</small></div>
-                <div class="fld"><input id="f-email" name="businessEmail" type="email" placeholder=" " required autocomplete="email"><label for="f-email">Business email <span class="req">*</span></label><small class="msg">Please enter a valid business email</small></div>
-                <div class="fld"><input id="f-company" name="companyName" type="text" placeholder=" " required autocomplete="organization"><label for="f-company">Company name <span class="req">*</span></label><small class="msg">Please enter your company name</small></div>
-                <div class="fld"><input id="f-site" name="websiteUrl" type="text" inputmode="url" placeholder=" " autocomplete="url"><label for="f-site">Website URL</label><small class="msg"></small></div>
-                <div class="fld sel"><select id="f-ind" name="industry" required>
-                  <option value="" disabled selected>Select industry</option>
-                  <option>Technology &amp; SaaS</option>
-                  <option>Finance &amp; Fintech</option>
-                  <option>Professional Services</option>
-                  <option>Manufacturing &amp; Industrial</option>
-                  <option>E-commerce &amp; Consumer</option>
-                  <option>Startup</option>
-                  <option>Other</option>
-                </select><label for="f-ind">Industry <span class="req">*</span></label><small class="msg">Please select your industry</small></div>
-                <div class="fld"><input id="f-market" name="targetMarket" type="text" placeholder=" "><label for="f-market">Target market</label><small class="msg"></small></div>
-              </div>
+            <div class="fhead"><span class="ftag">GROWTH STRATEGY ENQUIRY</span><span class="fcount">QUICK ENQUIRY</span></div>
+            <h2 class="fh2">Tell us what you’re looking to achieve.</h2>
+            <p class="fsub">Share your details and select the service you need. Our team will get back to you.</p>
+            <div class="fgrid">
+              <div class="fld"><input id="f-name" name="fullName" type="text" placeholder=" " required autocomplete="name"><label for="f-name">Full name <span class="req">*</span></label><small class="msg">Please enter your full name</small></div>
+              <div class="fld"><input id="f-email" name="businessEmail" type="email" placeholder=" " required autocomplete="email"><label for="f-email">Business email <span class="req">*</span></label><small class="msg">Please enter a valid email address</small></div>
+              <div class="fld"><input id="f-company" name="companyName" type="text" placeholder=" " required autocomplete="organization"><label for="f-company">Company name <span class="req">*</span></label><small class="msg">Please enter your company name</small></div>
+              <div class="fld"><input id="f-phone" name="phone" type="tel" placeholder=" " autocomplete="tel"><label for="f-phone">Phone / WhatsApp</label><small class="msg"></small></div>
+              <div class="fld"><input id="f-site" name="websiteUrl" type="url" placeholder=" " autocomplete="url"><label for="f-site">Website URL</label><small class="msg"></small></div>
+              <div class="fld sel"><select id="f-ind" name="industry"><option value="" selected>Select industry (optional)</option><option>Technology &amp; SaaS</option><option>Finance &amp; Fintech</option><option>Professional Services</option><option>Manufacturing &amp; Industrial</option><option>E-commerce &amp; Consumer</option><option>Healthcare</option><option>Education</option><option>Real Estate</option><option>Other</option></select><label for="f-ind">Industry</label><small class="msg"></small></div>
+              <div class="fld sel full"><select id="f-service" name="service" required><option value="" disabled selected>Select a service *</option><option>SEO &amp; AI Search Optimisation (SEO, AEO, GEO, LLMO)</option><option>Social Media Marketing</option><option>Performance Marketing (Google Ads, Meta Ads, LinkedIn Ads &amp; AI Ads)</option><option>B2B Lead Generation</option><option>AI &amp; Business Automation</option><option>Multiple Services / Growth Strategy</option></select><label for="f-service">Service required <span class="req">*</span></label><small class="msg">Please select a service</small></div>
+              <div class="fld full"><textarea id="f-message" name="message" placeholder=" "></textarea><label for="f-message">Tell us briefly about your goals or requirements</label><small class="msg"></small></div>
+              <div class="fld" style="position:absolute;left:-10000px" aria-hidden="true"><input name="website" type="text" tabindex="-1" autocomplete="off" placeholder=" "><label>Leave this field empty</label></div>
+              <input type="hidden" name="source" value="IdeaWonder AI Contact Form">
             </div>
-
-            <!-- STEP 2: PASTE YOUR EXISTING STEP 2 FIELDS HERE (delete the .slot div) -->
-            <div class="step" data-step="2">
-              <div class="slot">Step 2 fields go here — use the same markup pattern as step 1</div>
-            </div>
-
-            <!-- STEP 3: PASTE YOUR EXISTING STEP 3 FIELDS HERE (delete the .slot div) -->
-            <div class="step" data-step="3">
-              <div class="slot">Step 3 fields go here — use the same markup pattern as step 1</div>
-            </div>
-
-            <div class="fnav">
-              <button type="button" class="btn gh sm" id="back" hidden><svg class="ic"><use href="#i-left"/></svg> Back</button>
-              <button type="submit" class="btn pri mag" id="next"><span id="nexttxt">Continue →</span><i class="spin"></i></button>
-            </div>
-            <p class="fsec"><svg class="ic"><use href="#i-shield"/></svg>Your information is sent securely to our lead-storage backend.</p>
+            <div class="fnav"><button type="submit" class="btn pri mag" id="next"><span id="nexttxt">Submit enquiry →</span><i class="spin"></i></button></div>
+            <p class="fsec"><svg class="ic"><use href="#i-shield"/></svg>Your enquiry is sent securely. We’ll only use these details to respond to your request.</p>
           </form>
 
           <!-- SUCCESS STATE (replace copy with your existing success message) -->
@@ -437,61 +413,39 @@ const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const mqw=["LET'S PUT INTELLIGENCE BEHIND YOUR GROWTH","DISCOVER","IDEA WONDER","GROW"];
 $('#mq').innerHTML=[0,1].map(()=>mqw.map(w=>`<span>${w}</span><span>✦</span>`).join('')).join('');
 
-/* ============ MULTI-STEP FORM ============ */
-const form=$('#lead'),steps=$$('.step'),segs=$$('#progbar .seg'),TOTAL=steps.length;
-let cur=0;
-const pad=n=>String(n).padStart(2,'0');
-function show(i,back){
-  cur=i;
-  steps.forEach((s,k)=>{s.classList.toggle('on',k===i);s.classList.toggle('back',!!back&&k===i)});
-  segs.forEach((s,k)=>s.classList.toggle('on',k<=i));
-  $('#fcount').innerHTML=`<b>${pad(i+1)}</b> / ${pad(TOTAL)}`;
-  $('#back').hidden=i===0;
-  $('#nexttxt').textContent=i===TOTAL-1?'Submit enquiry':'Continue →';
-  $('#fcard').scrollIntoView({behavior:'smooth',block:'nearest'});
-}
-const emailOk=v=>/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim());
-function validate(stepEl){
+/* ============ SINGLE-STEP LEAD FORM ============ */
+const form=$('#lead');
+const emailOk=v=>/^[^\\s@]+@[^\\s@]+\\.[^\\s@]{2,}$/.test(v.trim());
+function validateForm(){
   let ok=true,first=null;
-  stepEl.querySelectorAll('[required]').forEach(el=>{
-    const fld=el.closest('.fld');
-    let good=el.value.trim()!=='';
+  form.querySelectorAll('[required]').forEach(el=>{
+    const fld=el.closest('.fld');let good=el.value.trim()!=='';
     if(good&&el.type==='email')good=emailOk(el.value);
-    if(el.type==='checkbox')good=el.checked;
     if(fld){fld.classList.toggle('bad',!good);fld.classList.toggle('ok',good)}
     if(!good){ok=false;first=first||el}
   });
   if(!ok){first.focus({preventScroll:true});const c=$('#fcard');c.classList.remove('shake');void c.offsetWidth;c.classList.add('shake')}
   return ok;
 }
-/* live clearing of errors */
-form.addEventListener('input',e=>{const f=e.target.closest('.fld');if(f&&f.classList.contains('bad')){
-  const el=e.target;let good=el.value.trim()!=='';if(good&&el.type==='email')good=emailOk(el.value);if(good)f.classList.remove('bad')}});
-form.addEventListener('change',e=>{const f=e.target.closest('.fld');if(f&&e.target.tagName==='SELECT'&&e.target.value)f.classList.remove('bad')});
-$('#back').addEventListener('click',()=>show(Math.max(0,cur-1),true));
-
-/* ---- HOOK: connect your EXISTING backend call here ----
-   `payload` contains every field in the form keyed by its name="" attribute.
-   Replace the body of submitLead with your current request (fetch/axios/server action). */
+form.addEventListener('input',e=>{const fld=e.target.closest('.fld');if(fld&&fld.classList.contains('bad')){let good=e.target.value.trim()!=='';if(e.target.type==='email')good=emailOk(e.target.value);if(good)fld.classList.remove('bad')}});
+form.addEventListener('change',e=>{const fld=e.target.closest('.fld');if(fld&&e.target.tagName==='SELECT'&&e.target.value)fld.classList.remove('bad')});
 async function submitLead(payload){
-  if(window.submitLead)return window.submitLead(payload);
-  console.warn('Connect your existing backend call in submitLead()',payload);
-  await new Promise(r=>setTimeout(r,900));
+  const response=await fetch('/api/leads',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+  const result=await response.json().catch(()=>({}));
+  if(!response.ok||!result.success)throw new Error(result.error||'Unable to submit your enquiry');
+  return result;
 }
-
 form.addEventListener('submit',async e=>{
   e.preventDefault();
-  if(!validate(steps[cur]))return;
-  if(cur<TOTAL-1){show(cur+1);return}
+  if(!validateForm())return;
   const btn=$('#next');btn.classList.add('loading');btn.disabled=true;
   try{
-    const data={};new FormData(form).forEach((v,k)=>{data[k]=data[k]!==undefined?[].concat(data[k],v):v});
+    const data={};new FormData(form).forEach((v,k)=>{data[k]=String(v).trim()});
     await submitLead(data);
     form.hidden=true;$('#done').hidden=false;
   }catch(err){
-    console.error(err);
-    btn.classList.remove('loading');btn.disabled=false;
-    alert('Something went wrong. Please try again.');   // replace with your existing error handling
+    console.error(err);btn.classList.remove('loading');btn.disabled=false;
+    alert('We could not submit your enquiry right now. Please try again in a moment.');
   }
 });
 
