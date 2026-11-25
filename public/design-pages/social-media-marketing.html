@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Digital Marketing & Automation Agency | IdeaWonder AI</title>
+<meta name="description" content="Grow your business with AI-powered SEO, GEO, paid advertising, lead generation, social media marketing and business automation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1446ff;--blue2:#0a2bd0;--sky:#a9c6ff;--ink:#0a0a0a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,sans-serif;line-height:1.65;color:var(--ink);background:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;letter-spacing:-.02em;line-height:1.08}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px;position:relative}
+svg.ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.sprite{position:absolute;width:0;height:0;overflow:hidden}
+
+/* THEMES: white bg = black text, blue bg = white text */
+.lt{--fg:#0a0a0a;--mut:#23283d;--card:#f2f6ff;--line:#d6e1ff;--spot:rgba(20,70,255,.14);--tile:var(--blue);--tilefg:#fff;background:#fff;color:var(--fg);background-image:radial-gradient(rgba(20,70,255,.13) 1.2px,transparent 1.3px);background-size:30px 30px}
+.bl{--fg:#fff;--mut:rgba(255,255,255,.84);--card:rgba(255,255,255,.11);--line:rgba(255,255,255,.3);--spot:rgba(255,255,255,.22);--tile:#fff;--tilefg:var(--blue);color:#fff;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(160deg,var(--blue),var(--blue2));background-size:64px 64px,64px 64px,auto}
+section{position:relative;padding:130px 0;overflow:hidden}
+.grad{background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
+.lt .grad,.hero .grad{background-image:linear-gradient(90deg,#1446ff,#5a8dff,#1446ff)}
+.bl .grad{background-image:linear-gradient(90deg,#fff,#a9c6ff,#fff)}
+@keyframes shine{to{background-position:200% center}}
+#prog{position:fixed;top:0;left:0;height:4px;width:0;background:var(--blue);z-index:300;box-shadow:0 0 12px var(--blue)}
+
+/* NAV */
+nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:250;width:min(1120px,calc(100% - 28px));display:flex;align-items:center;justify-content:space-between;padding:8px 12px 8px 22px;border:1px solid #dbe5ff;border-radius:100px;background:rgba(255,255,255,.86);backdrop-filter:blur(16px);box-shadow:0 12px 40px -16px rgba(20,70,255,.35);color:var(--ink)}
+.logo{display:flex;align-items:center;font-family:'Space Grotesk';font-weight:700;font-size:20px}
+.logo img{height:34px;width:auto;display:block}
+nav ul{display:flex;gap:30px;list-style:none;font-size:14px;font-weight:500}
+nav ul a{opacity:.7}nav ul a:hover,nav ul .on{opacity:1;color:var(--blue)}
+@media(max-width:820px){nav ul{display:none}}
+
+/* BUTTONS */
+.btn{position:relative;display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:100px;font-weight:600;font-size:15px;border:1.5px solid currentColor;transition:.35s;overflow:hidden;cursor:pointer;background:transparent;font-family:inherit;color:inherit}
+.btn.sm{padding:11px 22px;font-size:14px}
+.lt .btn.pri,.hero .btn.pri,nav .btn.pri{background:var(--blue);color:#fff;border-color:var(--blue);box-shadow:0 14px 34px -10px rgba(20,70,255,.6)}
+.bl .btn.pri{background:#fff;color:var(--blue);border-color:#fff;box-shadow:0 14px 34px -10px rgba(0,0,0,.4)}
+.btn.pri:hover{transform:translateY(-3px)}
+.btn.gh:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+.bl .btn.gh:hover{background:#fff;color:var(--blue)}
+.btn::after{content:"";position:absolute;top:0;left:-100%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg)}
+.btn:hover::after{left:150%;transition:.8s}
+.mag{transition:transform .25s}
+
+/* HERO STORY */
+.hero{background:#fff;background-image:radial-gradient(rgba(20,70,255,.14) 1.2px,transparent 1.3px);background-size:30px 30px;color:var(--ink);--mut:#23283d}
+.story{height:540vh;position:relative}
+.sticky{position:sticky;top:0;height:100vh;display:grid;grid-template-columns:1fr 1.05fr;gap:44px;align-items:center;padding:96px max(24px,calc((100vw - 1200px)/2)) 36px;overflow:hidden}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);border:1px solid #c9d8ff;background:#eef3ff;padding:8px 16px;border-radius:100px;margin-bottom:22px;font-weight:600}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--blue);animation:pulse 1.5s infinite}
+@keyframes pulse{50%{opacity:.3;transform:scale(.6)}}
+h1{font-size:clamp(30px,4vw,54px);margin-bottom:22px;color:var(--ink);font-weight:700;animation:h1in 1s cubic-bezier(.2,.8,.2,1) both}
+@keyframes h1in{from{opacity:0;transform:translateY(30px)}}
+.copies{display:grid;min-height:150px}
+.copy{grid-area:1/1;font-size:clamp(16px,1.35vw,19px);color:var(--mut);opacity:0;transform:translateY(26px);filter:blur(6px);transition:.7s cubic-bezier(.2,.8,.2,1);pointer-events:none}
+.copy.on{opacity:1;transform:none;filter:none}
+.copy.big{font-family:'Space Grotesk';font-size:clamp(24px,2.6vw,36px);font-weight:600;color:var(--ink);line-height:1.2}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.dots{display:flex;gap:8px;margin-top:30px;align-items:center}
+.dots i{height:5px;width:36px;border-radius:5px;background:#d6e1ff;position:relative;overflow:hidden}
+.dots i::after{content:"";position:absolute;inset:0;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:.6s}
+.dots i.on::after{transform:scaleX(1)}
+.dots span{font-size:11px;letter-spacing:.2em;color:var(--mut);margin-left:8px;font-weight:600}
+
+/* STAGE */
+.stage{--p:0;container-type:size;position:relative;height:min(80vh,660px);border-radius:40px;background:linear-gradient(155deg,#1b50ff,#0a2bd0 70%);color:#fff;overflow:hidden;box-shadow:0 50px 100px -30px rgba(20,70,255,.65)}
+.stage::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:8cqw 8cqw;translate:0 calc(var(--p)*-16cqw)}
+.stage .glow{position:absolute;width:70cqw;height:70cqw;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.4),transparent 65%);left:50%;top:48%;translate:-50% -50%;scale:calc(.8 + var(--p)*.7)}
+.e{opacity:0;transform:translateY(5cqh) scale(.92);filter:blur(8px);transition:opacity .8s,transform .9s cubic-bezier(.2,.8,.2,1),filter .8s;transition-delay:var(--d,0s);pointer-events:none}
+.e.on{opacity:1;transform:none;filter:none}
+.e:not(.on){transition-delay:0s}
+.schip{position:absolute;left:6cqw;top:5cqh;font-size:max(10px,1.9cqw);letter-spacing:.16em;font-weight:600;padding:1.4cqw 3cqw;border-radius:100px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.4)}
+.feedscroll{position:absolute;inset:0;transform:translateY(calc(var(--p)*-20cqh))}
+.post{position:absolute;left:7cqw;right:7cqw;padding:3cqw;border-radius:4cqw;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.32)}
+.post .ph{display:flex;gap:2.4cqw;align-items:center}
+.post .av{width:6cqw;height:6cqw;border-radius:50%;background:rgba(255,255,255,.65);flex:none}
+.post .ph b,.post .ph u{display:block;height:1.7cqw;border-radius:6px;text-decoration:none}
+.post .ph b{width:34cqw;background:rgba(255,255,255,.6);margin-bottom:1.1cqw}.post .ph u{width:20cqw;background:rgba(255,255,255,.28)}
+.post .pimg{margin-top:2.4cqw;height:12cqh;border-radius:2.6cqw;background:linear-gradient(90deg,rgba(255,255,255,.14),rgba(255,255,255,.3),rgba(255,255,255,.14));background-size:200%;animation:sk 2s infinite}
+@keyframes sk{to{background-position:-200% 0}}
+.qbub{position:absolute;right:6cqw;top:4cqh;width:10cqw;height:10cqw;border-radius:50%;background:#fff;color:var(--blue);display:grid;place-items:center;font-size:6cqw;box-shadow:0 0 0 2cqw rgba(255,255,255,.18),0 0 6cqw rgba(255,255,255,.5);animation:bobx 3s ease-in-out infinite}
+.bcard{position:absolute;left:15cqw;right:15cqw;top:14cqh;padding:3cqw;border-radius:4cqw;background:#fff;color:var(--ink);box-shadow:0 4cqw 9cqw -3cqw rgba(0,0,0,.55)}
+.bh{display:flex;align-items:center;gap:2cqw;font-size:max(11px,2.4cqw);font-weight:700;letter-spacing:.04em}
+.bh .dt{width:5cqw;height:5cqw;border-radius:50%;background:var(--blue)}
+.bh span{margin-left:auto;color:#777}
+.bimg{margin:2.4cqw 0;height:28cqh;border-radius:3cqw;background:linear-gradient(135deg,#dfe8ff,#9db8ff);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.4cqw;color:var(--blue);font-size:10cqw}
+.bimg small{font-size:max(9px,2cqw);letter-spacing:.16em;font-weight:700}
+.bact{display:flex;align-items:center;gap:3cqw;font-size:5cqw}
+.bact span{margin-left:auto;font-size:3cqw;color:#777}
+.bln i{display:block;height:1.8cqw;border-radius:6px;background:#dfe8ff;margin-top:1.6cqw}.bln i+i{width:60%}
+.hearts{position:absolute;inset:0}
+.hf{position:absolute;width:5cqw;height:5cqw;color:#fff;animation:rise 3.4s ease-in infinite;animation-delay:var(--dl,0s)}
+.hf svg{width:100%;height:100%;display:block}
+@keyframes rise{0%{opacity:0;transform:translateY(0) scale(.5)}15%{opacity:1}100%{opacity:0;transform:translate(var(--dx,0),-24cqh) scale(1.3)}}
+.stat{position:absolute;display:flex;align-items:center;gap:2cqw;padding:2cqw 3.4cqw;border-radius:3cqw;background:#fff;color:var(--ink);box-shadow:0 3cqw 6cqw -2cqw rgba(0,0,0,.5);font-size:max(10px,2cqw);letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+.stat b{display:block;font-family:'Space Grotesk';font-size:max(16px,4.4cqw);color:var(--blue);letter-spacing:0;line-height:1}
+.stat .ic{font-size:5cqw;color:var(--blue)}
+.cap2{position:absolute;left:0;right:0;bottom:1.6cqh;text-align:center;font-size:max(8.5px,1.7cqw);letter-spacing:.2em;opacity:.7}
+.orbit{position:absolute;left:50%;top:56cqh;width:0;height:0;--R:29cqw;transition:translate .9s cubic-bezier(.2,.8,.2,1),scale .9s cubic-bezier(.2,.8,.2,1)}
+#stage[data-s="4"] .orbit{translate:0 18cqh;scale:.7}
+.ring{position:absolute;left:calc(var(--R)*-1);top:calc(var(--R)*-1);width:calc(var(--R)*2);height:calc(var(--R)*2);border:1.5px dashed rgba(255,255,255,.6);border-radius:50%;rotate:calc(var(--p)*-120deg)}
+.ring.b{left:calc(var(--R)*-.62);top:calc(var(--R)*-.62);width:calc(var(--R)*1.24);height:calc(var(--R)*1.24);border-style:solid;border-color:rgba(255,255,255,.2)}
+.arm{position:absolute;left:0;top:0;transform:rotate(calc(var(--b)*1deg + var(--p)*220deg))}
+.spoke{position:absolute;left:0;top:-1px;width:var(--R);height:2px;background:linear-gradient(90deg,rgba(255,255,255,.05),rgba(255,255,255,.8))}
+.npos{position:absolute;left:var(--R);top:0;transform:translate(-50%,-50%) rotate(calc((var(--b)*1deg + var(--p)*220deg)*-1))}
+.node{display:grid;place-items:center;width:10cqw;height:10cqw;border-radius:50%;background:#fff;box-shadow:0 2cqw 4cqw -1.5cqw rgba(0,0,0,.5)}
+.node img,.node .fbk{width:5.6cqw;height:5.6cqw}
+.core{position:absolute;left:0;top:0;translate:-50% -50%;width:22cqw;height:22cqw;border-radius:50%;background:#fff;color:var(--ink);display:grid;place-items:center;text-align:center;font-family:'Space Grotesk';font-weight:700;font-size:max(12px,2.8cqw);line-height:1.1;box-shadow:0 0 0 2cqw rgba(255,255,255,.2),0 0 9cqw rgba(255,255,255,.7);animation:cp 2.4s infinite}
+.core svg{color:var(--blue);display:block;margin:0 auto 1cqw;font-size:6cqw}
+@keyframes cp{50%{box-shadow:0 0 0 3.6cqw rgba(255,255,255,.12),0 0 12cqw rgba(255,255,255,.85)}}
+.ansc{position:absolute;left:7cqw;right:7cqw;top:9cqh;padding:3.6cqw;border-radius:4cqw;background:#fff;color:var(--ink);box-shadow:0 4cqw 9cqw -3cqw rgba(0,0,0,.55)}
+.ansc small{display:flex;align-items:center;gap:1.4cqw;color:var(--blue);font-weight:700;font-size:max(9.5px,1.9cqw);letter-spacing:.14em;text-transform:uppercase}
+.ansc h4{font-size:max(18px,4.4cqw);margin:1.4cqw 0 2.2cqw}
+.ansc .ch2{display:flex;gap:1.4cqw;flex-wrap:wrap}
+.ansc .ch2 span{display:inline-flex;gap:1cqw;align-items:center;padding:1.1cqw 2.2cqw;border-radius:100px;background:#eef3ff;color:var(--blue);font-weight:600;font-size:max(9.5px,1.95cqw)}
+.scroll{position:absolute;left:50%;bottom:4px;translate:-50% 0;font-size:10px;letter-spacing:.3em;font-weight:600;color:var(--mut);display:flex;flex-direction:column;align-items:center;gap:6px}
+.scroll::after{content:"";width:2px;height:26px;background:linear-gradient(var(--blue),transparent);animation:sd 1.6s infinite}
+@keyframes sd{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@media(max-width:960px){.sticky{grid-template-columns:1fr;grid-template-rows:auto 1fr;gap:16px;padding-top:84px}.stage{height:44vh;order:-1}.copies{min-height:130px}.dots,.scroll{display:none}h1{font-size:26px;margin-bottom:12px}.eyebrow{margin-bottom:12px}.cta-row{margin-top:14px}}
+
+/* FLOATING DECOR */
+.fl{position:absolute;pointer-events:none;color:var(--blue);will-change:transform;animation:bobx 7s ease-in-out infinite}
+.bl .fl{color:#fff}
+.fl svg{width:100%;height:100%;display:block}
+@keyframes bobx{50%{translate:0 -18px}}
+@keyframes spin{to{rotate:360deg}}
+
+/* COMMON */
+.kick{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);display:flex;align-items:center;gap:12px;margin-bottom:22px;font-weight:600}
+.bl .kick{color:#fff}
+.kick b{font-family:'Space Grotesk';background:var(--blue);color:#fff;padding:3px 10px;border-radius:100px;letter-spacing:.06em}
+.bl .kick b{background:#fff;color:var(--blue)}
+.kick::after{content:"";height:2px;width:56px;background:currentColor;opacity:.5}
+h2{font-size:clamp(32px,4.5vw,58px);max-width:940px;margin-bottom:24px}
+.sub{color:var(--mut);font-size:18px;max-width:760px}
+.split .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em}
+.split .w span{display:inline-block;transform:translateY(112%) rotate(5deg);transition:transform .85s cubic-bezier(.2,.8,.2,1)}
+.split.in .w span{transform:none}
+.rv{opacity:0;transform:translateY(44px);transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+.spot{position:relative;border:1px solid var(--line);border-radius:26px;background:var(--card);padding:32px;overflow:hidden;transition:transform .45s,border-color .4s,box-shadow .4s}
+.spot::before{content:"";position:absolute;inset:0;background:radial-gradient(360px circle at var(--mx,50%) var(--my,50%),var(--spot),transparent 60%);opacity:0;transition:.4s}
+.spot:hover{transform:translateY(-8px);box-shadow:0 30px 60px -28px rgba(20,70,255,.55)}
+.spot:hover::before{opacity:1}
+.spot>*{position:relative}
+.spot h3{font-size:22px;margin:16px 0 10px}
+.spot p{color:var(--mut);font-size:15px}
+.tile{width:60px;height:60px;border-radius:20px;display:grid;place-items:center;font-size:28px;background:var(--tile);color:var(--tilefg);transition:.5s;position:relative}
+.tile::after{content:"";position:absolute;inset:-7px;border-radius:26px;border:1.5px dashed currentColor;opacity:0;transition:.5s;color:var(--tile)}
+.spot:hover .tile{transform:rotate(-8deg) scale(1.1)}.spot:hover .tile::after{opacity:.6;rotate:20deg}
+.num{font-family:'Space Grotesk';font-size:13px;font-weight:700;letter-spacing:.14em;opacity:.7;position:absolute!important;top:26px;right:28px}
+.big{position:absolute!important;right:18px;bottom:-14px;font-family:'Space Grotesk';font-weight:700;font-size:72px;opacity:.07;line-height:1}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:50px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:50px}
+.g2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:40px}
+@media(max-width:1000px){.g4,.g3{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.g4,.g3,.g2{grid-template-columns:1fr}.span2{grid-column:auto!important}}
+.callout{margin-top:50px;padding:36px 40px;border-radius:30px;font-family:'Space Grotesk';font-size:clamp(20px,2.4vw,28px);line-height:1.3;position:relative;overflow:hidden}
+.lt .callout{background:var(--blue);color:#fff}
+.lt .callout .grad{background-image:linear-gradient(90deg,#fff,#a9c6ff,#fff)}
+.bl .callout{background:#fff;color:var(--ink)}
+.bl .callout .grad{background-image:linear-gradient(90deg,#1446ff,#5a8dff,#1446ff)}
+.note{margin-top:28px;color:var(--mut);font-size:15px;border-left:3px solid currentColor;padding-left:18px;max-width:840px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:40px;align-items:center}
+@media(max-width:900px){.cols{grid-template-columns:1fr}}
+.cols p{color:var(--mut);font-size:17px;margin-bottom:18px}
+
+/* MARQUEE */
+.mqband{background:var(--blue);padding:24px 0;overflow:hidden;transform:rotate(-1.4deg);margin:0 -30px;position:relative;z-index:3;box-shadow:0 30px 60px -30px rgba(20,70,255,.7)}
+.mqband div{display:flex;gap:56px;width:max-content;animation:mq 30s linear infinite;font-family:'Space Grotesk';font-size:clamp(22px,3vw,36px);font-weight:700;white-space:nowrap;color:#fff}
+.mqband span:nth-child(3n+1){color:transparent;-webkit-text-stroke:1.2px #fff}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* CALENDAR VISUAL */
+.calwrap{border:1px solid var(--line);border-radius:30px;padding:26px;background:#fff;box-shadow:0 40px 80px -36px rgba(20,70,255,.5)}
+.calwrap .row2{display:flex;justify-content:space-between;font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px;font-weight:600}
+.calwrap .row2 span:last-child{color:var(--blue)}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
+.cal i{aspect-ratio:1;border-radius:10px;background:#e6eeff;opacity:0;transform:scale(.5);transition:.45s cubic-bezier(.2,.8,.2,1)}
+.calwrap.in .cal i{opacity:1;transform:none;background:var(--blue);transition-delay:calc(var(--i)*40ms)}
+.calwrap.in .cal i:nth-child(3n){background:#7da0ff}
+.calwrap.in .cal i:nth-child(7n){background:#e6eeff}
+.chart{width:100%;height:auto;display:block;overflow:visible;margin-top:18px}
+.chart .ln{fill:none;stroke-width:4;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2.2s cubic-bezier(.2,.8,.2,1) 1s}
+.chart .l1{stroke:var(--blue)}
+.chart .l2{stroke:#0a0a0a;stroke-width:3;stroke-dasharray:.03 .025;stroke-dashoffset:0;opacity:0;transition:opacity 1s 1.8s}
+.calwrap.in .l1{stroke-dashoffset:0}.calwrap.in .l2{opacity:1}
+.legend{display:flex;gap:18px;margin-top:12px;flex-wrap:wrap;font-size:13px;font-weight:500}
+.legend span{display:flex;align-items:center;gap:8px}.legend i{width:22px;height:4px;border-radius:4px;background:var(--blue)}.legend span+span i{background:repeating-linear-gradient(90deg,#0a0a0a 0 4px,transparent 4px 7px)}
+.capx{font-size:10.5px;letter-spacing:.1em;margin-top:12px;opacity:.6}
+
+/* CHIPS (what is) */
+.chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.chipx{display:inline-flex;align-items:center;gap:10px;padding:13px 20px;border-radius:100px;border:1px solid var(--line);background:var(--card);font-weight:500;font-size:15px;transition:.35s}
+.chipx .ic{font-size:19px}
+.chipx:hover{background:#fff;color:var(--blue);transform:translateY(-4px) rotate(-1deg)}
+
+/* SERVICES */
+.svc{display:grid;grid-template-columns:350px 1fr;gap:28px;margin-top:50px;align-items:start}
+.tabs{display:flex;flex-direction:column;gap:8px;position:sticky;top:110px}
+.tab{display:flex;gap:14px;align-items:center;text-align:left;padding:14px 18px;border-radius:18px;border:1.5px solid var(--line);background:#fff;color:var(--ink);font:600 15px Inter;cursor:pointer;transition:.35s}
+.tab .ic{font-size:20px;color:var(--blue)}
+.tab:hover{border-color:var(--blue);transform:translateX(4px)}
+.tab.on{background:var(--blue);color:#fff;border-color:var(--blue);transform:translateX(10px);box-shadow:0 18px 36px -14px rgba(20,70,255,.7)}
+.tab.on .ic{color:#fff}
+.panel{border-radius:34px;padding:46px;background:linear-gradient(155deg,var(--blue),var(--blue2));color:#fff;min-height:660px;position:relative;overflow:hidden;box-shadow:0 40px 80px -30px rgba(20,70,255,.6)}
+.panel::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:44px 44px}
+.pbody{position:relative;animation:swap .65s cubic-bezier(.2,.8,.2,1)}
+@keyframes swap{from{opacity:0;transform:translateY(26px)}}
+.pico{position:absolute;right:0;top:-6px;width:150px;height:150px}
+.pico .main{position:absolute;inset:25px;border-radius:34px;background:#fff;color:var(--blue);display:grid;place-items:center;font-size:56px;animation:bobx 5s ease-in-out infinite;box-shadow:0 20px 40px -12px rgba(0,0,0,.45)}
+.pico .r{position:absolute;inset:0;border-radius:50%;border:1.5px dashed rgba(255,255,255,.6);animation:spin 14s linear infinite}
+.pico .mini{position:absolute;width:30px;height:30px;border-radius:10px;background:rgba(255,255,255,.25);display:grid;place-items:center;font-size:16px;border:1px solid rgba(255,255,255,.5)}
+.panel h3{font-size:clamp(26px,3vw,36px);margin-bottom:12px;max-width:430px}
+.panel .stl{font-size:18px;margin-bottom:12px;font-weight:500;max-width:520px;color:var(--sky)}
+.panel p.d{color:rgba(255,255,255,.85);margin-bottom:22px;max-width:600px}
+.lst{display:grid;grid-template-columns:1fr 1fr;gap:10px 22px;list-style:none;margin-bottom:26px}
+.lst li{font-size:14.5px;padding-left:30px;position:relative;opacity:0;animation:li .5s forwards;animation-delay:calc(var(--i)*55ms + .15s)}
+@keyframes li{from{opacity:0;transform:translateX(-14px)}to{opacity:1;transform:none}}
+.lst li::before{content:"";position:absolute;left:0;top:3px;width:19px;height:19px;border-radius:50%;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231446ff' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/11px no-repeat}
+.deliv{padding:20px 24px;border-radius:20px;background:#fff;color:var(--ink);font-size:15px}
+.deliv b{color:var(--blue);display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:4px}
+.pnote{margin:0 0 18px;font-size:14px;font-style:italic;color:var(--sky)}
+@media(max-width:960px){.svc{grid-template-columns:1fr}.tabs{position:static;flex-direction:row;overflow-x:auto;padding-bottom:8px}.tab{flex:none;white-space:nowrap}.tab.on{transform:none}.lst{grid-template-columns:1fr}.panel{padding:28px}.pico{display:none}}
+
+/* PLATFORMS (original logos) */
+.pic{width:64px;height:64px;border-radius:20px;display:grid;place-items:center;background:#fff;color:var(--blue);transition:.5s;box-shadow:0 14px 28px -12px rgba(0,0,0,.4)}
+.pic.duo{width:auto;padding:0 14px;gap:10px;display:flex}
+.pic img,.pic .fbk{width:34px;height:34px;object-fit:contain;display:block}
+.fbk{display:grid;place-items:center;border-radius:9px;color:#fff;font:700 15px 'Space Grotesk'}
+.spot:hover .pic{transform:rotate(-8deg) scale(1.1)}
+.plat .spot{padding:28px}
+.plat .focus{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;opacity:.85;margin-bottom:14px}
+.tg{display:inline-block;font-size:12.5px;padding:5px 12px;border-radius:100px;border:1px solid var(--line);margin:0 6px 6px 0;background:rgba(255,255,255,.1)}
+
+/* PILLARS */
+.pillars{display:flex;gap:14px;height:500px;margin-top:50px}
+.pil{flex:1;min-width:0;position:relative;border-radius:30px;border:1.5px solid var(--line);background:var(--card);padding:26px;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;transition:flex .7s cubic-bezier(.2,.8,.2,1),background .5s,color .5s,box-shadow .5s}
+.pil.on{flex:3.6;background:linear-gradient(155deg,var(--blue),var(--blue2));color:#fff;border-color:var(--blue);box-shadow:0 40px 80px -30px rgba(20,70,255,.7)}
+.pil .top{display:flex;align-items:center;gap:14px}
+.pil.on .tile{background:#fff;color:var(--blue)}
+.pil .n{font-family:'Space Grotesk';font-weight:700;opacity:.6;font-size:14px;letter-spacing:.14em}
+.pil h3{margin-top:22px;font-size:28px}
+.pil:not(.on) h3{writing-mode:vertical-rl;transform:rotate(180deg);align-self:flex-start;margin-top:auto;font-size:24px}
+.pil .body{opacity:0;max-height:0;overflow:hidden;transition:opacity .5s .2s}
+.pil.on .body{opacity:1;max-height:420px}
+.pil .body p{margin:10px 0 18px;max-width:440px;font-size:16px;color:rgba(255,255,255,.9)}
+.pil .ex b{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;opacity:.85;margin-bottom:10px}
+.pil .ex span{display:inline-block;margin:0 8px 8px 0;padding:7px 14px;border-radius:100px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.4);font-size:13px}
+@media(max-width:900px){.pillars{flex-direction:column;height:auto}.pil.on{flex:none}.pil:not(.on) h3{writing-mode:horizontal-tb;transform:none;margin-top:14px}}
+
+/* TIMELINE (blue bg) */
+.tl{position:relative;margin-top:70px;padding-left:76px}
+.tl::before{content:"";position:absolute;left:25px;top:0;bottom:0;width:3px;background:rgba(255,255,255,.25);border-radius:3px}
+.tl .fill{position:absolute;left:25px;top:0;width:3px;height:0;background:#fff;border-radius:3px;box-shadow:0 0 18px #fff}
+.st{position:relative;padding:28px 34px;border:1px solid var(--line);border-radius:26px;background:var(--card);margin-bottom:22px;transition:.45s}
+.st:hover{transform:translateX(10px);background:rgba(255,255,255,.18)}
+.st .dot{position:absolute;left:-76px;top:22px;width:54px;height:54px;border-radius:50%;background:var(--blue2);border:3px solid rgba(255,255,255,.3);display:grid;place-items:center;font-size:24px;transition:.5s}
+.st.on .dot{background:#fff;color:var(--blue);border-color:#fff;box-shadow:0 0 0 8px rgba(255,255,255,.2),0 0 34px rgba(255,255,255,.7)}
+.st small{letter-spacing:.16em;font-size:11px;text-transform:uppercase;font-weight:600;opacity:.85}
+.st h3{font-size:28px;margin:4px 0 8px}.st p{color:var(--mut)}
+
+/* EFFECTIVE */
+.rgc{position:relative;width:128px;height:128px;margin:0 auto 20px;display:grid;place-items:center}
+.rgc::before,.rgc::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid rgba(255,255,255,.75);animation:ripple 3s infinite}
+.rgc::after{animation-delay:1.5s}
+@keyframes ripple{from{transform:scale(.55);opacity:1}to{transform:scale(1.25);opacity:0}}
+.rgc i{position:relative;z-index:2;width:72px;height:72px;border-radius:50%;background:#fff;color:var(--blue);display:grid;place-items:center;font-size:32px;font-style:normal}
+.spot.c{text-align:center}
+.spot.c h3{margin:0;font-size:20px}
+.dots2{display:grid;grid-template-columns:repeat(10,1fr);gap:10px;max-width:440px}
+.dots2 i{aspect-ratio:1;border-radius:50%;background:rgba(255,255,255,.28);transform:scale(0);transition:transform .5s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i)*14ms)}
+.dots2.in i{transform:scale(1)}
+.dots2.in i.hi{background:#fff;box-shadow:0 0 0 4px rgba(255,255,255,.25),0 0 24px rgba(255,255,255,.85);animation:hip 2s ease-in-out infinite}
+@keyframes hip{50%{transform:scale(1.28)}}
+
+/* FAQ */
+.faq{margin-top:50px;display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+@media(max-width:900px){.faq{grid-template-columns:1fr}}
+.fq{border:1px solid var(--line);border-radius:22px;background:var(--card);cursor:pointer;transition:.35s}
+.fq:hover{transform:translateY(-3px)}
+.fq .hd{display:flex;gap:14px;align-items:center;padding:20px 22px}
+.fq .hd h4{flex:1;font-size:16.5px;font-weight:600;line-height:1.3}
+.fq .nn{font-family:'Space Grotesk';font-weight:700;font-size:13px;opacity:.7}
+.pm{flex:none;width:34px;height:34px;border-radius:50%;border:1.5px solid currentColor;display:grid;place-items:center;transition:.4s;font-size:20px;line-height:1}
+.open>.hd .pm{transform:rotate(45deg);background:var(--blue);color:#fff;border-color:var(--blue)}
+.bd{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s}
+.open>.bd{grid-template-rows:1fr}.bd>div{overflow:hidden}
+.fq .bd p{padding:0 22px 22px;color:var(--mut);font-size:15px}
+.fq.open{background:#fff;color:var(--ink);--mut:#23283d}
+
+/* FINAL */
+.final{padding:110px 0 70px}
+.fcard{position:relative;border-radius:48px;padding:90px 50px;text-align:center;color:#fff;overflow:hidden;background:linear-gradient(150deg,var(--blue),var(--blue2));box-shadow:0 60px 120px -40px rgba(20,70,255,.7)}
+.fcard::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(circle at 50% 50%,#000,transparent 75%)}
+.fcard::after{content:"";position:absolute;width:700px;height:700px;left:50%;top:50%;translate:-50% -50%;background:conic-gradient(from 0deg,rgba(255,255,255,.35),transparent 30%,rgba(255,255,255,.2),transparent 70%,rgba(255,255,255,.35));border-radius:50%;animation:spin 20s linear infinite;filter:blur(40px);opacity:.5}
+.fcard>*{position:relative;z-index:2}
+.fcard .kick{justify-content:center;color:#fff}.fcard .kick b{background:#fff;color:var(--blue)}
+.fcard h2{margin-inline:auto;font-size:clamp(32px,4.8vw,62px);color:#fff}
+.fcard .grad{background-image:linear-gradient(90deg,#fff,#a9c6ff,#fff)}
+.fcard .sub{margin:0 auto 14px;color:rgba(255,255,255,.88)}
+.fcard .cta-row{justify-content:center}
+.fcard .btn.pri{background:#fff;color:var(--blue);border-color:#fff}
+.fcard .btn.gh:hover{background:#fff;color:var(--blue)}
+.fcard .fl{color:#fff;opacity:.6;z-index:1}
+.next{text-align:center;padding:60px 0 110px}
+.next h2{margin-inline:auto;font-size:clamp(30px,4vw,48px)}
+.svcs{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:34px}
+.svcs a{padding:13px 24px;border-radius:100px;border:1.5px solid var(--blue);color:var(--blue);font-weight:600;font-size:15px;transition:.3s;background:#fff}
+.svcs a:hover,.svcs a.cur{background:var(--blue);color:#fff;transform:translateY(-4px)}
+footer{background:linear-gradient(160deg,var(--blue),var(--blue2));color:#fff;padding:80px 0 40px;font-size:14px}
+.fg{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr 1fr;gap:34px}
+footer h5{font-family:'Space Grotesk';font-size:12px;letter-spacing:.18em;margin-bottom:16px}
+footer a{display:block;margin-bottom:10px;opacity:.85}footer a:hover{opacity:1;transform:translateX(3px)}
+footer a.flogo{display:inline-flex;background:#fff;padding:10px 18px;border-radius:16px;opacity:1;margin:0}
+footer a.flogo:hover{transform:none}
+footer a.flogo img{height:34px;width:auto;display:block}
+.fb{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:50px;padding-top:24px;border-top:1px solid rgba(255,255,255,.3)}
+.fb span a{display:inline;margin-left:18px}
+.cta-strip{margin-top:56px;padding:34px;border-radius:28px;background:#fff;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.cta-strip small{color:var(--blue);letter-spacing:.16em;font-size:11px;font-weight:700}
+.cta-strip h3{font-size:26px;margin-top:6px}
+footer .cta-strip a.btn.pri{background:var(--blue);color:#fff;border-color:var(--blue);opacity:1;margin:0}
+@media(max-width:900px){.fg{grid-template-columns:1fr 1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.split .w span{opacity:1!important;transform:none!important}.e.on{opacity:1}}
+
+/* Original IdeaWonder brand lockup: tagline sits below the logo */
+nav a.logo{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;gap:2px!important;line-height:1!important}
+nav a.logo img{display:block;width:205px;height:43px;object-fit:contain;object-position:left center}
+nav .brand-tagline{display:block;margin:0 0 0 2px;color:#6b9cff;font-size:7px;font-weight:800;letter-spacing:.19em;line-height:1.2;white-space:nowrap}
+@media(max-width:760px){nav a.logo img{width:165px;height:36px}nav .brand-tagline{font-size:6px;letter-spacing:.15em}}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+
+<!-- ICON + SHAPE SPRITE (transparent vector artwork) -->
+<svg class="sprite" aria-hidden="true"><defs>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.5 7.2L4 20l1-4.5A8 8 0 1 1 21 12z"/></symbol>
+<symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 17v4M17 19h4"/></symbol>
+<symbol id="i-chip" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+<symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></symbol>
+<symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></symbol>
+<symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></symbol>
+<symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></symbol>
+<symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+<symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
+<symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></symbol>
+<symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2 20c0-4 3-6 7-6s7 2 7 6"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14c3 0 5 1.8 5 5"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+<symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></symbol>
+<symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 1-1 1.7M12 17h.01"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></symbol>
+<symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z"/></symbol>
+<symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></symbol>
+<symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></symbol>
+<symbol id="i-palette" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.1 0 1.5-.8 1.2-1.6-.4-1 .3-2.4 1.8-2.4H17a4 4 0 0 0 4-4c0-5-4-10-9-10z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10" cy="7" r="1"/><circle cx="15" cy="7" r="1"/></symbol>
+<symbol id="i-megaphone" viewBox="0 0 24 24"><path d="M3 11v2a1 1 0 0 0 1 1h3l8 4V6L7 10H4a1 1 0 0 0-1 1zM19 9a4 4 0 0 1 0 6"/></symbol>
+<symbol id="i-video" viewBox="0 0 24 24"><rect x="2" y="6" width="13" height="12" rx="2"/><path d="M15 10l7-4v12l-7-4"/></symbol>
+<symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></symbol>
+<symbol id="i-repeat" viewBox="0 0 24 24"><path d="M17 2l4 4-4 4M3 11V9a3 3 0 0 1 3-3h15M7 22l-4-4 4-4M21 13v2a3 3 0 0 1-3 3H3"/></symbol>
+<symbol id="s-star" viewBox="0 0 100 100"><path fill="currentColor" d="M50 0C54 30 70 46 100 50 70 54 54 70 50 100 46 70 30 54 0 50 30 46 46 30 50 0z"/></symbol>
+<symbol id="s-ring" viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="5"/><circle cx="50" cy="50" r="26" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="3 6"/></symbol>
+<symbol id="s-dots" viewBox="0 0 100 100"><g fill="currentColor"><circle cx="10" cy="10" r="4"/><circle cx="35" cy="10" r="4"/><circle cx="60" cy="10" r="4"/><circle cx="85" cy="10" r="4"/><circle cx="10" cy="35" r="4"/><circle cx="35" cy="35" r="4"/><circle cx="60" cy="35" r="4"/><circle cx="85" cy="35" r="4"/><circle cx="10" cy="60" r="4"/><circle cx="35" cy="60" r="4"/><circle cx="60" cy="60" r="4"/><circle cx="85" cy="60" r="4"/><circle cx="10" cy="85" r="4"/><circle cx="35" cy="85" r="4"/><circle cx="60" cy="85" r="4"/><circle cx="85" cy="85" r="4"/></g></symbol>
+<symbol id="s-plus" viewBox="0 0 100 100"><path d="M50 12v76M12 50h76" stroke="currentColor" stroke-width="12" stroke-linecap="round"/></symbol>
+<symbol id="s-bubble" viewBox="0 0 120 100"><path fill="currentColor" d="M20 0h80a20 20 0 0 1 20 20v36a20 20 0 0 1-20 20H62L36 98V76H20A20 20 0 0 1 0 56V20A20 20 0 0 1 20 0z"/></symbol>
+<symbol id="s-heart" viewBox="0 0 100 100"><path fill="currentColor" d="M50 90C20 66 6 48 6 30a22 22 0 0 1 44-6 22 22 0 0 1 44 6c0 18-14 36-44 60z"/></symbol>
+</defs></svg>
+
+<nav>
+  <a class="logo" href="/"><img src="/brand/ideawonder-logo-horizontal.png" alt="IdeaWonder AI" onerror="this.replaceWith(document.createTextNode('IdeaWonder AI'))"><span class="brand-tagline">IMAGINE MORE. GROW SMARTER.</span></a>
+  <ul><li><a href="/">About</a></li><li><a class="on" href="/services/seo-ai-search">Services</a></li><li><a href="/contact">Contact</a></li></ul>
+  <a class="btn pri sm" href="/contact">Build Your Growth Strategy</a>
+</nav>
+
+<!-- ============ HERO: SCROLL STORY ============ -->
+<div class="hero story" id="story">
+  <div class="sticky">
+    <div>
+      <div class="eyebrow">IdeaWonder AI / Services / Social Brand Engine</div>
+      <h1>Don't Just Show Up on Social Media. <span class="grad">Give People a Reason to Remember Your Brand.</span></h1>
+      <div class="copies">
+        <p class="copy on">Your audience is scrolling, discovering brands, evaluating businesses and forming opinions long before they visit your website.</p>
+        <p class="copy big">Is your brand making the right impression?</p>
+        <p class="copy">IdeaWonder AI helps businesses turn social media into a strategic growth channel through content strategy, creative storytelling, platform management and performance-focused execution.</p>
+        <p class="copy">From building brand awareness to establishing thought leadership and generating business opportunities, we create social media strategies designed around your audience and commercial objectives.</p>
+        <p class="copy big">Turn attention into affinity.</p>
+      </div>
+      <div class="cta-row">
+        <a class="btn pri mag" href="/contact">Build Your Social Media Strategy <svg class="ic"><use href="#i-arrow"/></svg></a>
+        <a class="btn gh" href="#service-content">Explore Our Capabilities</a>
+      </div>
+      <div class="dots"><i class="on"></i><i></i><i></i><i></i><i></i><span>SCROLL TO EXPLORE</span></div>
+    </div>
+
+    <div class="stage" id="stage" data-s="0">
+      <div class="glow"></div>
+      <div class="schip e" data-in="0" data-out="1">SOCIAL BRAND ENGINE</div>
+      <div class="schip e" data-in="1" data-out="3">CONTENT THAT CONNECTS</div>
+      <div class="schip e" data-in="3">CONTENT &amp; COMMUNITY ECOSYSTEM</div>
+
+      <!-- 0: generic feed -->
+      <div class="feedscroll">
+        <div class="post e" data-in="0" data-out="1" style="top:15cqh;--d:.05s"><div class="ph"><i class="av"></i><div><b></b><u></u></div></div><div class="pimg"></div></div>
+        <div class="post e" data-in="0" data-out="1" style="top:39cqh;--d:.2s"><div class="ph"><i class="av"></i><div><b></b><u></u></div></div><div class="pimg"></div></div>
+        <div class="post e" data-in="0" data-out="1" style="top:63cqh;--d:.35s"><div class="ph"><i class="av"></i><div><b></b><u></u></div></div><div class="pimg"></div></div>
+      </div>
+
+      <!-- 1-2: your brand -->
+      <div class="qbub e" data-in="1" data-out="2"><svg class="ic"><use href="#i-help"/></svg></div>
+      <div class="bcard e" data-in="1" data-out="3">
+        <div class="bh"><i class="dt"></i><b>YOUR BRAND</b><span>•••</span></div>
+        <div class="bimg"><svg class="ic"><use href="#i-play"/></svg><small>CONTENT THAT CONNECTS</small></div>
+        <div class="bact"><svg class="ic"><use href="#i-heart"/></svg><svg class="ic"><use href="#i-chat"/></svg><svg class="ic"><use href="#i-send"/></svg><span>•••</span></div>
+        <div class="bln"><i></i><i></i></div>
+      </div>
+      <div class="hearts e" data-in="2" data-out="3">
+        <div class="hf" style="left:24cqw;bottom:34cqh;--dl:0s;--dx:-3cqw"><svg><use href="#s-heart"/></svg></div>
+        <div class="hf" style="left:40cqw;bottom:30cqh;--dl:.7s;--dx:2cqw"><svg><use href="#s-heart"/></svg></div>
+        <div class="hf" style="left:56cqw;bottom:36cqh;--dl:1.4s;--dx:-2cqw"><svg><use href="#s-heart"/></svg></div>
+        <div class="hf" style="left:68cqw;bottom:32cqh;--dl:2.1s;--dx:3cqw"><svg><use href="#s-heart"/></svg></div>
+        <div class="hf" style="left:32cqw;bottom:28cqh;--dl:2.7s;--dx:1cqw"><svg><use href="#s-heart"/></svg></div>
+      </div>
+      <div class="stat e" data-in="2" data-out="3" style="right:4cqw;top:50cqh;--d:.2s"><svg class="ic"><use href="#i-heart"/></svg><div><b data-to="2.8" data-dec="1" data-suf="k">2.8k</b>engagement</div></div>
+      <div class="stat e" data-in="2" data-out="3" style="left:4cqw;top:68cqh;--d:.5s"><svg class="ic"><use href="#i-chat"/></svg><div><b data-to="46" data-pre="+" data-suf="%">+46%</b>conversations</div></div>
+      <div class="cap2 e" data-in="2" data-out="3">ILLUSTRATIVE VISUAL</div>
+
+      <!-- 3-4: platforms orbit -->
+      <div class="orbit e" data-in="3">
+        <div class="ring"></div><div class="ring b"></div>
+        <div id="arms"></div>
+        <div class="core"><div><svg class="ic"><use href="#i-heart"/></svg>Your<br>brand</div></div>
+      </div>
+      <div class="ansc e" data-in="4" style="--d:.2s">
+        <small><svg class="ic"><use href="#i-spark"/></svg> Social brand engine</small>
+        <h4>Turn attention into affinity.</h4>
+        <div class="ch2"><span><svg class="ic"><use href="#i-target"/></svg>Content strategy</span><span><svg class="ic"><use href="#i-pen"/></svg>Creative storytelling</span><span><svg class="ic"><use href="#i-calendar"/></svg>Platform management</span><span><svg class="ic"><use href="#i-chart"/></svg>Performance-focused execution</span></div>
+      </div>
+    </div>
+    <div class="scroll">SCROLL</div>
+  </div>
+</div>
+
+<!-- 01 APPROACH -->
+<section class="bl" id="service-content" style="padding:120px 0 90px">
+  <svg class="fl" data-s=".14" style="width:100px;top:12%;right:8%;opacity:.6"><use href="#s-heart"/></svg>
+  <svg class="fl" data-s="-.1" style="width:120px;bottom:6%;left:3%;opacity:.3"><use href="#s-dots"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>01</b> The IdeaWonder Approach</div>
+    <h2 class="split">Turn attention into affinity. <span class="grad">Content &amp; community ecosystem</span></h2>
+    <p class="sub rv">Strategy, creative execution and connected systems—built around your business objectives.</p>
+  </div>
+</section>
+<div style="overflow:hidden;padding:30px 0;background:linear-gradient(#0a2bd0 50%,#fff 50%)"><div class="mqband"><div id="mq"></div></div></div>
+
+<!-- 02 CHALLENGE -->
+<section class="lt">
+  <svg class="fl" data-s=".13" style="width:120px;top:5%;right:4%"><use href="#s-ring"/></svg>
+  <svg class="fl" data-s="-.12" style="width:70px;bottom:6%;left:2%"><use href="#s-plus"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>02</b> The Challenge</div>
+    <h2 class="split">Posting Consistently Is Not a <span class="grad">Social Media Strategy.</span></h2>
+    <div class="cols">
+      <div>
+        <p class="rv">Having active social media accounts does not automatically build a recognizable brand or generate business opportunities.</p>
+        <p class="rv">Many businesses publish content regularly but struggle to understand why engagement remains low, followers do not convert and their social presence fails to create meaningful impact.</p>
+      </div>
+      <div class="calwrap rv" id="calwrap">
+        <div class="row2"><span>Content calendar</span><span>Illustrative</span></div>
+        <div class="cal" id="cal"></div>
+        <svg class="chart" viewBox="0 0 400 110">
+          <path class="ln l1" pathLength="1" d="M0 95 C100 82 200 50 400 14"/>
+          <path class="ln l2" pathLength="1" d="M0 96 L400 88"/>
+        </svg>
+        <div class="legend"><span><i></i>Posts published</span><span><i></i>Meaningful impact</span></div>
+        <div class="capx">VISUAL IS ILLUSTRATIVE AND DOES NOT REPRESENT REAL RESULTS</div>
+      </div>
+    </div>
+    <div class="g3" id="challenges"></div>
+    <div class="callout rv">Your brand deserves more than a content calendar. <span class="grad">It needs a social media strategy with a purpose.</span></div>
+  </div>
+</section>
+
+<!-- 03 WHAT IS -->
+<section class="bl">
+  <svg class="fl" data-s=".12" style="width:110px;top:6%;right:5%;opacity:.5"><use href="#s-bubble"/></svg>
+  <svg class="fl" data-s="-.12" style="width:90px;bottom:6%;left:3%;opacity:.5"><use href="#s-star"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>03</b> What Is Social Media Marketing?</div>
+    <h2 class="split">What Is Social Media Marketing and <span class="grad">How Does It Grow Your Business?</span></h2>
+    <p class="sub rv">Social media marketing is the strategic use of platforms such as LinkedIn, Instagram, Facebook, YouTube and other relevant networks to build brand visibility, connect with audiences, communicate value and support business growth.</p>
+    <p class="sub rv" style="margin-top:16px">It goes beyond publishing posts. Effective social media marketing connects your brand positioning, content, creative direction, community engagement and performance analysis into a consistent digital presence.</p>
+    <p class="sub rv" style="margin-top:22px;color:#fff;font-weight:600">Our social media marketing services can include:</p>
+    <div class="chips" id="chips"></div>
+    <div class="g2">
+      <div class="spot rv"><div class="tile"><svg class="ic"><use href="#i-briefcase"/></svg></div><h3>For B2B businesses</h3><p>Social media can help demonstrate expertise, build credibility and maintain relationships with potential buyers throughout longer decision-making journeys.</p></div>
+      <div class="spot rv" style="--d:.1s"><div class="tile"><svg class="ic"><use href="#i-heart"/></svg></div><h3>For consumer-facing businesses</h3><p>It can support discovery, engagement, brand affinity and customer interaction.</p></div>
+    </div>
+    <div class="callout rv"><span class="grad">The objective is to make your social presence meaningful to the people you want to reach.</span></div>
+  </div>
+</section>
+
+<!-- 04 SERVICES -->
+<section class="lt">
+  <svg class="fl" data-s=".13" style="width:130px;top:5%;right:3%"><use href="#s-ring"/></svg>
+  <svg class="fl" data-s="-.1" style="width:70px;top:46%;left:1%"><use href="#s-plus"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>04</b> Our Social Media Marketing Services</div>
+    <h2 class="split">Everything Your Brand Needs to Build a <span class="grad">Stronger Social Presence.</span></h2>
+    <p class="sub rv">We combine strategy, content and execution to create social media experiences that reflect your brand and support your business objectives.</p>
+    <div class="svc rv">
+      <div class="tabs" id="tabs"></div>
+      <div class="panel"><div class="pbody" id="panel"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 PLATFORMS -->
+<section class="bl plat">
+  <svg class="fl" data-s=".14" style="width:110px;top:5%;right:5%;opacity:.5"><use href="#s-star"/></svg>
+  <svg class="fl" data-s="-.12" style="width:90px;bottom:6%;left:4%;opacity:.5"><use href="#s-ring"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>05</b> Platforms We Work With</div>
+    <h2 class="split">Your Audience Is Not on One Platform. <span class="grad">Your Strategy Shouldn't Be Either.</span></h2>
+    <p class="sub rv">Every social media platform has a different audience, content culture and role in the customer journey.</p>
+    <p class="sub rv" style="margin-top:14px;color:#fff;font-weight:600">We help businesses choose and manage the platforms that make the most sense for their goals.</p>
+    <div class="g4" id="platforms"></div>
+    <p class="note rv">We don't recommend being everywhere simply for the sake of presence. We prioritize platforms where your audience, content and business goals align.</p>
+  </div>
+</section>
+
+<!-- 06 FRAMEWORK -->
+<section class="lt">
+  <svg class="fl" data-s=".13" style="width:100px;top:5%;right:4%"><use href="#s-star"/></svg>
+  <svg class="fl" data-s="-.12" style="width:110px;bottom:5%;left:2%;opacity:.4"><use href="#s-dots"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>06</b> Our Social Media Content Framework</div>
+    <h2 class="split">Every Post Should Have a Purpose. <span class="grad">Every Content Pillar Should Build Your Brand.</span></h2>
+    <p class="sub rv">A strong social media strategy balances different types of content instead of repeatedly promoting products and services.</p>
+    <p class="sub rv" style="margin-top:14px;color:var(--ink);font-weight:600">We organize content around five core pillars.</p>
+    <div class="pillars rv" id="pillars"></div>
+    <p class="note rv">The balance between these pillars depends on your industry, audience, brand maturity and commercial objectives.</p>
+  </div>
+</section>
+
+<!-- 07 PROCESS -->
+<section class="bl">
+  <svg class="fl" data-s=".12" style="width:110px;top:5%;right:5%;opacity:.5"><use href="#s-heart"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>07</b> Our Social Media Marketing Process</div>
+    <h2 class="split">From Brand Strategy to <span class="grad">Consistent Social Growth.</span></h2>
+    <div class="tl" id="tl"><div class="fill" id="fill"></div></div>
+    <div class="callout rv" style="margin-top:30px">A continuous cycle of <span class="grad">planning, creating, publishing, learning and improving.</span></div>
+  </div>
+</section>
+
+<!-- 08 B2B -->
+<section class="lt">
+  <svg class="fl" data-s=".13" style="width:120px;top:6%;right:4%"><use href="#s-ring"/></svg>
+  <svg class="fl" data-s="-.12" style="width:80px;bottom:8%;left:3%"><use href="#s-star"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>08</b> Social Media Marketing for B2B Businesses</div>
+    <h2 class="split">Make Your Brand Part of the Conversations <span class="grad">That Influence Business Decisions.</span></h2>
+    <p class="sub rv">B2B social media marketing is not about collecting followers. It is about building familiarity, demonstrating expertise and earning consideration among the people who influence purchasing decisions.</p>
+    <p class="sub rv" style="margin-top:14px;color:var(--ink);font-weight:600">We help B2B businesses create social strategies around their audience and sales journey.</p>
+    <div class="g3" id="b2b"></div>
+    <p class="note rv">We create social media strategies that help your business stay relevant throughout the buyer journey.</p>
+  </div>
+</section>
+
+<!-- 09 EFFECTIVE -->
+<section class="bl">
+  <svg class="fl" data-s=".12" style="width:100px;top:5%;right:5%;opacity:.5"><use href="#s-heart"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>09</b> What Makes a Social Media Strategy Effective?</div>
+    <h2 class="split">More Than Followers. More Than Likes. <span class="grad">A Stronger Brand Presence.</span></h2>
+    <p class="sub rv">We evaluate social media success through a combination of visibility, engagement, audience relevance and business contribution.</p>
+    <div class="g4">
+      <div class="spot c rv"><div class="rgc"><i><svg class="ic"><use href="#i-eye"/></svg></i></div><h3>Visibility</h3></div>
+      <div class="spot c rv" style="--d:.08s"><div class="rgc"><i><svg class="ic"><use href="#i-heart"/></svg></i></div><h3>Engagement</h3></div>
+      <div class="spot c rv" style="--d:.16s"><div class="rgc"><i><svg class="ic"><use href="#i-users"/></svg></i></div><h3>Audience relevance</h3></div>
+      <div class="spot c rv" style="--d:.24s"><div class="rgc"><i><svg class="ic"><use href="#i-trend"/></svg></i></div><h3>Business contribution</h3></div>
+    </div>
+    <div class="cols" style="margin-top:60px">
+      <div>
+        <p class="rv" style="color:#fff;font-weight:600;font-size:20px">We do not treat follower count or likes as the sole measure of success.</p>
+        <p class="rv">For B2B businesses, a smaller but relevant audience can be more valuable than a large audience with little connection to the company's services.</p>
+      </div>
+      <div class="rv">
+        <div class="dots2" id="dots2"></div>
+        <div class="capx" style="margin-top:14px">ILLUSTRATIVE VISUAL: HIGHLIGHTED DOTS REPRESENT A RELEVANT AUDIENCE</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 WHY -->
+<section class="lt">
+  <svg class="fl" data-s=".12" style="width:100px;top:6%;right:5%"><use href="#s-star"/></svg>
+  <svg class="fl" data-s="-.1" style="width:120px;bottom:5%;left:3%;opacity:.4"><use href="#s-dots"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>10</b> Why IdeaWonder AI?</div>
+    <h2 class="split">Creative Thinking. Strategic Execution. <span class="grad">Social Media Built for Business.</span></h2>
+    <div class="g4" id="why"></div>
+    <div class="callout rv"><b>Our philosophy:</b> <span class="grad">Don't just publish content. Build a brand people recognize, trust and want to hear from.</span></div>
+  </div>
+</section>
+
+<!-- 11 FAQ -->
+<section class="bl">
+  <svg class="fl" data-s=".12" style="width:110px;top:5%;right:5%;opacity:.5"><use href="#s-bubble"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>11</b> Frequently Asked Questions</div>
+    <h2 class="split">Social Media Marketing: <span class="grad">What Businesses Need to Know.</span></h2>
+    <div class="faq" id="faq"></div>
+  </div>
+</section>
+
+<!-- 12 FINAL -->
+<section class="lt final">
+  <div class="wrap">
+    <div class="fcard rv">
+      <svg class="fl" data-s=".1" style="width:90px;top:8%;left:6%"><use href="#s-heart"/></svg>
+      <svg class="fl" data-s="-.1" style="width:70px;bottom:10%;right:8%"><use href="#s-star"/></svg>
+      <svg class="fl" data-s=".1" style="width:130px;top:10%;right:5%;opacity:.4"><use href="#s-ring"/></svg>
+      <div class="kick"><b>12</b> Let's talk</div>
+      <h2>Your Brand Has Something Worth Saying. <span class="grad">Let's Make Sure the Right People Hear It.</span></h2>
+      <p class="sub">Build a social media presence that reflects your expertise, communicates your value and gives your audience a reason to engage.</p>
+      <p class="sub" style="color:#fff;font-weight:600">From strategy and content creation to platform management and performance analysis, IdeaWonder AI helps turn social media into a more meaningful part of your digital growth strategy.</p>
+      <div class="cta-row">
+        <a class="btn pri mag" href="/contact">Build Your Social Media Strategy <svg class="ic"><use href="#i-arrow"/></svg></a>
+        <a class="btn gh" href="/contact" style="color:#fff">Talk to Our Team</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="lt next">
+  <div class="wrap">
+    <div class="kick" style="justify-content:center"><b>GO</b> Let's build what's next</div>
+    <h2 class="split">Ready to make your <span class="grad">next move?</span></h2>
+    <p class="sub rv" style="margin:0 auto 30px">Let's understand your objectives, identify the right opportunities and create a plan that moves your business forward.</p>
+    <a class="btn pri mag" href="/contact">Book a Strategy Call <svg class="ic"><use href="#i-arrow"/></svg></a>
+    <div class="kick" style="justify-content:center;margin-top:70px">Explore other services</div>
+    <div class="svcs">
+      <a href="/services/seo-ai-search">SEO / GEO / AEO</a>
+      <a href="/services/performance-marketing">Performance Marketing</a>
+      <a class="cur" href="/services/social-media-marketing">Social Media Marketing</a>
+      <a href="/services/lead-generation">Lead Generation</a>
+      <a href="/services/business-automation">Business Automation</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fg">
+      <div><a class="flogo" href="/"><img src="/brand/ideawonder-logo-horizontal.png" alt="IdeaWonder AI" onerror="this.replaceWith(document.createTextNode('IdeaWonder AI'))"></a><p style="max-width:300px;margin-top:16px;opacity:.9">An AI-first growth and automation agency helping B2B businesses strengthen digital visibility, acquire customers and scale operations through intelligent marketing and automation.</p></div>
+      <div><h5>EXPLORE</h5><a href="/">Home</a><a href="/">About Us</a><a href="/services/seo-ai-search">Services</a><a href="/contact">Contact</a></div>
+      <div><h5>GET DISCOVERED</h5><a href="/services/seo-ai-search">SEO Services</a><a href="/services/seo-ai-search">AI Search Optimization</a></div>
+      <div><h5>GET CUSTOMERS</h5><a href="/services/performance-marketing">Performance Marketing</a><a href="/services/social-media-marketing">Social Media Marketing</a><a href="/services/lead-generation">B2B Lead Generation</a></div>
+      <div><h5>SCALE SMARTER</h5><a href="/services/business-automation">AI &amp; Business Automation</a><a href="/services/business-automation">Marketing Automation</a></div>
+    </div>
+    <div class="cta-strip"><div><small>YOUR NEXT GROWTH CHAPTER STARTS HERE</small><h3>Have a growth challenge or an idea worth exploring?</h3></div><a class="btn pri" href="/contact">Start a conversation <svg class="ic"><use href="#i-arrow"/></svg></a></div>
+    <div class="fb"><span>© 2026 IdeaWonder AI. All rights reserved. Imagine More. Market Smarter. Grow Faster.</span><span><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/cookies">Cookies</a></span></div>
+  </div>
+</footer>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const ic=n=>`<svg class="ic"><use href="#i-${n}"/></svg>`;
+
+/* ---------- ORIGINAL PLATFORM LOGOS (Simple Icons CDN, brand colours; fallback = brand-coloured tile) ---------- */
+const P={
+ li:{s:'linkedin',c:'0A66C2',n:'LinkedIn',f:'in'},
+ ig:{s:'instagram',c:'E4405F',n:'Instagram',f:'IG'},
+ fb:{s:'facebook',c:'0866FF',n:'Facebook',f:'f'},
+ yt:{s:'youtube',c:'FF0000',n:'YouTube',f:'▶'},
+ x:{s:'x',c:'000000',n:'X',f:'X'},
+ tt:{s:'tiktok',c:'000000',n:'TikTok',f:'♪'},
+ pi:{s:'pinterest',c:'BD081C',n:'Pinterest',f:'P'},
+ rd:{s:'reddit',c:'FF4500',n:'Reddit',f:'R'}
+};
+const logo=k=>`<img class="plg" src="https://cdn.simpleicons.org/${P[k].s}/${P[k].c}" alt="${P[k].n} logo" data-c="${P[k].c}" data-f="${P[k].f}" loading="lazy">`;
+function fixLogos(root=document){root.querySelectorAll('img.plg').forEach(img=>{if(img.dataset.fx)return;img.dataset.fx=1;
+ const f=()=>{const s=document.createElement('span');s.className='fbk';s.style.background='#'+img.dataset.c;s.textContent=img.dataset.f;img.replaceWith(s)};
+ img.addEventListener('error',f);if(img.complete&&img.naturalWidth===0)f()})}
+
+/* ---------- DATA ---------- */
+const challenges=[
+["target","Content Without Direction","Posting without a clear strategy results in disconnected content that does little to communicate your brand's value."],
+["heart","Low Audience Engagement","Your content may reach people without giving them a compelling reason to interact, share or remember your business."],
+["palette","Inconsistent Brand Identity","Different visuals, tones and messages across platforms can make your brand feel disconnected and difficult to recognize."],
+["users","Followers Without Business Opportunities","A growing follower count means little if your social media presence does not attract relevant audiences or support your business goals."],
+["repeat","Repetitive and Generic Content","Publishing predictable promotional posts without fresh perspectives makes it difficult to stand out in crowded feeds."],
+["chart","No Clear Performance Measurement","Without meaningful analysis, you cannot understand which content attracts attention, builds trust or contributes to enquiries."]
+];
+const whatChips=[["target","Social media strategy and planning."],["calendar","Platform selection and account management."],["pen","Content creation and creative direction."],["pen","Social media copywriting."],["palette","Graphic design and visual storytelling."],["play","Short-form video and Reels strategy."],["briefcase","LinkedIn content and thought leadership."],["calendar","Content calendars and publishing."],["chat","Community engagement."],["chart","Social media performance reporting."]];
+const svcIcons=["target","calendar","pen","palette","play","briefcase","heart","video","chat","chart"];
+const services=[
+{t:"Social Media Strategy and Planning",s:"Build your presence around a clear direction.",d:"Every successful social media presence begins with a strategy that defines who you want to reach, what you want to communicate and how each platform contributes to your goals.",h:"Our strategy services include:",l:["Brand and social media audits.","Competitor and industry research.","Target audience analysis.","Buyer persona development.","Platform selection.","Content pillar development.","Brand voice and messaging.","Content distribution strategy.","Social media growth planning.","Campaign and editorial calendars."],r:"A structured social media roadmap aligned with your brand positioning and business priorities."},
+{t:"Social Media Account Management",s:"Keep your brand active, consistent and professionally represented.",d:"We help manage your social media presence through structured planning and publishing workflows.",h:"Our account management capabilities include:",l:["Profile and bio optimization.","Content scheduling and publishing.","Platform-specific formatting.","Content calendar management.","Brand consistency checks.","Caption and hashtag planning where relevant.","Community interaction support.","Account performance reviews."],r:"A more consistent and organized social media presence."},
+{t:"Social Media Content Creation",s:"Create content people actually want to consume.",d:"Your content should do more than fill a feed. It should communicate ideas, solve audience problems, demonstrate expertise and make your brand recognizable.",h:"Our content creation services include:",l:["Educational social media posts.","Industry insights and trend commentary.","Informational carousels.","Brand storytelling.","Promotional and service-focused content.","Product and feature highlights.","Infographics and data-led content.","Thought leadership posts.","Short-form video concepts.","Campaign-based content."],r:"A purposeful content ecosystem built around audience interest and brand value."},
+{t:"Social Media Graphic Design",s:"Make your brand visually recognizable.",d:"Visual communication plays an important role in how audiences perceive and remember your business. We develop creative assets that align with your brand identity and platform requirements.",h:"Our design capabilities include:",l:["Static social media creatives.","Carousel designs.","Infographics.","Promotional graphics.","Campaign creatives.","Branded templates.","Event and announcement graphics.","Social media cover designs.","Visual content systems."],r:"A consistent and professional visual identity across your social media channels."},
+{t:"Short-Form Video and Reels Strategy",s:"Turn attention into meaningful engagement.",d:"Short-form video offers opportunities to communicate ideas quickly, demonstrate products and services, and make brands more relatable.",h:"Our services include:",l:["Reels and short-video concepts.","Video content planning.","Script and hook development.","Educational video formats.","Brand introduction videos.","Product and service explainers.","Video caption development.","Platform-specific video adaptations.","Performance analysis."],r:"Video content designed around audience interests, platform behavior and your brand's communication goals."},
+{t:"LinkedIn Marketing and Thought Leadership",s:"Build professional credibility where business conversations happen.",d:"LinkedIn can play an important role in B2B marketing, particularly when your audience includes founders, business owners, executives and industry professionals.",h:"Our LinkedIn marketing services include:",l:["Company page strategy.","LinkedIn content planning.","Thought leadership posts.","Industry insights and commentary.","Educational carousels and documents.","Founder and executive content support.","Employee advocacy recommendations.","Brand positioning.","Professional audience engagement.","LinkedIn content performance analysis."],r:"A more credible professional presence that communicates your expertise and supports B2B relationship building."},
+{t:"Instagram and Facebook Marketing",s:"Build brand recognition through visual storytelling and community.",d:"Instagram and Facebook offer different opportunities for audience discovery, brand communication and customer engagement.",h:"Our services include:",l:["Instagram profile optimization.","Facebook page management.","Reels and Stories planning.","Carousel and static content.","Brand storytelling.","Product and service highlights.","Community engagement.","Campaign content.","Social media insights and reporting."],r:"A consistent visual and social presence aligned with your audience and brand identity."},
+{t:"YouTube and Video Content Strategy",s:"Turn valuable knowledge into discoverable video content.",d:"YouTube can support brand awareness, audience education and long-term content discovery.",h:"Our capabilities include:",l:["Video content strategy.","Topic and keyword research.","Video title and description optimization.","Thumbnail creative direction.","YouTube Shorts planning.","Educational video concepts.","Channel content planning.","Performance analysis."],r:"A video content strategy that supports brand visibility and audience education."},
+{t:"Social Media Community Management",s:"Build relationships beyond the post.",d:"A strong social presence is not just about publishing. It also involves how your brand responds, participates and interacts with its audience.",h:"Our community management support can include:",l:["Comment monitoring and responses.","Audience interaction.","Brand mention monitoring.","Community engagement.","Message management workflows.","Escalation guidelines.","Reputation and feedback observations."],n:"Response handling depends on the agreed scope, platform permissions and access.",r:"A more responsive and relationship-focused social media presence."},
+{t:"Social Media Analytics and Reporting",s:"Understand what your content is actually achieving.",d:"We evaluate performance to understand which topics, formats and platforms are contributing to your objectives.",h:"Our reporting can include:",l:["Reach and impressions.","Follower growth.","Engagement rate.","Content interactions.","Video views and watch time.","Profile visits.","Website clicks.","Audience growth patterns.","Top-performing content.","Enquiry and conversion indicators where trackable."],r:"Clearer insights to guide content decisions and improve your social media strategy."}
+];
+const platforms=[
+{k:['li'],t:"LinkedIn",f:"B2B authority and professional visibility",l:["Thought leadership","Industry insights","Company updates","Professional storytelling","B2B audience engagement","Lead-supporting content"]},
+{k:['ig'],t:"Instagram",f:"Visual storytelling and brand discovery",l:["Reels","Stories","Carousels","Brand creatives","Educational content","Community engagement"]},
+{k:['fb'],t:"Facebook",f:"Community and audience engagement",l:["Page management","Community content","Promotional posts","Video and Reels","Audience interaction","Brand updates"]},
+{k:['yt'],t:"YouTube",f:"Video education and discovery",l:["Long-form videos","YouTube Shorts","Educational content","Product explainers","Video optimization","Channel strategy"]},
+{k:['x'],t:"X",f:"Conversations and real-time visibility",l:["Industry commentary","Brand updates","Short-form insights","Community conversations","Thought leadership","Relevant trend participation"]},
+{k:['tt'],t:"TikTok",f:"Short-form video and discovery",l:["Short-form storytelling","Educational videos","Trend-relevant content","Product and service explainers","Brand awareness"]},
+{k:['pi','rd'],t:"Pinterest and Other Relevant Platforms",f:"Visual discovery and niche audiences",p:"We can also evaluate Pinterest, Reddit and other networks where they align with your audience and business objectives."}
+];
+const pillars=[
+{i:"doc",t:"Educate",d:"Share useful knowledge that helps your audience understand challenges and explore solutions.",e:["Industry insights","How-to content","Expert tips","Educational carousels","Explainer videos"]},
+{i:"award",t:"Establish Authority",d:"Demonstrate expertise and communicate your perspective within your industry.",e:["Thought leadership","Original insights","Research commentary","Expert opinions","Professional perspectives"]},
+{i:"users",t:"Humanize",d:"Make your brand more relatable through the people, ideas and thinking behind the business.",e:["Founder perspectives","Team stories","Behind-the-scenes content","Company culture","Brand milestones"]},
+{i:"chat",t:"Engage",d:"Create opportunities for your audience to participate and interact.",e:["Industry questions","Polls and discussions","Interactive Stories","Community conversations","Relevant topical content"]},
+{i:"target",t:"Convert",d:"Help interested audiences take the next step toward your products or services.",e:["Service highlights","Product demonstrations","Use-case content","Lead magnets","Consultation invitations","Clear calls to action"]}
+];
+const steps=[
+["search","Discover","We understand your business, audience, brand positioning, services and current social media presence."],
+["doc","Audit","We evaluate your existing profiles, content, competitors, engagement patterns and platform opportunities."],
+["target","Strategize","We define platform priorities, content pillars, messaging, creative direction and publishing plans."],
+["pen","Create","We develop social media copy, creative assets, carousels, video concepts and platform-specific content."],
+["send","Publish and Engage","We execute the content calendar, maintain consistency and support audience interaction according to the agreed scope."],
+["trend","Analyze and Improve","We evaluate performance, identify successful content themes and refine the strategy based on insights."]
+];
+const b2b=[
+["chip","SaaS and Technology Companies","Explain complex products, highlight use cases and communicate technical expertise through accessible content."],
+["briefcase","Consulting and Professional Services","Build thought leadership and demonstrate industry knowledge through insights, educational content and expert perspectives."],
+["megaphone","Marketing and Digital Agencies","Showcase marketing expertise, share industry observations and communicate the value of your services."],
+["layers","Enterprise Solution Providers","Develop content around business challenges, technical capabilities, integrations and industry applications."],
+["bolt","Growing Businesses and Startups","Build brand recognition, establish a consistent digital identity and develop an engaged audience."],
+["users","Founders and Business Leaders","Develop personal brand content that communicates expertise, perspectives and leadership thinking."]
+];
+const why=[
+["target","Strategy Before Publishing","We establish clear content direction and platform objectives before creating posts."],
+["pen","Content With a Purpose","We develop content designed to educate, engage, establish authority and support business goals."],
+["palette","Consistent Brand Identity","We align messaging, visuals and communication across your social media presence."],
+["globe","Platform-Specific Thinking","We adapt content to platform formats and audience expectations instead of copying identical posts everywhere."],
+["briefcase","B2B-Aware Communication","We understand that professional audiences need relevant insights, credibility and clear business value."],
+["chart","Performance-Led Improvement","We use content insights and available analytics to refine future campaigns."],
+["link","Connected Digital Marketing","We align social media with SEO, paid advertising, lead generation and website strategy where relevant."]
+];
+const faqs=[
+["What does a social media marketing agency do?","A social media marketing agency helps businesses plan, create, publish and optimize content across social platforms. Services can include social media strategy, account management, creative design, copywriting, video content, community management and performance reporting."],
+["What is included in social media marketing services?","Social media marketing services can include platform strategy, profile optimization, content calendars, post creation, graphic design, video planning, publishing, community engagement and analytics. The exact scope depends on the platforms, content requirements and business objectives."],
+["Which social media platform is best for B2B businesses?","LinkedIn is often a strong starting point for B2B thought leadership and professional audience engagement. However, YouTube, Instagram, Facebook and other platforms can also support brand awareness, education and consideration. Platform selection should reflect where your target buyers spend time and what content they value."],
+["Is Instagram useful for B2B marketing?","Yes. Instagram can help B2B businesses humanize their brand, share visual insights, communicate company culture and distribute educational content. It can complement LinkedIn rather than replace it."],
+["How often should a business post on social media?","There is no universal posting frequency. It depends on the platform, audience, available resources and content quality. A sustainable publishing schedule with relevant content is generally more valuable than posting frequently without a clear strategy."],
+["What type of social media content works best for businesses?","Useful content formats include educational posts, industry insights, carousels, short-form videos, thought leadership, product explanations, company stories and customer-focused resources. The best format depends on your audience and the purpose of the content."],
+["Can social media marketing generate B2B leads?","Yes. Social media can support B2B lead generation by building awareness, communicating expertise, nurturing relationships and directing relevant audiences toward service pages, consultation forms and other conversion opportunities. Lead generation also depends on the offer, targeting, sales process and conversion experience."],
+["What is the difference between social media marketing and social media management?","Social media management generally focuses on the day-to-day operation of social accounts, including scheduling, publishing and community interaction. Social media marketing is broader and includes strategy, audience research, content development, campaign planning and performance optimization."],
+["Does social media marketing include paid advertising?","Not necessarily. Organic social media marketing focuses on content and audience engagement without paying for distribution. Paid social advertising involves running campaigns through platforms such as Meta and LinkedIn. Both can work together, but they are distinct services."],
+["How long does social media marketing take to show results?","Results vary by platform, audience, industry, content quality and consistency. Some posts may generate immediate engagement, while building recognition, audience trust and sustained business contribution generally requires ongoing effort."],
+["Do businesses need to be active on every social media platform?","No. Managing too many platforms without sufficient resources can weaken content quality and consistency. It is usually more effective to prioritize the platforms that align with your audience and business objectives."],
+["What is a social media content calendar?","A social media content calendar is a structured plan that organizes upcoming content by date, platform, topic, format and objective. It helps businesses maintain consistency, coordinate campaigns and plan content around important business priorities."],
+["How do you measure social media marketing performance?","Performance can be evaluated using reach, impressions, engagement, follower growth, video views, profile visits, website clicks and enquiries. The most relevant metrics depend on whether the goal is awareness, engagement, authority or lead generation."],
+["Can social media marketing improve brand credibility?","Consistent, relevant and useful content can help communicate expertise, demonstrate brand personality and build familiarity. Credibility also depends on the quality of your information, real customer experiences and the consistency of your business communication."],
+["Should founders and employees post on LinkedIn as well as the company page?","For many B2B businesses, founder and employee perspectives can complement company-page content. Individual expertise and professional insights can make a brand's communication more human and help distribute its ideas through relevant professional networks."],
+["Does IdeaWonder AI create social media content?","Yes. Our social media capabilities include content strategy, copywriting, creative direction, graphic design, carousel content and short-form video planning. Specific production requirements are determined by the agreed scope."],
+["Can social media marketing be combined with SEO and performance marketing?","Yes. Social media can distribute content, support brand awareness and complement organic search and paid advertising. A connected strategy helps maintain consistent messaging across discovery, engagement and conversion channels."]
+];
+
+/* ---------- BUILD ---------- */
+const mqw=["SOCIAL BRAND ENGINE","CONTENT THAT CONNECTS","TURN ATTENTION INTO AFFINITY","CONTENT & COMMUNITY ECOSYSTEM"];
+$('#mq').innerHTML=[0,1].map(()=>mqw.map(w=>`<span>${w}</span><span>✦</span>`).join('')).join('');
+$('#arms').innerHTML=['li','ig','fb','yt','x','tt'].map((k,i)=>`<div class="arm" style="--b:${-150+i*60}"><div class="spoke"></div><div class="npos"><div class="node">${logo(k)}</div></div></div>`).join('');
+$('#cal').innerHTML=[...Array(35)].map((_,i)=>`<i style="--i:${i}"></i>`).join('');
+$('#challenges').innerHTML=challenges.map((c,i)=>`<div class="spot rv" style="--d:${(i%3)*.08}s"><span class="num">0${i+1}</span><div class="tile">${ic(c[0])}</div><h3>${c[1]}</h3><p>${c[2]}</p></div>`).join('');
+$('#chips').innerHTML=whatChips.map((c,i)=>`<span class="chipx rv" style="--d:${i*.05}s">${ic(c[0])}${c[1]}</span>`).join('');
+$('#platforms').innerHTML=platforms.map((p,i)=>`<div class="spot rv" style="--d:${(i%4)*.08}s"><div class="pic ${p.k.length>1?'duo':''}">${p.k.map(logo).join('')}</div><h3>${p.t}</h3><div class="focus">Focus: ${p.f}</div>${p.l?p.l.map(x=>`<span class="tg">${x}</span>`).join(''):`<p>${p.p}</p>`}</div>`).join('');
+$('#pillars').innerHTML=pillars.map((p,i)=>`<div class="pil ${i?'':'on'}" data-i="${i}"><div class="top"><div class="tile">${ic(p.i)}</div><span class="n">0${i+1}</span></div><h3>${p.t}</h3><div class="body"><p>${p.d}</p><div class="ex"><b>Examples</b>${p.e.map(x=>`<span>${x}</span>`).join('')}</div></div></div>`).join('');
+$('#tl').insertAdjacentHTML('beforeend',steps.map((s,i)=>`<div class="st"><div class="dot">${ic(s[0])}</div><small>Step 0${i+1}</small><h3>${s[1]}</h3><p>${s[2]}</p></div>`).join(''));
+$('#b2b').innerHTML=b2b.map((c,i)=>`<div class="spot rv" style="--d:${(i%3)*.08}s"><span class="big">0${i+1}</span><div class="tile">${ic(c[0])}</div><h3>${c[1]}</h3><p>${c[2]}</p></div>`).join('');
+$('#why').innerHTML=why.map((c,i)=>`<div class="spot rv ${i==6?'span2':''}" style="--d:${(i%4)*.08}s;${i==6?'grid-column:span 2':''}"><span class="num">0${i+1}</span><div class="tile">${ic(c[0])}</div><h3>${c[1]}</h3><p>${c[2]}</p></div>`).join('');
+$('#faq').innerHTML=faqs.map((f,i)=>`<div class="fq rv" style="--d:${(i%2)*.06}s"><div class="hd"><span class="nn">${String(i+1).padStart(2,'0')}</span><h4>${f[0]}</h4><div class="pm">+</div></div><div class="bd"><div><p>${f[1]}</p></div></div></div>`).join('');
+const hi=[4,13,22,27,35,41,48,56];
+$('#dots2').innerHTML=[...Array(60)].map((_,i)=>`<i class="${hi.includes(i)?'hi':''}" style="--i:${i}"></i>`).join('');
+fixLogos();
+
+/* services tabs */
+function showSvc(i){const s=services[i],m=svcIcons[i];
+ $('#panel').innerHTML=`<div class="pico"><div class="r"></div><div class="main">${ic(m)}</div><div class="mini" style="top:2px;right:8px">${ic('spark')}</div><div class="mini" style="bottom:6px;left:0">${ic('check')}</div></div><h3>${s.t}</h3><p class="stl">${s.s}</p><p class="d">${s.d}</p><p style="font-weight:600;margin-bottom:14px">${s.h}</p><ul class="lst">${s.l.map((x,k)=>`<li style="--i:${k}">${x}</li>`).join('')}</ul>${s.n?`<p class="pnote">${s.n}</p>`:''}<div class="deliv"><b>Outcome</b>${s.r}</div>`}
+$('#tabs').innerHTML=services.map((s,i)=>`<button class="tab ${i?'':'on'}" data-i="${i}">${ic(svcIcons[i])}<span>${s.t}</span></button>`).join('');
+showSvc(0);
+$('#tabs').addEventListener('click',e=>{const b=e.target.closest('.tab');if(!b)return;$$('.tab').forEach(t=>t.classList.remove('on'));b.classList.add('on');showSvc(+b.dataset.i)});
+
+/* pillars */
+const setPil=el=>{$$('.pil').forEach(p=>p.classList.toggle('on',p===el))};
+$$('.pil').forEach(p=>{p.addEventListener('click',()=>setPil(p));p.addEventListener('mouseenter',()=>{if(matchMedia('(hover:hover) and (min-width:901px)').matches)setPil(p)})});
+
+/* faq */
+document.addEventListener('click',e=>{const c=e.target.closest('.fq');if(c)c.classList.toggle('open')});
+
+/* split headings */
+$$('.split').forEach(el=>{
+ const walk=n=>[...n.childNodes].forEach(c=>{
+  if(c.nodeType===3){const f=document.createDocumentFragment();c.textContent.split(/(\s+)/).forEach(t=>{if(!t.trim()){f.append(t);return}const w=document.createElement('span');w.className='w';w.innerHTML=`<span>${t}</span>`;f.append(w)});c.replaceWith(f)}
+  else if(c.nodeType===1)walk(c)});
+ walk(el);el.querySelectorAll('.w span').forEach((s,i)=>s.style.transitionDelay=i*40+'ms');
+});
+
+/* observers */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+$$('.rv,.split,#calwrap,#dots2').forEach(el=>io.observe(el));
+
+/* count-up for hero stats */
+function runCount(){$$('.stat b').forEach(b=>{const to=+b.dataset.to,dec=+b.dataset.dec||0,pre=b.dataset.pre||'',suf=b.dataset.suf||'',t0=performance.now();
+ const tick=t=>{const k=Math.min((t-t0)/1400,1),v=to*(1-Math.pow(1-k,3));b.textContent=pre+v.toFixed(dec)+suf;if(k<1)requestAnimationFrame(tick)};requestAnimationFrame(tick)})}
+
+/* HERO STORY */
+const story=$('#story'),stage=$('#stage'),N=5;let cur=-1;
+function storyUpdate(){
+ const r=story.getBoundingClientRect(),total=story.offsetHeight-innerHeight;
+ const p=Math.min(Math.max(-r.top/total,0),.9999),s=Math.floor(p*N);
+ stage.style.setProperty('--p',p.toFixed(4));
+ if(s!==cur){const prev=cur;cur=s;stage.dataset.s=s;
+  $$('#stage .e').forEach(el=>{const i=+el.dataset.in,o=el.dataset.out?+el.dataset.out:99;el.classList.toggle('on',s>=i&&s<o)});
+  $$('.copy').forEach((c,i)=>c.classList.toggle('on',i===s));
+  $$('.dots i').forEach((d,i)=>d.classList.toggle('on',i<=s));
+  if(s===2&&prev!==2)runCount();}
+}
+
+/* SCROLL */
+const fls=$$('.fl'),sts=$$('.st');
+function onScroll(){
+ const h=document.documentElement;
+ $('#prog').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+ storyUpdate();
+ const tl=$('#tl'),r=tl.getBoundingClientRect(),mid=innerHeight*.62;
+ $('#fill').style.height=Math.max(0,Math.min(r.height,mid-r.top))+'px';
+ sts.forEach(s=>s.classList.toggle('on',s.getBoundingClientRect().top<mid));
+ fls.forEach(f=>{const host=f.closest('section,.fcard,.sticky')||f.parentElement,b=host.getBoundingClientRect();
+  if(b.bottom<-200||b.top>innerHeight+200)return;
+  const off=(b.top+b.height/2-innerHeight/2)*(+f.dataset.s||.1);
+  f.style.transform=`translate3d(0,${off.toFixed(1)}px,0) rotate(${(off*.25).toFixed(1)}deg)`});
+}
+addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);onScroll();
+
+/* pointer fx */
+document.addEventListener('mousemove',e=>{const s=e.target.closest&&e.target.closest('.spot');
+ if(s){const r=s.getBoundingClientRect();s.style.setProperty('--mx',e.clientX-r.left+'px');s.style.setProperty('--my',e.clientY-r.top+'px')}});
+$$('.mag').forEach(b=>{b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.2}px,${(e.clientY-r.top-r.height/2)*.35}px)`});b.addEventListener('mouseleave',()=>b.style.transform='')});
+</script>
+</body>
+</html>
