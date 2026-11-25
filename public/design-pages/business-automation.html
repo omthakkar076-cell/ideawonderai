@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Digital Marketing & Automation Agency | IdeaWonder AI</title>
+<meta name="description" content="Grow your business with AI-powered SEO, GEO, paid advertising, lead generation, social media marketing and business automation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1446ff;--blue2:#0a2bd0;--sky:#a9c6ff;--ink:#0a0a0a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,sans-serif;line-height:1.65;color:var(--ink);background:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;letter-spacing:-.02em;line-height:1.08}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px;position:relative}
+svg.ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.sprite{position:absolute;width:0;height:0;overflow:hidden}
+
+/* THEMES: white bg = black text, blue bg = white text */
+.lt{--fg:#0a0a0a;--mut:#23283d;--card:#f2f6ff;--line:#d6e1ff;--spot:rgba(20,70,255,.14);--tile:var(--blue);--tilefg:#fff;background:#fff;color:var(--fg);background-image:radial-gradient(rgba(20,70,255,.13) 1.2px,transparent 1.3px);background-size:30px 30px}
+.bl{--fg:#fff;--mut:rgba(255,255,255,.84);--card:rgba(255,255,255,.11);--line:rgba(255,255,255,.3);--spot:rgba(255,255,255,.22);--tile:#fff;--tilefg:var(--blue);color:#fff;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(160deg,var(--blue),var(--blue2));background-size:64px 64px,64px 64px,auto}
+section{position:relative;padding:130px 0;overflow:hidden}
+.grad{background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
+.lt .grad,.hero .grad{background-image:linear-gradient(90deg,#1446ff,#5a8dff,#1446ff)}
+.bl .grad{background-image:linear-gradient(90deg,#fff,#a9c6ff,#fff)}
+@keyframes shine{to{background-position:200% center}}
+#prog{position:fixed;top:0;left:0;height:4px;width:0;background:var(--blue);z-index:300;box-shadow:0 0 12px var(--blue)}
+
+/* NAV */
+nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:250;width:min(1120px,calc(100% - 28px));display:flex;align-items:center;justify-content:space-between;padding:8px 12px 8px 22px;border:1px solid #dbe5ff;border-radius:100px;background:rgba(255,255,255,.86);backdrop-filter:blur(16px);box-shadow:0 12px 40px -16px rgba(20,70,255,.35);color:var(--ink)}
+.logo{display:flex;align-items:center;font-family:'Space Grotesk';font-weight:700;font-size:20px}
+.logo img{height:34px;width:auto;display:block}
+nav ul{display:flex;gap:30px;list-style:none;font-size:14px;font-weight:500}
+nav ul a{opacity:.7}nav ul a:hover,nav ul .on{opacity:1;color:var(--blue)}
+@media(max-width:820px){nav ul{display:none}}
+
+/* BUTTONS */
+.btn{position:relative;display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:100px;font-weight:600;font-size:15px;border:1.5px solid currentColor;transition:.35s;overflow:hidden;cursor:pointer;background:transparent;font-family:inherit;color:inherit}
+.btn.sm{padding:11px 22px;font-size:14px}
+.lt .btn.pri,.hero .btn.pri,nav .btn.pri{background:var(--blue);color:#fff;border-color:var(--blue);box-shadow:0 14px 34px -10px rgba(20,70,255,.6)}
+.bl .btn.pri{background:#fff;color:var(--blue);border-color:#fff;box-shadow:0 14px 34px -10px rgba(0,0,0,.4)}
+.btn.pri:hover{transform:translateY(-3px)}
+.btn.gh:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+.bl .btn.gh:hover{background:#fff;color:var(--blue)}
+.btn::after{content:"";position:absolute;top:0;left:-100%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg)}
+.btn:hover::after{left:150%;transition:.8s}
+.mag{transition:transform .25s}
+
+/* HERO STORY */
+.hero{background:#fff;background-image:radial-gradient(rgba(20,70,255,.14) 1.2px,transparent 1.3px);background-size:30px 30px;color:var(--ink);--mut:#23283d}
+.story{height:540vh;position:relative}
+.sticky{position:sticky;top:0;height:100vh;display:grid;grid-template-columns:1fr 1.05fr;gap:44px;align-items:center;padding:96px max(24px,calc((100vw - 1200px)/2)) 36px;overflow:hidden}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);border:1px solid #c9d8ff;background:#eef3ff;padding:8px 16px;border-radius:100px;margin-bottom:22px;font-weight:600}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--blue);animation:pulse 1.5s infinite}
+@keyframes pulse{50%{opacity:.3;transform:scale(.6)}}
+h1{font-size:clamp(30px,4.2vw,56px);margin-bottom:22px;color:var(--ink);font-weight:700;animation:h1in 1s cubic-bezier(.2,.8,.2,1) both}
+@keyframes h1in{from{opacity:0;transform:translateY(30px)}}
+.copies{display:grid;min-height:150px;position:relative}
+.copy{grid-area:1/1;font-size:clamp(16px,1.35vw,19px);color:var(--mut);opacity:0;transform:translateY(26px);filter:blur(6px);transition:.7s cubic-bezier(.2,.8,.2,1);pointer-events:none}
+.copy.on{opacity:1;transform:none;filter:none}
+.copy.lg{font-family:'Space Grotesk';font-size:clamp(24px,2.6vw,36px);font-weight:600;color:var(--ink);line-height:1.2}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.dots{display:flex;gap:8px;margin-top:30px;align-items:center}
+.dots i{height:5px;width:36px;border-radius:5px;background:#d6e1ff;position:relative;overflow:hidden}
+.dots i::after{content:"";position:absolute;inset:0;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:.6s}
+.dots i.on::after{transform:scaleX(1)}
+.dots span{font-size:11px;letter-spacing:.2em;color:var(--mut);margin-left:8px;font-weight:600}
+
+/* STAGE */
+.stage{--p:0;container-type:size;position:relative;height:min(80vh,660px);border-radius:40px;background:linear-gradient(155deg,#1b50ff,#0a2bd0 70%);color:#fff;overflow:hidden;box-shadow:0 50px 100px -30px rgba(20,70,255,.65)}
+.stage::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:8cqw 8cqw;translate:0 calc(var(--p)*-16cqw)}
+.stage .glow{position:absolute;width:70cqw;height:70cqw;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.4),transparent 65%);left:50%;top:48%;translate:-50% -50%;scale:calc(.8 + var(--p)*.7)}
+.e{opacity:0;transform:translateY(5cqh) scale(.92);filter:blur(8px);transition:opacity .8s,transform .9s cubic-bezier(.2,.8,.2,1),filter .8s;transition-delay:var(--d,0s);pointer-events:none}
+.e.on{opacity:1;transform:none;filter:none}
+.e:not(.on){transition-delay:0s}
+.schip{position:absolute;left:6cqw;top:5cqh;font-size:max(10px,1.9cqw);letter-spacing:.16em;font-weight:600;padding:1.4cqw 3cqw;border-radius:100px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.4);z-index:5}
+/* 0 manual notes */
+.fieldwrap{position:absolute;inset:0;transform:translateY(calc(var(--p)*-14cqh))}
+.sn{position:absolute;display:flex;align-items:center;gap:1.8cqw;padding:2cqw 3cqw 2cqw 2cqw;border-radius:2.4cqw;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.45);font-size:max(10px,2.2cqw);font-weight:600;rotate:var(--r,0deg);animation:bobx 5s ease-in-out infinite;animation-delay:var(--dl,0s);white-space:nowrap}
+.sn i{width:3.6cqw;height:3.6cqw;border:2px solid #fff;border-radius:.9cqw;flex:none}
+.sn svg{font-size:3.4cqw;opacity:.8;margin-left:1cqw}
+/* 1-2 network */
+.net{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.net line{stroke:rgba(255,255,255,.6);stroke-width:2;stroke-dasharray:4 8;stroke-linecap:round;vector-effect:non-scaling-stroke}
+.net.n2 line{stroke:#fff;stroke-width:2.5;stroke-dasharray:6 6;animation:dashflow 1s linear infinite}
+@keyframes dashflow{to{stroke-dashoffset:-24}}
+.apw{position:absolute;transform:translate(-50%,-50%)}
+.ap{width:17cqw;padding:2cqw 1cqw;border-radius:3cqw;background:#fff;color:var(--ink);text-align:center;box-shadow:0 3cqw 6cqw -2cqw rgba(0,0,0,.5)}
+.ap svg{display:block;margin:0 auto;font-size:6cqw;color:var(--blue)}
+.ap b{display:block;margin-top:.8cqw;font-size:max(9px,1.8cqw);letter-spacing:.1em;text-transform:uppercase}
+.orch{width:23cqw;height:23cqw;border-radius:50%;background:#fff;color:var(--ink);display:grid;place-items:center;text-align:center;box-shadow:0 0 0 2cqw rgba(255,255,255,.2),0 0 9cqw rgba(255,255,255,.7);animation:cp 2.4s infinite}
+.orch svg{display:block;margin:0 auto 1cqw;font-size:7cqw;color:var(--blue)}
+.orch b{font-family:'Space Grotesk';font-size:max(10px,2.1cqw);letter-spacing:.08em;line-height:1.1}
+@keyframes cp{50%{box-shadow:0 0 0 3.6cqw rgba(255,255,255,.12),0 0 12cqw rgba(255,255,255,.85)}}
+.pillx{position:absolute;display:inline-flex;align-items:center;gap:1.4cqw;padding:1.5cqw 3cqw;border-radius:100px;background:#fff;color:var(--blue);font-weight:700;font-size:max(9px,1.85cqw);letter-spacing:.1em;box-shadow:0 2cqw 4cqw -1.5cqw rgba(0,0,0,.5)}
+.pillx svg{font-size:3cqw}
+/* 3 workflow card */
+.flowc{position:absolute;left:9cqw;right:9cqw;top:14cqh;padding:3.6cqw 4cqw;border-radius:4cqw;background:#fff;color:var(--ink);box-shadow:0 4cqw 9cqw -3cqw rgba(0,0,0,.55)}
+.fh{display:flex;justify-content:space-between;align-items:center;font-size:max(9px,1.8cqw);letter-spacing:.12em;font-weight:700;text-transform:uppercase;color:#444;margin-bottom:1cqw}
+.fh .live{display:inline-flex;align-items:center;gap:1.2cqw;color:var(--blue)}
+.fh .live i{width:1.8cqw;height:1.8cqw;border-radius:50%;background:var(--blue);animation:pulse 1.4s infinite}
+.fr{position:relative;display:flex;align-items:center;gap:3cqw;padding:2cqw 0;opacity:.35;transition:opacity .6s;transition-delay:calc(var(--i)*.7s + .3s)}
+.flowc.on .fr{opacity:1}
+.fr:not(:last-child)::after{content:"";position:absolute;left:4cqw;top:calc(2cqw + 8cqw);height:calc(100% - 8cqw);width:2px;background:#cfdcff}
+.fr .ci{width:8cqw;height:8cqw;border-radius:50%;background:#eef3ff;color:var(--blue);display:grid;place-items:center;font-size:4cqw;flex:none;transition:.6s;transition-delay:calc(var(--i)*.7s + .3s)}
+.flowc.on .fr .ci{background:var(--blue);color:#fff}
+.fr b{display:block;font-family:'Space Grotesk';font-size:max(12px,2.8cqw);line-height:1.2}
+.fr small{display:block;font-size:max(9px,1.8cqw);color:#555}
+.fr .dn{margin-left:auto;width:5.4cqw;height:5.4cqw;border-radius:50%;background:#dff5e8;color:#0a7a3a;display:grid;place-items:center;font-size:3.2cqw;opacity:0;transform:scale(.4);transition:.5s;transition-delay:calc(var(--i)*.7s + .8s)}
+.flowc.on .fr .dn{opacity:1;transform:none}
+.cap2{position:absolute;left:0;right:0;bottom:1.6cqh;text-align:center;font-size:max(8.5px,1.7cqw);letter-spacing:.2em;opacity:.7}
+/* 4 orbit */
+.orbit{position:absolute;left:50%;top:76cqh;width:0;height:0;--R:21cqw}
+.ring{position:absolute;left:calc(var(--R)*-1);top:calc(var(--R)*-1);width:calc(var(--R)*2);height:calc(var(--R)*2);border:1.5px dashed rgba(255,255,255,.6);border-radius:50%;rotate:calc(var(--p)*-120deg)}
+.ring.b{left:calc(var(--R)*-.6);top:calc(var(--R)*-.6);width:calc(var(--R)*1.2);height:calc(var(--R)*1.2);border-style:solid;border-color:rgba(255,255,255,.2)}
+.arm{position:absolute;left:0;top:0;transform:rotate(calc(var(--b)*1deg + var(--p)*220deg))}
+.spoke{position:absolute;left:0;top:-1px;width:var(--R);height:2px;background:linear-gradient(90deg,rgba(255,255,255,.05),rgba(255,255,255,.8))}
+.npos{position:absolute;left:var(--R);top:0;transform:translate(-50%,-50%) rotate(calc((var(--b)*1deg + var(--p)*220deg)*-1))}
+.node{display:grid;place-items:center;width:9cqw;height:9cqw;border-radius:50%;background:#fff;box-shadow:0 2cqw 4cqw -1.5cqw rgba(0,0,0,.5);color:var(--blue);font-size:4.6cqw}
+.core{position:absolute;left:0;top:0;translate:-50% -50%;width:16cqw;height:16cqw;border-radius:50%;background:#fff;color:var(--ink);display:grid;place-items:center;text-align:center;font-family:'Space Grotesk';font-weight:700;font-size:max(10px,2.2cqw);line-height:1.1;box-shadow:0 0 0 2cqw rgba(255,255,255,.2),0 0 9cqw rgba(255,255,255,.7);animation:cp 2.4s infinite}
+.core svg{color:var(--blue);display:block;margin:0 auto .6cqw;font-size:5cqw}
+.ansc{position:absolute;left:7cqw;right:7cqw;top:8cqh;padding:3.6cqw;border-radius:4cqw;background:#fff;color:var(--ink);box-shadow:0 4cqw 9cqw -3cqw rgba(0,0,0,.55)}
+.ansc small{display:flex;align-items:center;gap:1.4cqw;color:var(--blue);font-weight:700;font-size:max(9.5px,1.9cqw);letter-spacing:.14em;text-transform:uppercase}
+.ansc h4{font-size:max(17px,4.1cqw);margin:1.4cqw 0 .8cqw}
+.ansc p{font-size:max(10px,2cqw);color:#444;margin-bottom:2cqw;letter-spacing:.06em}
+.ansc .ch2{display:flex;gap:1.3cqw;flex-wrap:wrap}
+.ansc .ch2 span{display:inline-flex;gap:.8cqw;align-items:center;padding:1cqw 2cqw;border-radius:100px;background:#eef3ff;color:var(--blue);font-weight:600;font-size:max(9px,1.8cqw)}
+.scroll{position:absolute;left:50%;bottom:4px;translate:-50% 0;font-size:10px;letter-spacing:.3em;font-weight:600;color:var(--mut);display:flex;flex-direction:column;align-items:center;gap:6px}
+.scroll::after{content:"";width:2px;height:26px;background:linear-gradient(var(--blue),transparent);animation:sd 1.6s infinite}
+@keyframes sd{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@media(max-width:960px){.sticky{grid-template-columns:1fr;grid-template-rows:auto 1fr;gap:16px;padding-top:84px}.stage{height:44vh;order:-1}.copies{min-height:130px}.dots,.scroll{display:none}h1{font-size:26px;margin-bottom:12px}.eyebrow{margin-bottom:12px}.cta-row{margin-top:14px}}
+
+/* FLOATING DECOR */
+.fl{position:absolute;pointer-events:none;color:var(--blue);will-change:transform;animation:bobx 7s ease-in-out infinite}
+.bl .fl{color:#fff}
+.fl svg{width:100%;height:100%;display:block}
+@keyframes bobx{50%{translate:0 -18px}}
+@keyframes spin{to{rotate:360deg}}
+
+/* COMMON */
+.kick{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);display:flex;align-items:center;gap:12px;margin-bottom:22px;font-weight:600}
+.bl .kick{color:#fff}
+.kick b{font-family:'Space Grotesk';background:var(--blue);color:#fff;padding:3px 10px;border-radius:100px;letter-spacing:.06em}
+.bl .kick b{background:#fff;color:var(--blue)}
+.kick::after{content:"";height:2px;width:56px;background:currentColor;opacity:.5}
+h2{font-size:clamp(32px,4.5vw,58px);max-width:940px;margin-bottom:24px}
+.sub{color:var(--mut);font-size:18px;max-width:760px}
+.split .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em}
+.split .w span{display:inline-block;transform:translateY(112%) rotate(5deg);transition:transform .85s cubic-bezier(.2,.8,.2,1)}
+.split.in .w span{transform:none}
+.rv{opacity:0;transform:translateY(44px);transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+.spot{position:relative;border:1px solid var(--line);border-radius:26px;background:var(--card);padding:32px;overflow:hidden;transition:transform .45s,border-color .4s,box-shadow .4s}
+.spot::before{content:"";position:absolute;inset:0;background:radial-gradient(360px circle at var(--mx,50%) var(--my,50%),var(--spot),transparent 60%);opacity:0;transition:.4s}
+.spot:hover{transform:translateY(-8px);box-shadow:0 30px 60px -28px rgba(20,70,255,.55)}
+.spot:hover::before{opacity:1}
+.spot>*{position:relative}
+.spot h3{font-size:22px;margin:16px 0 10px}
+.spot p{color:var(--mut);font-size:15px}
+.tile{width:60px;height:60px;border-radius:20px;display:grid;place-items:center;font-size:28px;background:var(--tile);color:var(--tilefg);transition:.5s;position:relative}
+.tile::after{content:"";position:absolute;inset:-7px;border-radius:26px;border:1.5px dashed currentColor;opacity:0;transition:.5s;color:var(--tile)}
+.spot:hover .tile{transform:rotate(-8deg) scale(1.1)}.spot:hover .tile::after{opacity:.6;rotate:20deg}
+.num{font-family:'Space Grotesk';font-size:13px;font-weight:700;letter-spacing:.14em;opacity:.7;position:absolute!important;top:26px;right:28px}
+.spot>.wm{position:absolute!important;right:18px;bottom:-14px;font-family:'Space Grotesk';font-weight:700;font-size:72px;opacity:.07;line-height:1}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:50px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:50px}
+@media(max-width:1000px){.g4,.g3{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.g4,.g3{grid-template-columns:1fr}}
+.callout{margin-top:50px;padding:36px 40px;border-radius:30px;font-family:'Space Grotesk';font-size:clamp(20px,2.4vw,28px);line-height:1.3;position:relative;overflow:hidden}
+.lt .callout{background:var(--blue);color:#fff}
+.lt .callout .grad{background-image:linear-gradient(90deg,#fff,#a9c6ff,#fff)}
+.bl .callout{background:#fff;color:var(--ink)}
+.bl .callout .grad{background-image:linear-gradient(90deg,#1446ff,#5a8dff,#1446ff)}
+.note{margin-top:28px;color:var(--mut);font-size:15px;border-left:3px solid currentColor;padding-left:18px;max-width:840px}
+
+/* MARQUEE */
+.mqband{background:var(--blue);padding:24px 0;overflow:hidden;transform:rotate(-1.4deg);margin:0 -30px;position:relative;z-index:3;box-shadow:0 30px 60px -30px rgba(20,70,255,.7)}
+.mqband div{display:flex;gap:56px;width:max-content;animation:mq 30s linear infinite;font-family:'Space Grotesk';font-size:clamp(22px,3vw,36px);font-weight:700;white-space:nowrap;color:#fff}
+.mqband span:nth-child(3n+1){color:transparent;-webkit-text-stroke:1.2px #fff}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* SERVICE TABS (15) */
+.svc{display:grid;grid-template-columns:360px 1fr;gap:28px;margin-top:50px;align-items:start}
+.tabs{display:flex;flex-direction:column;gap:8px;position:sticky;top:100px;max-height:calc(100vh - 130px);overflow-y:auto;padding-right:6px;scrollbar-width:thin;scrollbar-color:#9db8ff transparent}
+.tab{display:flex;gap:12px;align-items:center;text-align:left;padding:11px 16px;border-radius:16px;border:1.5px solid var(--line);background:#fff;color:var(--ink);font:600 14px Inter;cursor:pointer;transition:.35s;flex:none}
+.tab .ic{font-size:19px;color:var(--blue)}
+.tab .tn{font-family:'Space Grotesk';font-size:12px;opacity:.6;width:20px;flex:none}
+.tab:hover{border-color:var(--blue);transform:translateX(4px)}
+.tab.on{background:var(--blue);color:#fff;border-color:var(--blue);transform:translateX(8px);box-shadow:0 18px 36px -14px rgba(20,70,255,.7)}
+.tab.on .ic{color:#fff}
+.panel{border-radius:34px;padding:46px;background:linear-gradient(155deg,var(--blue),var(--blue2));color:#fff;min-height:640px;position:relative;overflow:hidden;box-shadow:0 40px 80px -30px rgba(20,70,255,.6)}
+.panel::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:44px 44px}
+.pbody{position:relative;animation:swap .65s cubic-bezier(.2,.8,.2,1)}
+@keyframes swap{from{opacity:0;transform:translateY(26px)}}
+.pico{position:absolute;right:0;top:-6px;width:150px;height:150px}
+.pico .main{position:absolute;inset:25px;border-radius:34px;background:#fff;color:var(--blue);display:grid;place-items:center;font-size:56px;animation:bobx 5s ease-in-out infinite;box-shadow:0 20px 40px -12px rgba(0,0,0,.45)}
+.pico .r{position:absolute;inset:0;border-radius:50%;border:1.5px dashed rgba(255,255,255,.6);animation:spin 14s linear infinite}
+.pico .mini{position:absolute;width:30px;height:30px;border-radius:10px;background:rgba(255,255,255,.25);display:grid;place-items:center;font-size:16px;border:1px solid rgba(255,255,255,.5)}
+.panel .pn{font-family:'Space Grotesk';font-size:13px;letter-spacing:.14em;opacity:.8;margin-bottom:8px}
+.panel h3{font-size:clamp(26px,3vw,36px);margin-bottom:12px;max-width:430px}
+.panel .stl{font-size:18px;margin-bottom:12px;font-weight:500;max-width:540px;color:var(--sky)}
+.panel p.d{color:rgba(255,255,255,.85);margin-bottom:22px;max-width:600px}
+.lst{display:grid;grid-template-columns:1fr 1fr;gap:10px 22px;list-style:none;margin-bottom:22px}
+.lst li{font-size:14.5px;padding-left:30px;position:relative;opacity:0;animation:li .5s forwards;animation-delay:calc(var(--i)*55ms + .15s)}
+@keyframes li{from{opacity:0;transform:translateX(-14px)}to{opacity:1;transform:none}}
+.lst li::before{content:"";position:absolute;left:0;top:3px;width:19px;height:19px;border-radius:50%;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231446ff' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/11px no-repeat}
+.gn{padding:18px 22px;border-radius:18px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.45);font-size:14.5px}
+.gn b{display:block;color:var(--sky);font-size:11px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:4px}
+@media(max-width:960px){.svc{grid-template-columns:1fr}.tabs{position:static;max-height:none;flex-direction:row;overflow-x:auto;overflow-y:hidden;padding-bottom:8px}.tab{white-space:nowrap}.tab.on{transform:none}.lst{grid-template-columns:1fr}.panel{padding:28px}.pico{display:none}}
+
+/* STAIRCASE (automation levels) */
+.stairs{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:60px;align-items:start}
+.stp:nth-child(1){margin-top:150px}.stp:nth-child(2){margin-top:120px}.stp:nth-child(3){margin-top:90px}.stp:nth-child(4){margin-top:60px}.stp:nth-child(5){margin-top:30px}
+.stp .spot{padding:20px}
+.stp .tile{width:48px;height:48px;font-size:22px;border-radius:16px}
+.stp h3{font-size:17px;margin:14px 0 8px}
+.stp p{font-size:13.5px}
+.stp .bf{margin-top:14px;padding:12px 14px;border-radius:14px;background:#fff;color:var(--ink);font-size:12.5px;line-height:1.45}
+.stp .bf b{display:block;color:var(--blue);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:3px}
+@media(max-width:1100px){.stairs{grid-template-columns:1fr 1fr 1fr}.stp:nth-child(n){margin-top:0}}
+@media(max-width:700px){.stairs{grid-template-columns:1fr}}
+
+/* TIMELINE (blue bg) */
+.tl{position:relative;margin-top:70px;padding-left:76px}
+.tl::before{content:"";position:absolute;left:25px;top:0;bottom:0;width:3px;background:rgba(255,255,255,.25);border-radius:3px}
+.tl .fill{position:absolute;left:25px;top:0;width:3px;height:0;background:#fff;border-radius:3px;box-shadow:0 0 18px #fff}
+.st{position:relative;padding:26px 34px;border:1px solid var(--line);border-radius:26px;background:var(--card);margin-bottom:20px;transition:.45s}
+.st:hover{transform:translateX(10px);background:rgba(255,255,255,.18)}
+.st .dot{position:absolute;left:-76px;top:20px;width:54px;height:54px;border-radius:50%;background:var(--blue2);border:3px solid rgba(255,255,255,.3);display:grid;place-items:center;font-size:24px;transition:.5s}
+.st.on .dot{background:#fff;color:var(--blue);border-color:#fff;box-shadow:0 0 0 8px rgba(255,255,255,.2),0 0 34px rgba(255,255,255,.7)}
+.st small{letter-spacing:.16em;font-size:11px;text-transform:uppercase;font-weight:600;opacity:.85}
+.st h3{font-size:26px;margin:4px 0 8px}.st p{color:var(--mut)}
+
+/* FAQ */
+.faq{margin-top:50px;display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+@media(max-width:900px){.faq{grid-template-columns:1fr}}
+.fq{border:1px solid var(--line);border-radius:22px;background:var(--card);cursor:pointer;transition:.35s}
+.fq:hover{transform:translateY(-3px)}
+.fq .hd{display:flex;gap:14px;align-items:center;padding:20px 22px}
+.fq .hd h4{flex:1;font-size:16.5px;font-weight:600;line-height:1.3}
+.fq .nn{font-family:'Space Grotesk';font-weight:700;font-size:13px;opacity:.7}
+.pm{flex:none;width:34px;height:34px;border-radius:50%;border:1.5px solid currentColor;display:grid;place-items:center;transition:.4s;font-size:20px;line-height:1}
+.open>.hd .pm{transform:rotate(45deg);background:var(--blue);color:#fff;border-color:var(--blue)}
+.bd{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s}
+.open>.bd{grid-template-rows:1fr}.bd>div{overflow:hidden}
+.fq .bd p{padding:0 22px 22px;color:var(--mut);font-size:15px}
+.fq.open{background:#fff;color:var(--ink);--mut:#23283d}
+
+/* FINAL */
+.final{padding:110px 0 70px}
+.fcard{position:relative;border-radius:48px;padding:90px 50px;text-align:center;color:#fff;overflow:hidden;background:linear-gradient(150deg,var(--blue),var(--blue2));box-shadow:0 60px 120px -40px rgba(20,70,255,.7)}
+.fcard::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(circle at 50% 50%,#000,transparent 75%)}
+.fcard::after{content:"";position:absolute;width:700px;height:700px;left:50%;top:50%;translate:-50% -50%;background:conic-gradient(from 0deg,rgba(255,255,255,.35),transparent 30%,rgba(255,255,255,.2),transparent 70%,rgba(255,255,255,.35));border-radius:50%;animation:spin 20s linear infinite;filter:blur(40px);opacity:.5}
+.fcard>*{position:relative;z-index:2}
+.fcard .kick{justify-content:center;color:#fff}.fcard .kick b{background:#fff;color:var(--blue)}
+.fcard h2{margin-inline:auto;font-size:clamp(32px,4.8vw,62px);color:#fff}
+.fcard .grad{background-image:linear-gradient(90deg,#fff,#a9c6ff,#fff)}
+.fcard .sub{margin:0 auto 14px;color:rgba(255,255,255,.88)}
+.fcard .cta-row{justify-content:center}
+.fcard .btn.pri{background:#fff;color:var(--blue);border-color:#fff}
+.fcard .btn.gh:hover{background:#fff;color:var(--blue)}
+.fcard .fl{color:#fff;opacity:.6;z-index:1}
+.next{text-align:center;padding:60px 0 110px}
+.next h2{margin-inline:auto;font-size:clamp(30px,4vw,48px)}
+.svcs{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:34px}
+.svcs a{padding:13px 24px;border-radius:100px;border:1.5px solid var(--blue);color:var(--blue);font-weight:600;font-size:15px;transition:.3s;background:#fff}
+.svcs a:hover,.svcs a.cur{background:var(--blue);color:#fff;transform:translateY(-4px)}
+footer{background:linear-gradient(160deg,var(--blue),var(--blue2));color:#fff;padding:80px 0 40px;font-size:14px}
+.fg{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr 1fr;gap:34px}
+footer h5{font-family:'Space Grotesk';font-size:12px;letter-spacing:.18em;margin-bottom:16px}
+footer a{display:block;margin-bottom:10px;opacity:.85}footer a:hover{opacity:1;transform:translateX(3px)}
+footer a.flogo{display:inline-flex;background:#fff;padding:10px 18px;border-radius:16px;opacity:1;margin:0}
+footer a.flogo:hover{transform:none}
+footer a.flogo img{height:34px;width:auto;display:block}
+.fbar{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:50px;padding-top:24px;border-top:1px solid rgba(255,255,255,.3)}
+.fbar span a{display:inline;margin-left:18px}
+.cta-strip{margin-top:56px;padding:34px;border-radius:28px;background:#fff;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.cta-strip small{color:var(--blue);letter-spacing:.16em;font-size:11px;font-weight:700}
+.cta-strip h3{font-size:26px;margin-top:6px}
+footer .cta-strip a.btn.pri{background:var(--blue);color:#fff;border-color:var(--blue);opacity:1;margin:0}
+@media(max-width:900px){.fg{grid-template-columns:1fr 1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.split .w span{opacity:1!important;transform:none!important}.e.on{opacity:1}.fr,.fr .dn{opacity:1!important;transform:none!important}}
+
+/* Original IdeaWonder brand lockup: tagline sits below the logo */
+nav a.logo{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;gap:2px!important;line-height:1!important}
+nav a.logo img{display:block;width:205px;height:43px;object-fit:contain;object-position:left center}
+nav .brand-tagline{display:block;margin:0 0 0 2px;color:#6b9cff;font-size:7px;font-weight:800;letter-spacing:.19em;line-height:1.2;white-space:nowrap}
+@media(max-width:760px){nav a.logo img{width:165px;height:36px}nav .brand-tagline{font-size:6px;letter-spacing:.15em}}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+
+<!-- ICON + SHAPE SPRITE (transparent vector artwork) -->
+<svg class="sprite" aria-hidden="true"><defs>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.5 7.2L4 20l1-4.5A8 8 0 1 1 21 12z"/></symbol>
+<symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 17v4M17 19h4"/></symbol>
+<symbol id="i-chip" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+<symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></symbol>
+<symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></symbol>
+<symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></symbol>
+<symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></symbol>
+<symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+<symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
+<symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></symbol>
+<symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2 20c0-4 3-6 7-6s7 2 7 6"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14c3 0 5 1.8 5 5"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+<symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></symbol>
+<symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></symbol>
+<symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></symbol>
+<symbol id="i-megaphone" viewBox="0 0 24 24"><path d="M3 11v2a1 1 0 0 0 1 1h3l8 4V6L7 10H4a1 1 0 0 0-1 1zM19 9a4 4 0 0 1 0 6"/></symbol>
+<symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></symbol>
+<symbol id="i-repeat" viewBox="0 0 24 24"><path d="M17 2l4 4-4 4M3 11V9a3 3 0 0 1 3-3h15M7 22l-4-4 4-4M21 13v2a3 3 0 0 1-3 3H3"/></symbol>
+<symbol id="i-filter" viewBox="0 0 24 24"><path d="M3 4h18l-7 8v6l-4 2v-8z"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></symbol>
+<symbol id="i-wallet" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M2 10h20M16 14h2"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+<symbol id="i-bot" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 3v5M9 14h.01M15 14h.01M2 13v3M22 13v3"/></symbol>
+<symbol id="s-star" viewBox="0 0 100 100"><path fill="currentColor" d="M50 0C54 30 70 46 100 50 70 54 54 70 50 100 46 70 30 54 0 50 30 46 46 30 50 0z"/></symbol>
+<symbol id="s-ring" viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="5"/><circle cx="50" cy="50" r="26" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="3 6"/></symbol>
+<symbol id="s-dots" viewBox="0 0 100 100"><g fill="currentColor"><circle cx="10" cy="10" r="4"/><circle cx="35" cy="10" r="4"/><circle cx="60" cy="10" r="4"/><circle cx="85" cy="10" r="4"/><circle cx="10" cy="35" r="4"/><circle cx="35" cy="35" r="4"/><circle cx="60" cy="35" r="4"/><circle cx="85" cy="35" r="4"/><circle cx="10" cy="60" r="4"/><circle cx="35" cy="60" r="4"/><circle cx="60" cy="60" r="4"/><circle cx="85" cy="60" r="4"/><circle cx="10" cy="85" r="4"/><circle cx="35" cy="85" r="4"/><circle cx="60" cy="85" r="4"/><circle cx="85" cy="85" r="4"/></g></symbol>
+<symbol id="s-plus" viewBox="0 0 100 100"><path d="M50 12v76M12 50h76" stroke="currentColor" stroke-width="12" stroke-linecap="round"/></symbol>
+<symbol id="s-gear" viewBox="0 0 100 100"><circle cx="50" cy="50" r="36" fill="none" stroke="currentColor" stroke-width="14" stroke-dasharray="11.3 11.3"/><circle cx="50" cy="50" r="27" fill="none" stroke="currentColor" stroke-width="6"/><circle cx="50" cy="50" r="10" fill="none" stroke="currentColor" stroke-width="5"/></symbol>
+<symbol id="s-nodes" viewBox="0 0 100 100"><g stroke="currentColor" stroke-width="4"><path d="M20 70L50 25 80 70M20 70H80" fill="none"/></g><g fill="currentColor"><circle cx="20" cy="70" r="10"/><circle cx="50" cy="25" r="10"/><circle cx="80" cy="70" r="10"/></g></symbol>
+</defs></svg>
+
+<nav>
+  <a class="logo" href="/"><img src="/brand/ideawonder-logo-horizontal.png" alt="IdeaWonder AI" onerror="this.replaceWith(document.createTextNode('IdeaWonder AI'))"><span class="brand-tagline">IMAGINE MORE. GROW SMARTER.</span></a>
+  <ul><li><a href="/">About</a></li><li><a class="on" href="/services/seo-ai-search">Services</a></li><li><a href="/contact">Contact</a></li></ul>
+  <a class="btn pri sm" href="/contact">Build Your Growth Strategy</a>
+</nav>
+
+<!-- ============ HERO: SCROLL STORY ============ -->
+<div class="hero story" id="story">
+  <div class="sticky">
+    <div>
+      <div class="eyebrow">IdeaWonder AI / Services / Connected Operations</div>
+      <h1>AI Automation Services That <span class="grad">Make Your Business Work Smarter</span></h1>
+      <div class="copies">
+        <p class="copy on lg">Automate More. Work Smarter. Scale Without Limits.</p>
+        <p class="copy">Your business shouldn't lose valuable time to repetitive tasks, disconnected systems and processes that depend on manual intervention.</p>
+        <p class="copy">IdeaWonder AI helps businesses transform the way they operate through intelligent AI automation, business process automation and connected workflows.</p>
+        <p class="copy">From marketing and sales to customer support, finance and everyday operations, we design automation solutions that reduce manual work, streamline processes and help teams focus on higher-value activities.</p>
+        <p class="copy lg">Connect your systems. Automate your workflows. Put AI to work across your business.</p>
+      </div>
+      <div class="cta-row">
+        <a class="btn pri mag" href="/contact">Build Your Automation Strategy <svg class="ic"><use href="#i-arrow"/></svg></a>
+        <a class="btn gh" href="#service-content">Explore Automation Solutions</a>
+      </div>
+      <div class="dots"><i class="on"></i><i></i><i></i><i></i><i></i><span>SCROLL TO EXPLORE</span></div>
+    </div>
+
+    <div class="stage" id="stage" data-s="0">
+      <div class="glow"></div>
+      <div class="schip e" data-in="0" data-out="1">CONNECTED OPERATIONS</div>
+      <div class="schip e" data-in="1" data-out="2">CONNECTED SYSTEMS</div>
+      <div class="schip e" data-in="2" data-out="3">AI ORCHESTRATOR</div>
+      <div class="schip e" data-in="3" data-out="4">WORKFLOWS</div>
+      <div class="schip e" data-in="4">AI-POWERED BUSINESS OPERATIONS</div>
+
+      <!-- 0: manual tasks -->
+      <div class="fieldwrap e" data-in="0" data-out="1" id="notes"></div>
+
+      <!-- 1-2: systems -->
+      <svg class="net e" data-in="1" data-out="2" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <line x1="50" y1="24" x2="78.5" y2="40.6"/><line x1="78.5" y1="40.6" x2="67.6" y2="67.4"/><line x1="67.6" y1="67.4" x2="32.4" y2="67.4"/><line x1="32.4" y1="67.4" x2="21.5" y2="40.6"/><line x1="21.5" y1="40.6" x2="50" y2="24"/>
+      </svg>
+      <svg class="net n2 e" data-in="2" data-out="3" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <line x1="50" y1="48" x2="50" y2="24"/><line x1="50" y1="48" x2="78.5" y2="40.6"/><line x1="50" y1="48" x2="67.6" y2="67.4"/><line x1="50" y1="48" x2="32.4" y2="67.4"/><line x1="50" y1="48" x2="21.5" y2="40.6"/>
+      </svg>
+      <div class="apw" style="left:50%;top:24%"><div class="ap e" data-in="1" data-out="3"><svg class="ic"><use href="#i-briefcase"/></svg><b>CRM</b></div></div>
+      <div class="apw" style="left:78.5%;top:40.6%"><div class="ap e" data-in="1" data-out="3" style="--d:.1s"><svg class="ic"><use href="#i-mail"/></svg><b>Email</b></div></div>
+      <div class="apw" style="left:67.6%;top:67.4%"><div class="ap e" data-in="1" data-out="3" style="--d:.2s"><svg class="ic"><use href="#i-doc"/></svg><b>Forms</b></div></div>
+      <div class="apw" style="left:32.4%;top:67.4%"><div class="ap e" data-in="1" data-out="3" style="--d:.3s"><svg class="ic"><use href="#i-chat"/></svg><b>Support</b></div></div>
+      <div class="apw" style="left:21.5%;top:40.6%"><div class="ap e" data-in="1" data-out="3" style="--d:.4s"><svg class="ic"><use href="#i-chart"/></svg><b>Reports</b></div></div>
+      <div class="apw" style="left:50%;top:48%"><div class="orch e" data-in="2" data-out="3" style="--d:.2s"><div><svg class="ic"><use href="#i-spark"/></svg><b>AI<br>ORCHESTRATOR</b></div></div></div>
+      <div class="pillx e" data-in="2" data-out="3" style="left:5cqw;top:13cqh;--d:.3s"><svg class="ic"><use href="#i-target"/></svg>LEAD CAPTURE</div>
+      <div class="pillx e" data-in="2" data-out="3" style="right:5cqw;top:13cqh;--d:.4s"><svg class="ic"><use href="#i-repeat"/></svg>WORKFLOWS</div>
+      <div class="pillx e" data-in="2" data-out="3" style="left:5cqw;bottom:8cqh;--d:.5s"><svg class="ic"><use href="#i-briefcase"/></svg>CRM SYNC</div>
+      <div class="pillx e" data-in="2" data-out="3" style="right:5cqw;bottom:8cqh;--d:.6s"><svg class="ic"><use href="#i-send"/></svg>FOLLOW-UPS</div>
+
+      <!-- 3: workflow running -->
+      <div class="flowc e" data-in="3" data-out="4">
+        <div class="fh"><span>Workflow running</span><span class="live"><i></i>Live</span></div>
+        <div class="fr" style="--i:0"><span class="ci"><svg class="ic"><use href="#i-mail"/></svg></span><div><b>Lead capture</b><small>Trigger: new enquiry received</small></div><span class="dn"><svg class="ic"><use href="#i-check"/></svg></span></div>
+        <div class="fr" style="--i:1"><span class="ci"><svg class="ic"><use href="#i-spark"/></svg></span><div><b>AI classifies</b><small>Scores and routes the lead</small></div><span class="dn"><svg class="ic"><use href="#i-check"/></svg></span></div>
+        <div class="fr" style="--i:2"><span class="ci"><svg class="ic"><use href="#i-users"/></svg></span><div><b>Human review</b><small>Approval where judgment is needed</small></div><span class="dn"><svg class="ic"><use href="#i-check"/></svg></span></div>
+        <div class="fr" style="--i:3"><span class="ci"><svg class="ic"><use href="#i-send"/></svg></span><div><b>CRM sync + follow-up</b><small>Systems updated automatically</small></div><span class="dn"><svg class="ic"><use href="#i-check"/></svg></span></div>
+      </div>
+      <div class="cap2 e" data-in="3" data-out="4">ILLUSTRATIVE VISUAL</div>
+
+      <!-- 4: functions orbit -->
+      <div class="orbit e" data-in="4">
+        <div class="ring"></div><div class="ring b"></div>
+        <div id="arms"></div>
+        <div class="core"><div><svg class="ic"><use href="#i-bot"/></svg>Your<br>business</div></div>
+      </div>
+      <div class="ansc e" data-in="4" style="--d:.2s">
+        <small><svg class="ic"><use href="#i-spark"/></svg> Connected operations</small>
+        <h4>Make every workflow work smarter.</h4>
+        <p>AI-POWERED BUSINESS OPERATIONS</p>
+        <div class="ch2"><span>Marketing</span><span>Sales</span><span>Customer support</span><span>Finance</span><span>HR</span><span>E-commerce</span></div>
+      </div>
+    </div>
+    <div class="scroll">SCROLL</div>
+  </div>
+</div>
+
+<!-- 01 APPROACH -->
+<section class="bl" id="service-content" style="padding:120px 0 90px">
+  <svg class="fl" data-s=".14" style="width:100px;top:12%;right:8%;opacity:.6"><use href="#s-gear"/></svg>
+  <svg class="fl" data-s="-.1" style="width:120px;bottom:6%;left:3%;opacity:.3"><use href="#s-dots"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>01</b> The IdeaWonder Approach</div>
+    <h2 class="split">Make every workflow work smarter. <span class="grad">AI-powered business operations</span></h2>
+    <p class="sub rv">Strategy, creative execution and connected systems—built around your business objectives.</p>
+  </div>
+</section>
+<div style="overflow:hidden;padding:30px 0;background:linear-gradient(#0a2bd0 50%,#fff 50%)"><div class="mqband"><div id="mq"></div></div></div>
+
+<!-- 02 SERVICES -->
+<section class="lt">
+  <svg class="fl" data-s=".13" style="width:130px;top:5%;right:3%"><use href="#s-gear"/></svg>
+  <svg class="fl" data-s="-.1" style="width:70px;top:46%;left:1%"><use href="#s-plus"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>02</b> Automation Services</div>
+    <h2 class="split">One Automation Partner. <span class="grad">Every Part of Your Business.</span></h2>
+    <div class="svc rv">
+      <div class="tabs" id="tabs"></div>
+      <div class="panel"><div class="pbody" id="panel"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 LEVELS -->
+<section class="bl">
+  <svg class="fl" data-s=".14" style="width:110px;top:5%;right:5%;opacity:.5"><use href="#s-nodes"/></svg>
+  <svg class="fl" data-s="-.12" style="width:90px;bottom:5%;left:4%;opacity:.5"><use href="#s-ring"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>03</b> Automation Spectrum</div>
+    <h2 class="split">From Simple Automation to <span class="grad">Intelligent AI Agents.</span></h2>
+    <div class="stairs" id="stairs"></div>
+    <div class="callout rv">The objective is not to use the most complex technology. <span class="grad">It is to choose an appropriate, maintainable and secure solution for the business problem.</span></div>
+  </div>
+</section>
+
+<!-- 04 FUNCTIONS -->
+<section class="lt">
+  <svg class="fl" data-s=".13" style="width:100px;top:6%;left:4%"><use href="#s-nodes"/></svg>
+  <svg class="fl" data-s="-.12" style="width:120px;bottom:8%;right:3%;opacity:.4"><use href="#s-dots"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>04</b> Business Functions</div>
+    <h2 class="split">How AI Automation Transforms <span class="grad">Different Business Functions</span></h2>
+    <div class="g4" id="funcs"></div>
+  </div>
+</section>
+
+<!-- 05 PROCESS -->
+<section class="bl">
+  <svg class="fl" data-s=".12" style="width:110px;top:5%;right:5%;opacity:.5"><use href="#s-gear"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>05</b> Our AI Automation Implementation Process</div>
+    <h2 class="split">From First Audit to <span class="grad">Scalable Automation.</span></h2>
+    <div class="tl" id="tl"><div class="fill" id="fill"></div></div>
+    <div style="margin-top:30px"><a class="btn pri mag" href="/contact">Start Your Automation Assessment <svg class="ic"><use href="#i-arrow"/></svg></a></div>
+  </div>
+</section>
+
+<!-- 06 WHY -->
+<section class="lt">
+  <svg class="fl" data-s=".12" style="width:100px;top:6%;right:5%"><use href="#s-star"/></svg>
+  <svg class="fl" data-s="-.1" style="width:120px;bottom:5%;left:3%;opacity:.4"><use href="#s-dots"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>06</b> Why Choose IdeaWonder AI for Automation?</div>
+    <h2 class="split">Practical AI. Connected Systems. <span class="grad">People Kept in Control.</span></h2>
+    <div class="g3" id="why"></div>
+  </div>
+</section>
+
+<!-- 07 FAQ -->
+<section class="bl">
+  <svg class="fl" data-s=".12" style="width:110px;top:5%;right:5%;opacity:.5"><use href="#s-nodes"/></svg>
+  <div class="wrap">
+    <div class="kick"><b>07</b> Frequently Asked Questions</div>
+    <h2 class="split">Frequently Asked Questions <span class="grad">About AI Automation Services</span></h2>
+    <div class="faq" id="faq"></div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="lt final">
+  <div class="wrap">
+    <div class="fcard rv">
+      <svg class="fl" data-s=".1" style="width:90px;top:8%;left:6%"><use href="#s-gear"/></svg>
+      <svg class="fl" data-s="-.1" style="width:70px;bottom:10%;right:8%"><use href="#s-star"/></svg>
+      <svg class="fl" data-s=".1" style="width:130px;top:10%;right:5%;opacity:.4"><use href="#s-nodes"/></svg>
+      <div class="kick"><b>GO</b> Let's talk</div>
+      <h2>Ready to Make Your <span class="grad">Business Work Smarter?</span></h2>
+      <p class="sub">The first step is understanding how your business currently operates and identifying processes where automation can deliver meaningful value.</p>
+      <p class="sub" style="color:#fff;font-weight:600">IdeaWonder AI can help assess your requirements, map potential workflows and develop an implementation roadmap.</p>
+      <div class="cta-row">
+        <a class="btn pri mag" href="/contact">Build Your Automation Strategy <svg class="ic"><use href="#i-arrow"/></svg></a>
+        <a class="btn gh" href="/contact" style="color:#fff">Talk to Our Team</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="lt next">
+  <div class="wrap">
+    <div class="kick" style="justify-content:center"><b>GO</b> Let's build what's next</div>
+    <h2 class="split">Ready to make your <span class="grad">next move?</span></h2>
+    <p class="sub rv" style="margin:0 auto 30px">Let's understand your objectives, identify the right opportunities and create a plan that moves your business forward.</p>
+    <a class="btn pri mag" href="/contact">Book a Strategy Call <svg class="ic"><use href="#i-arrow"/></svg></a>
+    <div class="kick" style="justify-content:center;margin-top:70px">Explore other services</div>
+    <div class="svcs">
+      <a href="/services/seo-ai-search">SEO / GEO / AEO</a>
+      <a href="/services/performance-marketing">Performance Marketing</a>
+      <a href="/services/social-media-marketing">Social Media Marketing</a>
+      <a href="/services/lead-generation">Lead Generation</a>
+      <a class="cur" href="/services/business-automation">Business Automation</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fg">
+      <div><a class="flogo" href="/"><img src="/brand/ideawonder-logo-horizontal.png" alt="IdeaWonder AI" onerror="this.replaceWith(document.createTextNode('IdeaWonder AI'))"></a><p style="max-width:300px;margin-top:16px;opacity:.9">An AI-first growth and automation agency helping B2B businesses strengthen digital visibility, acquire customers and scale operations through intelligent marketing and automation.</p></div>
+      <div><h5>EXPLORE</h5><a href="/">Home</a><a href="/">About Us</a><a href="/services/seo-ai-search">Services</a><a href="/contact">Contact</a></div>
+      <div><h5>GET DISCOVERED</h5><a href="/services/seo-ai-search">SEO Services</a><a href="/services/seo-ai-search">AI Search Optimization</a></div>
+      <div><h5>GET CUSTOMERS</h5><a href="/services/performance-marketing">Performance Marketing</a><a href="/services/social-media-marketing">Social Media Marketing</a><a href="/services/lead-generation">B2B Lead Generation</a></div>
+      <div><h5>SCALE SMARTER</h5><a href="/services/business-automation">AI &amp; Business Automation</a><a href="/services/business-automation">Marketing Automation</a></div>
+    </div>
+    <div class="cta-strip"><div><small>YOUR NEXT GROWTH CHAPTER STARTS HERE</small><h3>Have a growth challenge or an idea worth exploring?</h3></div><a class="btn pri" href="/contact">Start a conversation <svg class="ic"><use href="#i-arrow"/></svg></a></div>
+    <div class="fbar"><span>© 2026 IdeaWonder AI. All rights reserved. Imagine More. Market Smarter. Grow Faster.</span><span><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/cookies">Cookies</a></span></div>
+  </div>
+</footer>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const ic=n=>`<svg class="ic"><use href="#i-${n}"/></svg>`;
+
+/* ---------- DATA ---------- */
+const services=[
+{i:"gear",t:"AI-Powered Business Process Automation",s:"Transform repetitive business processes into structured, automated workflows.",d:"We help identify manual processes, map operational requirements and implement automation that coordinates tasks, approvals, notifications and information between teams and systems.",h:"What we automate:",l:["Repetitive administrative processes","Multi-step business operations","Internal task assignments and notifications","Approval and review workflows","Data entry and information transfers","Routine operational requests","Process monitoring and status updates","Cross-department workflow coordination"]},
+{i:"link",t:"Intelligent Workflow Automation",s:"Connect individual tasks into complete workflows that operate according to your business rules.",d:"Our workflow automation solutions use triggers, conditions, integrations and AI capabilities to coordinate actions across multiple applications.",h:"What we automate:",l:["Trigger-based workflows","Conditional actions and routing","Task creation and assignment","Automated notifications and reminders","Cross-platform data synchronization","Multi-step approvals","Exception handling and escalation","Recurring operational workflows"]},
+{i:"megaphone",t:"AI Marketing Automation",s:"Make your marketing operations more connected, consistent and efficient.",d:"We automate marketing activities across customer acquisition, engagement, nurturing and retention, helping businesses coordinate campaigns and customer journeys without relying on manual execution at every stage.",h:"What we automate:",l:["Email marketing sequences","Automated customer journeys","Audience segmentation and synchronization","Lead nurturing workflows","Campaign triggers and notifications","Marketing form and CRM integrations","Webinar and event follow-ups","Re-engagement campaigns","Marketing performance reporting","AI-assisted content personalization"]},
+{i:"trend",t:"Sales Automation",s:"Give your sales team more time to focus on conversations, relationships and revenue opportunities.",d:"We build sales automation workflows that help manage prospect information, coordinate follow-ups and keep sales processes organized.",h:"What we automate:",l:["Lead capture and distribution","Prospect assignment and routing","Sales follow-up reminders","Automated email and messaging sequences","CRM activity updates","Sales pipeline stage changes","Meeting scheduling workflows","Proposal and document notifications","Deal progression alerts","Sales activity reporting"]},
+{i:"filter",t:"AI Lead Management and Qualification",s:"Make lead management more structured with AI-assisted workflows that help businesses process and prioritize incoming opportunities.",h:"What we automate:",l:["Lead data collection and enrichment","Lead categorization","AI-assisted lead qualification","Lead scoring based on defined criteria","Automated lead routing","Follow-up scheduling","Lead status updates","Duplicate detection","Lead nurturing triggers","CRM synchronization"],n:"Automation rules and AI-assisted decisions can be configured around your qualification criteria, with human review wherever business judgment is required."},
+{i:"chat",t:"Customer Support and Service Automation",s:"Deliver more consistent customer experiences while reducing repetitive support workloads.",d:"We help businesses introduce AI-powered customer support and communication workflows that assist customers, organize requests and connect service activities with internal systems.",h:"What we automate:",l:["AI-powered customer chatbots","Frequently asked question responses","Customer inquiry classification","Support ticket creation","Ticket routing and assignment","Automated status notifications","Customer service follow-ups","Knowledge-base-assisted responses","Escalation to human support teams","Support activity reporting"],n:"AI responses can be designed with appropriate knowledge sources, boundaries and human escalation so that complex or sensitive requests receive the right attention."},
+{i:"briefcase",t:"CRM Automation and Integration",s:"Make your CRM work as a connected business system rather than a database that requires constant manual updates.",d:"We help automate CRM activities and connect customer information with the applications your teams use.",h:"What we automate:",l:["Contact and account synchronization","Lead and opportunity updates","Automated task creation","Deal-stage notifications","Customer activity tracking","Data validation and organization","CRM-to-marketing platform integration","CRM-to-sales tool integration","Customer lifecycle workflows","Automated CRM reporting"]},
+{i:"send",t:"WhatsApp and Business Communication Automation",s:"Connect customer conversations with business processes through structured messaging automation.",d:"Where supported by the selected platform and applicable consent requirements, we help businesses automate communication and customer engagement through WhatsApp Business and other messaging channels.",h:"What we automate:",l:["Automated WhatsApp responses","Lead inquiry capture","Customer notifications","Appointment and booking reminders","Order and service updates","Follow-up messages","Customer onboarding communication","Conversation routing","Human agent handover","Messaging workflow integrations"],n:"All messaging automation should respect applicable platform policies, opt-in requirements and customer communication preferences."},
+{i:"bot",t:"AI Agent Development and Agentic Automation",s:"Move beyond simple trigger-based automation with AI agents designed to perform defined tasks and coordinate multi-step processes.",d:"Depending on the use case, AI agents can interpret requests, retrieve information, use connected tools and complete approved actions within defined boundaries.",h:"Potential AI agent applications:",l:["AI research assistants","Customer interaction agents","Internal knowledge assistants","Sales support agents","Marketing workflow assistants","Document analysis agents","Business operations assistants","Data retrieval and reporting agents","Multi-step task orchestration","AI-powered service assistants"],n:"We define what each agent can access, which actions it can perform, when it needs approval and when a task should be transferred to a person."},
+{i:"doc",t:"Data and Document Automation",s:"Reduce repetitive document handling and information processing with intelligent automation.",d:"We help businesses organize workflows that extract, classify, validate and transfer information across connected systems.",h:"What we automate:",l:["Document data extraction","Form processing","Invoice information capture","Document classification","Data validation","Spreadsheet processing","Information transfer between systems","File organization workflows","Report generation","Document review and approval routing"],n:"AI-based extraction and classification should be validated against the required accuracy level, especially for financial, legal and other critical information."},
+{i:"chart",t:"Reporting and Analytics Automation",s:"Spend less time compiling reports and more time understanding what the data means.",d:"We connect reporting workflows with relevant business systems to automate data collection, recurring reports and operational notifications.",h:"What we automate:",l:["Marketing performance reports","Sales pipeline reporting","Lead generation dashboards","Customer support reports","Operational performance summaries","Data consolidation","Scheduled reporting","Threshold-based alerts","Automated spreadsheet updates","AI-assisted report summaries"]},
+{i:"globe",t:"E-commerce Automation",s:"Connect the customer journey with the operational workflows behind your online business.",h:"What we automate:",l:["Order confirmation notifications","Order status updates","Abandoned-cart communication","Customer onboarding sequences","Post-purchase follow-ups","Product inquiry responses","Inventory-related alerts","Customer segmentation","Returns and support workflows","Customer retention campaigns"]},
+{i:"users",t:"HR and Recruitment Automation",s:"Streamline repetitive human resource and recruitment activities while keeping people involved in important decisions.",h:"What we automate:",l:["Candidate application workflows","Application data organization","Interview scheduling","Candidate communication","Recruitment status updates","Employee onboarding checklists","Document collection reminders","Internal HR requests","Training and task notifications","Employee workflow coordination"]},
+{i:"wallet",t:"Finance and Administrative Automation",s:"Improve the flow of routine administrative and finance-related work through connected processes.",h:"What we automate:",l:["Invoice processing workflows","Expense submission and approvals","Payment reminders","Document collection","Financial data organization","Reconciliation support workflows","Administrative task assignment","Internal approval notifications","Recurring report preparation","Record synchronization"],n:"Financial approvals, payments and other sensitive actions should retain the appropriate authorization and human oversight."},
+{i:"chip",t:"System Integration and API Automation",s:"Your business tools should work together.",d:"We help connect applications, databases and platforms so information can move between systems without unnecessary manual intervention.",h:"What we integrate and automate:",l:["CRM platforms","Marketing automation platforms","Email and messaging applications","Websites and lead forms","E-commerce platforms","Business databases","Project management tools","Customer support systems","Analytics and reporting platforms","Custom applications through APIs"],n:"Integration possibilities depend on each platform's available APIs, permissions, subscription and technical limitations."}
+];
+const levels=[
+["bolt","Rule-Based Automation","Automate predictable tasks using predefined conditions, triggers and actions.","Notifications, reminders, form submissions, data updates and recurring tasks."],
+["repeat","Workflow and Process Automation","Coordinate multiple activities across teams, tools and business systems.","Approvals, task routing, customer journeys, internal processes and multi-step operations."],
+["gear","Robotic Process Automation (RPA)","Automate repetitive interactions with software interfaces where suitable integrations or APIs are unavailable.","Structured data entry, repetitive application interactions and legacy-system workflows."],
+["spark","AI-Powered Automation","Introduce AI capabilities into workflows that involve language, classification, summarization, extraction and contextual interpretation.","Document processing, customer inquiry classification, content assistance and information analysis."],
+["bot","AI Agents and Agentic Workflows","Enable AI systems to work through defined multi-step tasks using approved tools, information sources and actions.","Research assistance, internal knowledge retrieval, structured operational tasks and complex workflow coordination."],
+["link","API and Application Integration","Connect business applications so data and actions can move between systems.","CRM synchronization, marketing integrations, e-commerce workflows and custom business applications."]
+];
+const funcs=[
+["megaphone","Marketing and Growth","Connect campaign activity, lead capture, customer segmentation, nurturing and performance reporting."],
+["trend","Sales and Revenue Operations","Coordinate lead assignment, prospect follow-ups, CRM updates, sales activity and pipeline notifications."],
+["chat","Customer Experience","Automate routine inquiries, customer updates, service requests and support routing while preserving access to human assistance."],
+["gear","Business Operations","Connect approvals, internal requests, task management, document processing and recurring workflows."],
+["wallet","Finance and Administration","Streamline information collection, invoice workflows, expense submissions and approval processes."],
+["users","Human Resources","Coordinate recruitment administration, onboarding, employee requests and internal communication."],
+["globe","E-commerce","Connect order events, customer communication, abandoned-cart workflows and post-purchase engagement."]
+];
+const steps=[
+["search","Discover and Audit","We understand how your business operates, identify repetitive processes and examine where manual work, delays or disconnected systems create friction."],
+["target","Identify Automation Opportunities","We prioritize potential workflows based on business value, frequency, complexity, feasibility and operational risk."],
+["layers","Design the Automation Architecture","We map triggers, conditions, data flows, integrations, permissions, exceptions and human approval points."],
+["chip","Select the Right Technology","We identify the appropriate combination of AI models, workflow platforms, APIs, RPA and existing business applications."],
+["gear","Build and Integrate","We configure automation workflows, connect systems, establish business rules and implement the required AI capabilities."],
+["check","Test and Validate","We test normal scenarios, edge cases, data handling, permissions, failure conditions and escalation paths before deployment."],
+["send","Deploy and Monitor","We introduce the automation into the relevant business process, monitor execution and review operational performance."],
+["trend","Optimize and Scale","We refine workflows based on actual usage, changing business requirements and opportunities for further automation."]
+];
+const why=[
+["target","Business-First Automation Strategy","We begin with your business objectives and operational challenges rather than recommending technology without context."],
+["layers","Automation Across the Entire Business","From marketing and sales to customer support, administration and operations, we consider how different processes connect."],
+["spark","Practical AI Implementation","We identify where AI adds meaningful value and where conventional automation is simpler, more predictable and easier to maintain."],
+["link","Connected Systems and Workflows","We focus on connecting applications and processes to reduce fragmented operations and unnecessary manual data handling."],
+["shield","Human Oversight Where It Matters","We design appropriate approval, review and escalation mechanisms for sensitive or high-impact workflows."],
+["trend","Built for Long-Term Scalability","We consider maintainability, documentation, monitoring and future business requirements when designing automation systems."]
+];
+const faqs=[
+["What are AI automation services?","AI automation services help businesses use artificial intelligence, software integrations and automated workflows to perform tasks that would otherwise require repetitive manual effort. These services can cover marketing, sales, customer support, data processing, reporting and business operations."],
+["What is the difference between AI automation and business process automation?","Business process automation focuses on streamlining structured business processes through predefined workflows, rules and integrations. AI automation introduces artificial intelligence into those processes to support tasks such as language understanding, classification, summarization, data extraction and contextual decision support."],
+["What business processes can be automated using AI?","Businesses can automate lead management, customer communication, marketing campaigns, sales administration, document processing, reporting, customer support, recruitment workflows, internal approvals and many other repetitive processes. The suitability depends on process complexity, data availability and risk."],
+["Can you automate an entire business?","Many repetitive and structured activities across a business can be automated, but complete business autonomy is rarely appropriate. Strategic decisions, sensitive approvals, complex customer situations and high-impact actions often require human involvement. The goal is to automate suitable work while keeping people in control."],
+["What is the difference between workflow automation and AI automation?","Workflow automation connects tasks through predefined triggers, conditions and actions. AI automation can add capabilities such as understanding unstructured information, interpreting requests and generating context-aware outputs. They can also work together within the same business process."],
+["What are AI agents, and how can businesses use them?","AI agents are systems designed to pursue defined tasks using AI models and approved tools or data sources. Businesses can use them for research assistance, customer support, internal knowledge retrieval, information processing and multi-step operational workflows. Their permissions and actions should be carefully controlled."],
+["What is robotic process automation (RPA)?","Robotic Process Automation uses software bots to perform repetitive, rule-based interactions with digital applications. It can automate activities such as data entry, form completion and structured application tasks. RPA is particularly useful when direct system integrations are not practical."],
+["Can AI automation integrate with our existing CRM?","Yes, CRM automation may be possible through native integrations, APIs or supported automation platforms. The exact implementation depends on your CRM, access permissions, available APIs and business requirements."],
+["Can you automate WhatsApp Business communication?","Yes, WhatsApp Business communication workflows can be automated through supported integrations and approved platform capabilities. Use cases include customer notifications, inquiry handling, lead capture and follow-ups. Implementation must comply with WhatsApp policies and applicable messaging consent requirements."],
+["Can AI automate sales and lead generation?","AI can support sales and lead generation through automated lead capture, enrichment, qualification assistance, routing, follow-ups, CRM updates and reporting. Human review remains important for complex qualification decisions and relationship-driven sales activities."],
+["Can you automate marketing campaigns?","Yes. Marketing automation can coordinate email sequences, customer journeys, audience segmentation, campaign triggers, lead nurturing, event follow-ups and reporting. AI can also assist with content variations and personalization where appropriate."],
+["Which automation tools and platforms do you use?","The technology stack depends on the requirements. Solutions may involve workflow automation platforms, APIs, CRM integrations, AI models, RPA tools, databases and custom software. We select tools according to functionality, compatibility, security and maintainability rather than forcing every business into one platform."],
+["Do we need to replace our existing business software?","Not necessarily. Many automation solutions are designed to connect existing systems. We first assess whether your current applications offer suitable integrations, APIs or other reliable connection methods."],
+["Is AI automation suitable for small businesses?","Yes. Small businesses can benefit from automating repetitive activities such as inquiry management, customer communication, appointment reminders, lead follow-ups, reporting and administrative workflows. The best approach is to start with a manageable, high-value process."],
+["How much do AI automation services cost?","The cost depends on workflow complexity, the number of integrations, AI requirements, implementation effort, software subscriptions and ongoing maintenance. A focused workflow automation project will generally require a different investment from a custom multi-system AI agent solution. A requirement assessment helps establish the scope."],
+["How long does it take to implement business automation?","Implementation time varies based on the number of workflows, integrations, data requirements, testing needs and operational complexity. A simple automation may be implemented relatively quickly, while a complex, multi-system solution requires more planning and validation."],
+["Is AI automation secure?","Security depends on the architecture, platforms, access controls, data handling and implementation practices. Automation should use appropriate permissions, secure integrations, data protection measures, monitoring and human approval for sensitive actions."],
+["Can AI automation make mistakes?","Yes. AI systems can generate incorrect outputs, misunderstand context or encounter unexpected inputs. We recommend validation rules, testing, exception handling, monitoring and human review wherever accuracy or business impact requires it."],
+["What is no-code and low-code automation?","No-code and low-code automation platforms allow workflows to be created with visual interfaces and limited or moderate programming. They can simplify integrations and accelerate implementation, although more complex requirements may still need custom development or API work."],
+["How do we identify the right automation opportunities?","Start by identifying repetitive processes, frequent manual tasks, operational delays, data duplication and recurring errors. Evaluate each opportunity based on business value, feasibility, process stability and risk. A structured automation audit can help prioritize the right starting points."],
+["Do you provide ongoing automation support?","Ongoing support can include workflow monitoring, troubleshooting, integration maintenance, performance reviews, improvements and updates as business processes or connected platforms change. The scope can be defined according to the implemented solution."],
+["What is the first step to implementing AI automation?","The first step is understanding how your business currently operates and identifying processes where automation can deliver meaningful value. IdeaWonder AI can help assess your requirements, map potential workflows and develop an implementation roadmap."]
+];
+
+/* ---------- BUILD ---------- */
+const mqw=["CONNECTED OPERATIONS","MAKE EVERY WORKFLOW WORK SMARTER","AI-POWERED BUSINESS OPERATIONS","CONNECTED SYSTEMS"];
+$('#mq').innerHTML=[0,1].map(()=>mqw.map(w=>`<span>${w}</span><span>✦</span>`).join('')).join('');
+
+// hero 0: manual task notes
+const nt=[["Data entry",6,12,-4],["Follow-ups",50,9,3],["Reports",14,26,2],["Approvals",58,30,-3],["Updates",8,44,4],["Notifications",44,48,-2],["Spreadsheets",60,64,3],["Reminders",10,64,-3],["Status checks",34,80,2],["Copy & paste",62,86,-2]];
+$('#notes').innerHTML=nt.map((n,i)=>`<div class="sn" style="left:${n[1]}cqw;top:${n[2]}cqh;--r:${n[3]}deg;--dl:${(i%6)*.5}s"><i></i>${n[0]}${ic('repeat')}</div>`).join('');
+
+// hero 4: orbit nodes
+$('#arms').innerHTML=['megaphone','trend','chat','gear','wallet','users'].map((k,i)=>`<div class="arm" style="--b:${-150+i*60}"><div class="spoke"></div><div class="npos"><div class="node">${ic(k)}</div></div></div>`).join('');
+
+// services tabs
+function showSvc(i){const s=services[i];
+ $('#panel').innerHTML=`<div class="pico"><div class="r"></div><div class="main">${ic(s.i)}</div><div class="mini" style="top:2px;right:8px">${ic('spark')}</div><div class="mini" style="bottom:6px;left:0">${ic('check')}</div></div><div class="pn">${String(i+1).padStart(2,'0')} / ${services.length}</div><h3>${s.t}</h3><p class="stl">${s.s}</p>${s.d?`<p class="d">${s.d}</p>`:''}<p style="font-weight:600;margin-bottom:14px">${s.h}</p><ul class="lst">${s.l.map((x,k)=>`<li style="--i:${k}">${x}</li>`).join('')}</ul>${s.n?`<div class="gn"><b>Good to know</b>${s.n}</div>`:''}`}
+$('#tabs').innerHTML=services.map((s,i)=>`<button class="tab ${i?'':'on'}" data-i="${i}"><span class="tn">${String(i+1).padStart(2,'0')}</span>${ic(s.i)}<span>${s.t}</span></button>`).join('');
+showSvc(0);
+$('#tabs').addEventListener('click',e=>{const b=e.target.closest('.tab');if(!b)return;$$('.tab').forEach(t=>t.classList.remove('on'));b.classList.add('on');showSvc(+b.dataset.i)});
+
+$('#stairs').innerHTML=levels.map((l,i)=>`<div class="stp rv" style="--d:${i*.1}s"><div class="spot"><div class="tile">${ic(l[0])}</div><h3>${l[1]}</h3><p>${l[2]}</p><div class="bf"><b>Best for</b>${l[3]}</div></div></div>`).join('');
+$('#funcs').innerHTML=funcs.map((c,i)=>`<div class="spot rv" style="--d:${(i%4)*.08}s"><span class="wm">0${i+1}</span><div class="tile">${ic(c[0])}</div><h3>${c[1]}</h3><p>${c[2]}</p></div>`).join('')+
+ `<div class="spot rv" style="--d:.24s;background:var(--blue);color:#fff;border-color:var(--blue);display:flex;flex-direction:column;justify-content:center"><div class="tile" style="background:#fff;color:var(--blue)">${ic('spark')}</div><h3 style="color:#fff">AI Orchestrator</h3><p style="color:rgba(255,255,255,.85)">Connected systems</p></div>`;
+$('#tl').insertAdjacentHTML('beforeend',steps.map((s,i)=>`<div class="st"><div class="dot">${ic(s[0])}</div><small>Step 0${i+1}</small><h3>${s[1]}</h3><p>${s[2]}</p></div>`).join(''));
+$('#why').innerHTML=why.map((c,i)=>`<div class="spot rv" style="--d:${(i%3)*.08}s"><span class="num">0${i+1}</span><div class="tile">${ic(c[0])}</div><h3>${c[1]}</h3><p>${c[2]}</p></div>`).join('');
+$('#faq').innerHTML=faqs.map((f,i)=>`<div class="fq rv" style="--d:${(i%2)*.06}s"><div class="hd"><span class="nn">${String(i+1).padStart(2,'0')}</span><h4>${f[0]}</h4><div class="pm">+</div></div><div class="bd"><div><p>${f[1]}</p></div></div></div>`).join('');
+document.addEventListener('click',e=>{const c=e.target.closest('.fq');if(c)c.classList.toggle('open')});
+
+/* split headings */
+$$('.split').forEach(el=>{
+ const walk=n=>[...n.childNodes].forEach(c=>{
+  if(c.nodeType===3){const f=document.createDocumentFragment();c.textContent.split(/(\s+)/).forEach(t=>{if(!t.trim()){f.append(t);return}const w=document.createElement('span');w.className='w';w.innerHTML=`<span>${t}</span>`;f.append(w)});c.replaceWith(f)}
+  else if(c.nodeType===1)walk(c)});
+ walk(el);el.querySelectorAll('.w span').forEach((s,i)=>s.style.transitionDelay=i*40+'ms');
+});
+
+/* observers */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+$$('.rv,.split').forEach(el=>io.observe(el));
+
+/* HERO STORY */
+const story=$('#story'),stage=$('#stage'),N=5;let cur=-1;
+function storyUpdate(){
+ const r=story.getBoundingClientRect(),total=story.offsetHeight-innerHeight;
+ const p=Math.min(Math.max(-r.top/total,0),.9999),s=Math.floor(p*N);
+ stage.style.setProperty('--p',p.toFixed(4));
+ if(s!==cur){cur=s;stage.dataset.s=s;
+  $$('#stage .e').forEach(el=>{const i=+el.dataset.in,o=el.dataset.out?+el.dataset.out:99;el.classList.toggle('on',s>=i&&s<o)});
+  $$('.copy').forEach((c,i)=>c.classList.toggle('on',i===s));
+  $$('.dots i').forEach((d,i)=>d.classList.toggle('on',i<=s));}
+}
+
+/* SCROLL */
+const fls=$$('.fl'),sts=$$('.st');
+function onScroll(){
+ const h=document.documentElement;
+ $('#prog').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+ storyUpdate();
+ const tl=$('#tl'),r=tl.getBoundingClientRect(),mid=innerHeight*.62;
+ $('#fill').style.height=Math.max(0,Math.min(r.height,mid-r.top))+'px';
+ sts.forEach(s=>s.classList.toggle('on',s.getBoundingClientRect().top<mid));
+ fls.forEach(f=>{const host=f.closest('section,.fcard,.sticky')||f.parentElement,b=host.getBoundingClientRect();
+  if(b.bottom<-200||b.top>innerHeight+200)return;
+  const off=(b.top+b.height/2-innerHeight/2)*(+f.dataset.s||.1);
+  f.style.transform=`translate3d(0,${off.toFixed(1)}px,0) rotate(${(off*.25).toFixed(1)}deg)`});
+}
+addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);onScroll();
+
+/* pointer fx */
+document.addEventListener('mousemove',e=>{const s=e.target.closest&&e.target.closest('.spot');
+ if(s){const r=s.getBoundingClientRect();s.style.setProperty('--mx',e.clientX-r.left+'px');s.style.setProperty('--my',e.clientY-r.top+'px')}});
+$$('.mag').forEach(b=>{b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.2}px,${(e.clientY-r.top-r.height/2)*.35}px)`});b.addEventListener('mouseleave',()=>b.style.transform='')});
+</script>
+</body>
+</html>
