@@ -1,7 +1,8 @@
 function doPost(e) {
   try {
     var data = JSON.parse(e.postData.contents || "{}");
-    var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Leads");
+    var spreadsheet = SpreadsheetApp.openById("14jx_EO25rhG8M_0XjipGr3Te2MkzQptoznbl40KBAl4");
+    var sheet = spreadsheet.getSheetByName("Leads");
     if (!sheet) {
       sheet = SpreadsheetApp.getActiveSpreadsheet().insertSheet("Leads");
       sheet.appendRow(["Submitted At","Full Name","Business Email","Company Name","Phone / WhatsApp","Website URL","Industry","Service Required","Target Market","Message","Source"]);
