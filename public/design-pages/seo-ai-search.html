@@ -848,5 +848,6 @@ const vcs=$$('.vc');
 $$('#vcards .spot').forEach(c=>{c.addEventListener('mouseenter',()=>{const k=c.dataset.k;vcs.forEach(v=>v.classList.toggle('hl',v.dataset.k===k||k==='3'))});c.addEventListener('mouseleave',()=>vcs.forEach(v=>v.classList.remove('hl')))});
 vcs.forEach(v=>{v.addEventListener('mouseenter',()=>v.classList.add('hl'));v.addEventListener('mouseleave',()=>v.classList.remove('hl'))});
 </script>
+<script src="/brand/brand-consistency.js"></script>
 </body>
 </html>
