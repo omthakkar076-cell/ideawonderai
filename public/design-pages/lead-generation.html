@@ -924,5 +924,6 @@ document.addEventListener('mousemove',e=>{const s=e.target.closest&&e.target.clo
  if(s){const r=s.getBoundingClientRect();s.style.setProperty('--mx',e.clientX-r.left+'px');s.style.setProperty('--my',e.clientY-r.top+'px')}});
 $$('.mag').forEach(b=>{b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.2}px,${(e.clientY-r.top-r.height/2)*.35}px)`});b.addEventListener('mouseleave',()=>b.style.transform='')});
 </script>
+<script src="/brand/brand-consistency.js"></script>
 </body>
 </html>
