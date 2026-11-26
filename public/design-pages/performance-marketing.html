@@ -356,7 +356,126 @@ nav a.logo{display:flex!important;flex-direction:column!important;align-items:fl
 nav a.logo img{display:block;width:205px;height:43px;object-fit:contain;object-position:left center}
 nav .brand-tagline{display:block;margin:0 0 0 2px;color:#6b9cff;font-size:7px;font-weight:800;letter-spacing:.19em;line-height:1.2;white-space:nowrap}
 @media(max-width:760px){nav a.logo img{width:165px;height:36px}nav .brand-tagline{font-size:6px;letter-spacing:.15em}}
-</style></head>
+</style>
+<style id="iw-performance-hero-layout-fix">
+/* Keep the scroll-story hero below the shared fixed navigation. */
+.hero.story {
+  position: relative !important;
+  z-index: 2 !important;
+  isolation: isolate !important;
+  background-color: #fff !important;
+}
+.hero.story > .sticky {
+  position: sticky !important;
+  top: 76px !important;
+  height: calc(100svh - 76px) !important;
+  min-height: 620px;
+  padding: 26px max(24px, calc((100vw - 1200px) / 2)) 24px !important;
+  z-index: 3 !important;
+  background: #fff !important;
+  overflow: hidden !important;
+  align-items: center !important;
+}
+.hero.story > .sticky > div:first-child {
+  min-width: 0 !important;
+  max-width: 100% !important;
+  align-self: center !important;
+}
+.hero.story h1 {
+  margin-top: 0 !important;
+  font-size: clamp(38px, 4.4vw, 62px) !important;
+  line-height: 1.08 !important;
+  overflow-wrap: normal !important;
+}
+.hero.story .copies {
+  min-width: 0 !important;
+  min-height: 154px !important;
+  position: relative !important;
+}
+.hero.story .copy {
+  grid-area: 1 / 1 !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  overflow-wrap: break-word !important;
+}
+.hero.story .copy:not(.on) {
+  visibility: hidden !important;
+}
+.hero.story .copy.on {
+  visibility: visible !important;
+}
+.hero.story .cta-row {
+  margin-top: 20px !important;
+  gap: 10px !important;
+}
+.hero.story .dots {
+  margin-top: 18px !important;
+}
+.hero.story .stage {
+  min-width: 0 !important;
+  width: 100% !important;
+  height: min(72vh, 620px) !important;
+  max-height: calc(100svh - 116px) !important;
+  align-self: center !important;
+}
+.hero.story + section {
+  position: relative !important;
+  z-index: 0 !important;
+}
+@media (max-width: 1100px) {
+  .hero.story > .sticky {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    gap: 24px !important;
+  }
+  .hero.story h1 { font-size: clamp(34px, 4vw, 48px) !important; }
+}
+@media (max-width: 960px) {
+  .hero.story { height: 540vh !important; }
+  .hero.story > .sticky {
+    top: 70px !important;
+    height: calc(100svh - 70px) !important;
+    min-height: 0 !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-rows: minmax(0, 1fr) auto !important;
+    gap: 12px !important;
+    padding: 18px 20px 20px !important;
+  }
+  .hero.story > .sticky > div:first-child { order: 1 !important; }
+  .hero.story .stage {
+    order: 0 !important;
+    height: min(40svh, 350px) !important;
+    max-height: 350px !important;
+    min-height: 240px !important;
+  }
+  .hero.story h1 {
+    font-size: clamp(28px, 5.2vw, 42px) !important;
+    margin-bottom: 12px !important;
+  }
+  .hero.story .copies { min-height: 74px !important; }
+  .hero.story .copy { font-size: 14px !important; line-height: 1.45 !important; }
+  .hero.story .copy.big { font-size: clamp(19px, 4vw, 25px) !important; }
+  .hero.story .cta-row { margin-top: 10px !important; }
+  .hero.story .dots { display: none !important; }
+}
+@media (max-width: 600px) {
+  .hero.story > .sticky {
+    padding: 12px 16px 16px !important;
+    gap: 10px !important;
+  }
+  .hero.story .stage {
+    height: min(36svh, 290px) !important;
+    min-height: 210px !important;
+    border-radius: 22px !important;
+  }
+  .hero.story h1 { font-size: clamp(27px, 7.4vw, 35px) !important; }
+  .hero.story .copies { min-height: 70px !important; }
+  .hero.story .copy { font-size: 13px !important; }
+  .hero.story .copy.big { font-size: 20px !important; }
+  .hero.story .cta-row .btn { padding: 12px 16px !important; font-size: 12px !important; }
+}
+</style>
+
+</head>
 <body>
 <div id="prog"></div>
 
